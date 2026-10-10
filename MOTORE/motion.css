@@ -1,0 +1,216 @@
+/* ==========================================================================
+   MOTION KIT — foglio di stile del motore
+   Non contiene stile del sito. Solo lo stato iniziale delle animazioni.
+   Regola ferrea: qui NON si tocca mai height, width, margin, padding, display.
+   ========================================================================== */
+
+:root {
+  --m-dur-reveal: 0.9s;
+  --m-dur-hover: 0.45s;
+  --m-ease: cubic-bezier(0.16, 1, 0.3, 1); /* equivalente CSS di expo.out */
+}
+
+/* --------------------------------------------------------------------------
+   1. GUARDIA ANTI-FLASH
+   Nasconde gli elementi taggati SOLO se il JS è partito (html.m-js).
+   Se GSAP non carica o va in errore, la classe viene tolta dal timeout
+   inline nel <head> e il contenuto resta visibile. Mai pagina bianca.
+   -------------------------------------------------------------------------- */
+html.m-js [data-m="text"],
+html.m-js [data-m="text-focus"],
+html.m-js [data-m="fade"],
+html.m-js [data-m="node"],
+html.m-js [data-m="reveal"],
+html.m-js [data-m="word-scrub"],
+html.m-js [data-m="typewriter"],
+html.m-js [data-m="stagger"] > *,
+html.m-js [data-m="scatter-stack"] > * {
+  opacity: 0;
+}
+
+/* Il contorno resta visibile mentre il pieno arriva con lo scroll. */
+[data-m="outline-fill"] {
+  -webkit-text-stroke: 1px currentColor;
+}
+
+/* La scena a pannelli: ogni pannello occupa una schermata. */
+[data-m="story"] > [data-panel] {
+  height: 100svh;
+}
+
+/* --------------------------------------------------------------------------
+   2. SPLIT TIPOGRAFICO
+   Le maschere sono inline-block: non alterano il flusso del testo.
+   -------------------------------------------------------------------------- */
+.m-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.08em; /* salva le discendenti (g, p, q) dal taglio */
+  margin-bottom: -0.08em;
+}
+
+.m-unit {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.m-line {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. MEDIA
+   Il wrapper maschera, l'immagine si muove dentro. Il layout non si accorge
+   di niente: nessun reflow, nessun accavallamento di testo.
+   -------------------------------------------------------------------------- */
+[data-m="reveal"],
+[data-m="parallax"] {
+  overflow: hidden;
+}
+
+[data-m="reveal"] > img,
+[data-m="reveal"] > video,
+[data-m="parallax"] > img,
+[data-m="parallax"] > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+[data-m="text-focus"] {
+  will-change: filter, opacity;
+}
+
+/* --------------------------------------------------------------------------
+   4. MICROINTERAZIONI
+   -------------------------------------------------------------------------- */
+[data-m="magnetic"] {
+  display: inline-block;
+  will-change: transform;
+}
+
+[data-m="marquee"] {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+}
+
+[data-m="marquee"] > * {
+  flex: 0 0 auto;
+  will-change: transform;
+}
+
+[data-m="hrail"] {
+  overflow: hidden;
+}
+
+[data-m="hrail"] > * {
+  display: flex;
+  flex: 0 0 auto;
+  will-change: transform;
+}
+
+/* --------------------------------------------------------------------------
+   4b. PRELOADER · CURSORE · HOVER MEDIA
+   Sovrascrivi i colori con le tue variabili, la geometria lasciala stare.
+   -------------------------------------------------------------------------- */
+[data-m="preloader"] {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  /* UNA RIGA SOLA, NON UNA GRIGLIA — 7 settembre 2026, misurato.
+     Qui c'era `display: grid; place-items: center`. Con grid ogni figlio
+     finisce in una RIGA SUA: un preloader scritto
+     `<span data-m-counter>0</span>%` mostrava il numero in alto e il segno di
+     percentuale trecento pixel piu' sotto, ciascuno centrato per conto suo.
+     Chi guardava l'ha detto subito: "il simbolo di percentuale e' messo
+     male". L'autore aveva scritto flex nell'HTML, ma questa regola lo
+     sovrascriveva. Con flex i pezzi restano sulla stessa riga, che e' quello
+     che chiunque si aspetta scrivendo un contatore. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--m-preloader-bg, #0b0b0b);
+  color: var(--m-preloader-fg, #f2f0ec);
+  will-change: transform;
+}
+
+[data-m="cursor"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--m-cursor-bg, #f2f0ec);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  will-change: transform;
+}
+
+[data-m="cursor"] [data-cursor-text] {
+  font-size: 4px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--m-cursor-fg, #0b0b0b);
+  white-space: nowrap;
+}
+
+[data-m="skew"] > img,
+[data-m="skew"] > video {
+  will-change: transform;
+}
+
+.m-hover-media {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9997;
+  width: 22vw;
+  max-width: 340px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.m-hover-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Puntatore fine assente (touch): niente cursore custom, niente hover media. */
+@media (hover: none), (pointer: coarse) {
+  [data-m="cursor"],
+  .m-hover-media { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   5. ACCESSIBILITÀ — non negoziabile
+   Chi ha attivato "riduci movimento" vede il sito fermo e completo.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html.m-js [data-m],
+  html.m-js [data-m="stagger"] > *,
+  html.m-js [data-m="scatter-stack"] > * {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .m-mask {
+    overflow: visible;
+  }
+
+  [data-m="cursor"],
+  .m-hover-media { display: none !important; }
+
+  html.m-js [data-m="preloader"] { display: none !important; }
+}

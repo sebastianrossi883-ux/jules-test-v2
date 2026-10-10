@@ -1,0 +1,13 @@
+/* R2: complemento operativo. motion.css storico resta intatto.
+   Un overlay editoriale non deve coprire il sito se il motore non e attivo.
+   data-m-skip conserva il controllo del componente originale. */
+html:not(.m-js):not(.m-motion-active) [data-m="preloader"]:not([data-m-skip]):not([data-m-skip] *),
+html:not(.m-js):not(.m-motion-active) [data-m="cursor"]:not([data-m-skip]):not([data-m-skip] *) {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-m="preloader"]:not([data-m-skip]):not([data-m-skip] *) {
+    display: none !important;
+  }
+}
