@@ -1,10 +1,10 @@
 # Motore 12 Cinematico R2 — integrazione reale
 
-La guida operativa e `METHOD/MISSIONE_JULES.md` prevalgono sulle istruzioni storiche e sui template delle skill. Il motore originale resta intatto in `RIFERIMENTO_12_ORIGINALE/`. Il CSS e le skill sono preservati. Il JS operativo mantiene tutti i 25 gesti, più cursore e preloader, collegandoli allo stesso coordinatore delle scene custom. Non usare in parallelo il motore originale e quello R2.
+La guida operativa è `METHOD/MISSIONE_JULES.md`, insieme all'incarico concreto `METHOD/INCARICO_GIRO.md`. I file in `MOTORE` sono il runtime disponibile in questa repository; non fare riferimento a una cartella `RIFERIMENTO_12_ORIGINALE` che qui non esiste. Il motore editoriale e le scene custom condividono il coordinatore.
 
 ## Avvio Vanilla
 
-Metti questi import una volta, dopo il markup del sito (oppure usa tutti gli script `defer` nell'ordine indicato). Nessun CDN e nessun template estetico sono richiesti.
+Metti gli import necessari una volta, dopo il markup del sito (oppure usa tutti gli script `defer` nell'ordine indicato). L'esempio include `MaterialHost` solo per runtime che richiedono davvero isolamento; non è la modalità predefinita per gli assegnati. Usa i percorsi che esistono realmente nella repository.
 
 ```html
 <link rel="stylesheet" href="MOTORE/vendor/lenis.css">
@@ -24,7 +24,7 @@ window.MOTION_CONFIG = { auto: false, lenis: true, intensity: 'hero', pinOnMobil
 <script src="assets/js/regia-sito.js"></script>
 ```
 
-Le versioni locali sono GSAP/ScrollTrigger 3.15.0 (dalla R0) e Lenis 1.3.26 (JS, CSS e licenza MIT inclusi). Le dipendenze opzionali vengono risolte per nome dal registro. I runtime incompatibili, come GSAP 2, restano dentro le capsule `MaterialHost` e non vengono caricati nella pagina principale.
+Le dipendenze opzionali vengono risolte per nome dal registro. I runtime incompatibili, come GSAP 2, possono restare dentro capsule `MaterialHost` e non vanno caricati nella pagina principale. Le scene assegnate richiedono comunque adattamento al sito, non la demo originale incollata.
 
 `motion.js` aspetta DOM e font prima dello split, funziona anche se caricato dopo `load` e restituisce `MotionKit.ready`. `assets/js/regia-sito.js` deve aspettarlo:
 

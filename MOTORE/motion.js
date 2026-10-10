@@ -5,7 +5,7 @@
 
    R2: i gesti storici convivono con coreografie GSAP originali.
    SiteScenes coordina i proprietari e il lifecycle di ENTRAMBI.
-   L'archivio RIFERIMENTO_12_ORIGINALE conserva il motore originale.
+   Le sorgenti dei materiali sono separate in MOTION_COMPONENTE/ARCHIVIO.
    ========================================================================== */
 
 (function () {

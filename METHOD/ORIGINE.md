@@ -1,7 +1,5 @@
-Metodo 12 Cinematico R2, revisione obbligatoria; originale intatto nel pacchetto master.
-Il motore operativo mantiene i gesti e aggiunge ownership/lifecycle; motion.css resta originale.
-Caricare coordinatore PRIMA di motion.js; attendere MotionKit.ready prima delle scene custom.
-Caricare regia-accessibilita.css DOPO motion.css per il fallback degli overlay.
-MOTION_CONFIG.auto=false: assegnazione intenzionale a tutta la pagina, senza contaminare le demo.
-Sono state fornite solo le sorgenti scelte dal committente; leggerle e integrarle tutte.
-Usare le versioni locali/verificate delle librerie, senza doppie istanze.
+# Provenienza e ruoli
+
+`MOTION_COMPONENTE/ARCHIVIO` è un catalogo ampio di sorgenti, non una collezione di scene già integrate. I tre materiali del giro corrente sono nominati in `METHOD/INCARICO_GIRO.md` e hanno sorgenti originali anche in `MOTION_COMPONENTE/COMPONENTI` e `MOTION_COMPONENTE/SEMI`. Jules deve studiare e adattare tutti e tre nel sito reale; Python ha importato sorgenti, non ha fatto il lavoro creativo.
+
+Il coordinatore va caricato prima di `motion.js`; le scene custom aspettano `MotionKit.ready`. `MOTION_CONFIG.auto=false` richiede regia esplicita. Usa una sola istanza delle dipendenze e i percorsi reali della repository.
