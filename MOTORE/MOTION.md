@@ -10,6 +10,8 @@ Metti questi import una volta, dopo il markup del sito (oppure usa tutti gli scr
 <link rel="stylesheet" href="MOTORE/vendor/lenis.css">
 <link rel="stylesheet" href="MOTORE/motion.css">
 <link rel="stylesheet" href="MOTORE/regia-accessibilita.css">
+<link rel="stylesheet" href="MOTORE/material-host.css">
+<script src="MOTORE/plugin-registry.js"></script>
 <script src="MOTORE/vendor/gsap.min.js"></script>
 <script src="MOTORE/vendor/ScrollTrigger.min.js"></script>
 <script src="MOTORE/vendor/lenis.min.js"></script>
@@ -17,11 +19,12 @@ Metti questi import una volta, dopo il markup del sito (oppure usa tutti gli scr
 window.MOTION_CONFIG = { auto: false, lenis: true, intensity: 'hero', pinOnMobile: false };
 </script>
 <script src="MOTORE/regia-coordinatore.js"></script>
+<script src="MOTORE/material-host.js"></script>
 <script src="MOTORE/motion.js"></script>
 <script src="assets/js/regia-sito.js"></script>
 ```
 
-Le versioni locali sono GSAP/ScrollTrigger 3.15.0 (dalla R0) e Lenis 1.3.26 (JS, CSS e licenza MIT inclusi). Se il progetto possiede già librerie equivalenti, integra UNA sola build compatibile. Non aggiungere le copie locali a una seconda istanza già attiva. In progetti ESM importa le stesse dipendenze una sola volta e adatta il bootstrap, senza introdurre globali concorrenti.
+Le versioni locali sono GSAP/ScrollTrigger 3.15.0 (dalla R0) e Lenis 1.3.26 (JS, CSS e licenza MIT inclusi). Le dipendenze opzionali vengono risolte per nome dal registro. I runtime incompatibili, come GSAP 2, restano dentro le capsule `MaterialHost` e non vengono caricati nella pagina principale.
 
 `motion.js` aspetta DOM e font prima dello split, funziona anche se caricato dopo `load` e restituisce `MotionKit.ready`. `assets/js/regia-sito.js` deve aspettarlo:
 

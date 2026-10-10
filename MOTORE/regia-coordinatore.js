@@ -4,7 +4,9 @@
   'use strict';
   if (global.SiteScenes) return;
   const active = new Map(), claims = new WeakMap(), resources = new Map();
+  const pluginRegistry = new Map(), dependencyLoads = new Map();
   const pins = new Set(), measures = new Set(), refreshHooks = new Set(), locks = new Set();
+  const diagnostics = { version: '21.1.0', startedAt: new Date().toISOString(), scenes: new Map(), errors: [] };
   let scroll = null, frame = null, refreshing = false, initialized = false, nativeOverflow = null, lockedDriver = null;
   const transform = /^(x|y|z|xPercent|yPercent|scale|scaleX|scaleY|scaleZ|rotation|rotationX|rotationY|rotationZ|rotate|translate|skewX|skewY|transform|transformOrigin)$/i;
   function properties(prop) {
@@ -12,6 +14,133 @@
     if (prop === 'autoAlpha') return ['opacity', 'visibility'];
     const key = prop.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
     return [transform.test(key) ? 'transform' : key];
+  }
+  function isCollection(value) {
+    return Array.isArray(value) ||
+      (typeof global.NodeList !== 'undefined' && value instanceof global.NodeList) ||
+      (typeof global.HTMLCollection !== 'undefined' && value instanceof global.HTMLCollection);
+  }
+  function collectionItems(value) {
+    if (!isCollection(value)) return [value];
+    return Array.from(value).flatMap(collectionItems);
+  }
+  function errorRecord(type, error, id = null) {
+    const message = error?.message || String(error || type);
+    const entry = { type, id, message, at: new Date().toISOString() };
+    if (error?.stack) entry.stack = String(error.stack).split('\n').slice(0, 8).join('\n');
+    diagnostics.errors.push(entry);
+    if (diagnostics.errors.length > 100) diagnostics.errors.shift();
+    return entry;
+  }
+  function globalValue(path) {
+    if (typeof path !== 'string' || !path) return undefined;
+    return path.split('.').reduce((value, key) => value == null ? undefined : value[key], global);
+  }
+  function normalizeUrl(value) {
+    return new URL(value, global.document.baseURI).href;
+  }
+  function registerDependencies(entries) {
+    if (!entries || typeof entries !== 'object' || Array.isArray(entries)) {
+      throw Error('SiteScenes: registro dipendenze non valido');
+    }
+    for (const [name, descriptor] of Object.entries(entries)) {
+      if (!name || !descriptor || typeof descriptor !== 'object') {
+        throw Error('SiteScenes: descrittore dipendenza non valido');
+      }
+      pluginRegistry.set(name, Object.assign({}, descriptor));
+    }
+  }
+  function loadStyle(item) {
+    const descriptor = typeof item === 'string' ? { src: item } : item;
+    if (!descriptor?.src) throw Error('SiteScenes: URL foglio stile mancante');
+    const url = normalizeUrl(descriptor.src);
+    const key = 'style:'+url;
+    if (dependencyLoads.has(key)) return dependencyLoads.get(key);
+    const existing = Array.from(global.document.querySelectorAll('link[rel="stylesheet"]'))
+      .find(node => node.href === url);
+    if (existing) {
+      const ready = Promise.resolve(existing);
+      dependencyLoads.set(key, ready);
+      return ready;
+    }
+    const promise = new Promise((resolve, reject) => {
+      const link = global.document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = url;
+      if (descriptor.media) link.media = descriptor.media;
+      if (descriptor.integrity) { link.integrity = descriptor.integrity; link.crossOrigin = descriptor.crossOrigin || 'anonymous'; }
+      link.onload = () => resolve(link);
+      link.onerror = () => reject(Error('SiteScenes: stylesheet non caricato: '+url));
+      global.document.head.appendChild(link);
+    }).catch(error => { dependencyLoads.delete(key); throw error; });
+    dependencyLoads.set(key, promise);
+    return promise;
+  }
+  function loadScript(item) {
+    const descriptor = typeof item === 'string' ? { src: item } : item;
+    if (!descriptor?.src) throw Error('SiteScenes: URL script mancante');
+    const url = normalizeUrl(descriptor.src);
+    const type = descriptor.type === 'module' ? 'module' : 'classic';
+    const key = 'script:'+type+':'+url;
+    if (dependencyLoads.has(key)) return dependencyLoads.get(key);
+    const existing = Array.from(global.document.scripts).find(node => node.src === url &&
+      ((node.type === 'module' ? 'module' : 'classic') === type));
+    if (existing) {
+      const ready = Promise.resolve(existing);
+      dependencyLoads.set(key, ready);
+      return ready;
+    }
+    const promise = new Promise((resolve, reject) => {
+      const script = global.document.createElement('script');
+      script.src = url;
+      script.async = false;
+      if (type === 'module') script.type = 'module';
+      if (descriptor.integrity) { script.integrity = descriptor.integrity; script.crossOrigin = descriptor.crossOrigin || 'anonymous'; }
+      script.onload = () => resolve(script);
+      script.onerror = () => reject(Error('SiteScenes: script non caricato: '+url));
+      global.document.head.appendChild(script);
+    }).catch(error => { dependencyLoads.delete(key); throw error; });
+    dependencyLoads.set(key, promise);
+    return promise;
+  }
+  async function loadRegistered(name, trail = []) {
+    const descriptor = pluginRegistry.get(name);
+    if (!descriptor) throw Error('SiteScenes: plugin sconosciuto: '+name);
+    if (trail.includes(name)) throw Error('SiteScenes: dipendenza circolare: '+trail.concat(name).join(' -> '));
+    const key = 'plugin:'+name;
+    if (dependencyLoads.has(key)) return dependencyLoads.get(key);
+    const promise = (async () => {
+      for (const parent of descriptor.dependsOn || []) await loadRegistered(parent, trail.concat(name));
+      await Promise.all((descriptor.styles || []).map(loadStyle));
+      for (const script of descriptor.scripts || []) await loadScript(script);
+      const missing = (descriptor.globals || []).filter(path => globalValue(path) == null);
+      if (missing.length) throw Error('SiteScenes: '+name+' caricato ma globale assente: '+missing.join(', '));
+      return descriptor;
+    })().catch(error => { dependencyLoads.delete(key); throw error; });
+    dependencyLoads.set(key, promise);
+    return promise;
+  }
+  async function loadDependencies({ id = 'dipendenze', dependencies = [], scripts = [], styles = [], globals = [] } = {}) {
+    try {
+      for (const name of dependencies) await loadRegistered(name);
+      await Promise.all(styles.map(loadStyle));
+      for (const script of scripts) await loadScript(script);
+      const missing = globals.filter(path => globalValue(path) == null);
+      if (missing.length) throw Error('SiteScenes: dipendenze mancanti in '+id+': '+missing.join(', '));
+      return Object.fromEntries(globals.map(path => [path, globalValue(path)]));
+    } catch (error) {
+      errorRecord('dependency-load', error, id);
+      throw error;
+    }
+  }
+  function onWindowError(event) {
+    const target = event?.target;
+    const url = target && target !== global ? (target.currentSrc || target.src || target.href) : '';
+    if (url) errorRecord('resource-error', Error('Risorsa non caricata: '+url));
+    else errorRecord('window-error', event?.error || event?.message || 'Errore runtime');
+  }
+  function onUnhandledRejection(event) {
+    errorRecord('unhandled-rejection', event?.reason || 'Promise rifiutata');
   }
   function requestRefresh() {
     if (frame !== null || refreshing) return;
@@ -36,6 +165,8 @@
     global.addEventListener('load', requestRefresh);
     global.document.addEventListener('load', requestRefresh, true);
     global.document.addEventListener('loadedmetadata', requestRefresh, true);
+    global.addEventListener('error', onWindowError, true);
+    global.addEventListener('unhandledrejection', onUnhandledRejection);
     global.document.fonts?.ready.then(() => { if (initialized) requestRefresh(); });
   }
   function configureScroll({ enabled = true, instance = null, externalTicker = false,
@@ -103,6 +234,14 @@
     function claim(element, props) {
       if (!alive) throw Error('SiteScenes: scena gia distrutta');
       if (!element || typeof element !== 'object') throw Error('SiteScenes: target non valido');
+
+      if (isCollection(element)) {
+        const items = collectionItems(element);
+        if (!items.length) throw Error('SiteScenes: collezione target vuota in '+id);
+        items.forEach(el => claim(el, props));
+        return items;
+      }
+
       if (![...allowed].some(r => r === element || r.contains(element))) throw Error('SiteScenes: target fuori scena; registrare un portal esplicito');
       const keys = (Array.isArray(props) ? props : [props]).flatMap(properties);
       const owners = claims.get(element) || new Map();
@@ -235,6 +374,7 @@
   function mount({ id, root, writes = [], resources: names = [], setup }) {
     if (typeof id !== 'string' || !id || active.has(id)) throw Error('SiteScenes: id non valido o gia montato');
     if (!root || typeof root.contains !== 'function' || !Array.isArray(writes) || typeof setup !== 'function') throw Error('SiteScenes: root/writes/setup obbligatori');
+    diagnostics.scenes.set(id, { id, status: 'mounting', mountedAt: new Date().toISOString() });
     const ctx = global.gsap?.context(() => {}, root);
     const scope = makeScope(id, root, ctx);
     active.set(id, { ctx, scope });
@@ -245,8 +385,52 @@
       if (ctx) ctx.add(() => { cleanup = setup(scope); }); else cleanup = setup(scope);
       if (typeof cleanup !== 'function') throw Error('SiteScenes: setup deve restituire cleanup');
       scope.defer(cleanup);
-    } catch (e) { try { unmount(id); } catch (_) {} throw e; }
+      diagnostics.scenes.set(id, { id, status: 'mounted', mountedAt: new Date().toISOString() });
+    } catch (e) {
+      try { unmount(id); } catch (_) {}
+      diagnostics.scenes.set(id, { id, status: 'failed', message: e?.message || String(e), failedAt: new Date().toISOString() });
+      errorRecord('scene-mount', e, id);
+      throw e;
+    }
     return () => unmount(id);
+  }
+  function mountSafe(spec) {
+    const id = spec?.id || 'scena-senza-id';
+    try { return mount(spec); }
+    catch (error) {
+      global.console?.error?.('[SiteScenes:'+id+']', error);
+      return () => false;
+    }
+  }
+  async function mountAsyncSafe(spec) {
+    const id = spec?.id || 'scena-senza-id';
+    try {
+      await loadDependencies(Object.assign({ id }, spec?.requires || {}));
+      const mountSpec = Object.assign({}, spec);
+      delete mountSpec.requires;
+      return mount(mountSpec);
+    } catch (error) {
+      diagnostics.scenes.set(id, { id, status: 'skipped', message: error?.message || String(error), skippedAt: new Date().toISOString() });
+      errorRecord('scene-skipped', error, id);
+      global.console?.error?.('[SiteScenes:'+id+']', error);
+      return () => false;
+    }
+  }
+  function requireGlobals(id, names) {
+    const required = Array.isArray(names) ? names : [names];
+    const missing = required.filter(name => typeof name !== 'string' || !name || global[name] == null);
+    if (missing.length) throw Error('SiteScenes: dipendenze mancanti in '+id+': '+missing.join(', '));
+    return Object.fromEntries(required.map(name => [name, global[name]]));
+  }
+  function report() {
+    return {
+      version: diagnostics.version,
+      startedAt: diagnostics.startedAt,
+      generatedAt: new Date().toISOString(),
+      active: Array.from(active.keys()),
+      scenes: Array.from(diagnostics.scenes.values()).map(item => Object.assign({}, item)),
+      errors: diagnostics.errors.map(item => Object.assign({}, item))
+    };
   }
   function unmount(id) {
     const state = active.get(id);
@@ -255,6 +439,8 @@
     try { state.ctx?.revert(); } catch (e) { first = e; }
     try { state.scope.destroy(); } catch (e) { first ||= e; }
     active.delete(id);
+    const prior = diagnostics.scenes.get(id) || { id };
+    if (prior.status !== 'failed') diagnostics.scenes.set(id, Object.assign({}, prior, { status: 'unmounted', unmountedAt: new Date().toISOString() }));
     requestRefresh();
     if (first) throw first;
     return true;
@@ -267,6 +453,8 @@
       global.removeEventListener('load', requestRefresh);
       global.document.removeEventListener('load', requestRefresh, true);
       global.document.removeEventListener('loadedmetadata', requestRefresh, true);
+      global.removeEventListener('error', onWindowError, true);
+      global.removeEventListener('unhandledrejection', onUnhandledRejection);
       initialized = false;
     }
     if (frame !== null) global.cancelAnimationFrame(frame);
@@ -283,6 +471,8 @@
     if (!Number.isFinite(value) || !Number.isFinite(period) || period <= 0) throw Error('SiteScenes: progresso non finito');
     return ((value % period) + period) % period;
   }
-  global.SiteScenes = Object.freeze({ mount, unmount, dispose, init, configureScroll, requestRefresh,
-    positiveModulo, activeCount: () => active.size });
+  if (global.METHOD_PLUGIN_REGISTRY) registerDependencies(global.METHOD_PLUGIN_REGISTRY);
+  global.SiteScenes = Object.freeze({ mount, mountSafe, mountAsyncSafe, loadDependencies, registerDependencies,
+    requireGlobals, report, unmount, dispose, init,
+    configureScroll, requestRefresh, positiveModulo, activeCount: () => active.size });
 })(window);

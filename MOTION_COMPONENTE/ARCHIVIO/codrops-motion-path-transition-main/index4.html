@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+<meta name="method21-offline" content="true">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thumbnail Flow Animation with GSAP MotionPath | Demo 4 | Codrops</title>
+  <meta
+        name="description"
+        content="A GSAP MotionPath gallery demo featuring animated thumbnail flow transitions, image stacking effects, and smooth featured image reveals." />
+  <meta
+        name="keywords"
+        content="GSAP, MotionPath, thumbnail flow, gallery animation, image transition, JavaScript animation, web effects" />
+  <link rel="icon" type="image/svg+xml" href="https://tympanus.net/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="https://tympanus.net/favicon/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script>
+    document.documentElement.className = 'js';
+  </script>
+  <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+</head>
+
+<body class="demo-4 loading">
+  <main>
+    <header class="frame">
+      <h1 class="frame__title">
+        Image Flow Effect Using
+        <a href="https://tympanus.net/codrops/demos/?tag=gsap">#GSAP</a>
+        MotionPath Plugin
+      </h1>
+      <nav class="frame__links">
+        <a href="https://tympanus.net/codrops/?p=116387">Article</a>
+        <a href="https://tympanus.net/codrops/hub/">All demos</a>
+        <a href="https://github.com/Ibaliqbal/codrops-motion-path-transition">GitHub</a>
+      </nav>
+      <nav class="frame__demos">
+        <p class="frame__demos-label">effects:</p>
+        <ul class="effects-list">
+          <li>
+            <a class="effects-list__item" href="index.html">01</a>
+          </li>
+          <li>
+            <a class="effects-list__item" href="index2.html">02</a>
+          </li>
+          <li>
+            <a class="effects-list__item" href="index2.html">03</a>
+          </li>
+          <li>
+            <a class="effects-list__item effects-list__item--active" href="index4.html">04</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="trigger__wrapper">
+        <button id="bottom" class="trigger__button trigger__button--active">
+          bottom
+        </button>
+
+        <div class="trigger__divider"></div>
+
+        <button id="left" class="trigger__button">
+          left
+        </button>
+      </div>
+
+      <div class="thumbnail" style="--index: 0">
+        <img src="./public/img-1.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 1">
+        <img src="./public/img-2.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 2">
+        <img src="./public/img-3.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 3">
+        <img src="./public/img-4.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 4">
+        <img src="./public/img-5.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 5">
+        <img src="./public/img-6.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 6">
+        <img src="./public/img-7.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 7">
+        <img src="./public/img-8.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 8">
+        <img src="./public/img-9.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 9">
+        <img src="./public/img-10.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 10">
+        <img src="./public/img-11.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 11">
+        <img src="./public/img-12.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 12">
+        <img src="./public/img-13.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 13">
+        <img src="./public/img-14.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 14">
+        <img src="./public/img-15.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 15">
+        <img src="./public/img-16.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 16">
+        <img src="./public/img-17.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 17">
+        <img src="./public/img-18.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 18">
+        <img src="./public/img-19.webp" alt="" />
+      </div>
+
+      <div class="thumbnail" style="--index: 19">
+        <img src="./public/img-20.webp" alt="" />
+      </div>
+    </div>
+  </main>
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="./js/gsap.js"></script>
+  <script src="./js/MotionPathPlugin.js"></script>
+  <script src="./js/script4.js"></script>
+  <!--script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script-->
+<script src="_method_capsule_bridge.js"></script>
+</body>
+
+</html>

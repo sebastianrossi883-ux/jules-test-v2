@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metodo 21 — Libreria componenti</title>
+  <link rel="stylesheet" href="MOTORE/material-host.css">
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0b0b0c; color: #f3f1ea; }
+    header { padding: 3rem clamp(1.25rem, 5vw, 5rem) 2rem; border-bottom: 1px solid #2a2a2d; }
+    h1 { margin: 0; font: 500 clamp(2rem, 5vw, 5rem)/.95 Georgia, serif; letter-spacing: -.04em; }
+    .local { display: inline-flex; margin-bottom: 1rem; padding: .4rem .65rem; border: 1px solid #5c9b72; border-radius: 999px; color: #9ee0b6; font-size: .72rem; letter-spacing: .14em; }
+    p { max-width: 68ch; color: #aaa8a1; line-height: 1.6; }
+    main { display: grid; grid-template-columns: minmax(16rem, 22rem) 1fr; min-height: calc(100vh - 12rem); }
+    nav { padding: 1.25rem; border-right: 1px solid #2a2a2d; max-height: calc(100vh - 11rem); overflow: auto; position: sticky; top: 0; }
+    button { width: 100%; padding: .9rem 1rem; border: 1px solid #29292d; background: #121214; color: inherit; text-align: left; cursor: pointer; border-radius: .65rem; margin: 0 0 .55rem; }
+    button:hover, button[aria-current="true"] { border-color: #d8b46b; background: #1b1915; }
+    button[data-build="source-fallback"] { border-color: #664f35; }
+    button small { display: block; margin-top: .35rem; color: #898780; }
+    .stage { min-width: 0; padding: 1.25rem; }
+    #material-stage { --material-min-height: calc(100vh - 13.5rem); border: 1px solid #29292d; border-radius: .8rem; background: #111; }
+    #status { margin: 0 0 1rem; font-size: .8rem; color: #aaa8a1; text-transform: uppercase; letter-spacing: .12em; }
+    @media (max-width: 760px) {
+      main { grid-template-columns: 1fr; }
+      nav { position: static; max-height: 16rem; border-right: 0; border-bottom: 1px solid #2a2a2d; }
+      .stage { padding: .75rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="local">● LOCALE / OFFLINE · 127.0.0.1</span>
+    <h1>Libreria componenti</h1>
+    <p>I materiali arrivano esclusivamente dalle cartelle sul tuo Mac. Scegline uno; se la demo usa lo scroll, scorri direttamente al suo interno.</p>
+  </header>
+  <main>
+    <nav id="materials" aria-label="Materiali importati"></nav>
+    <section class="stage">
+      <p id="status">Caricamento libreria…</p>
+      <div id="material-stage"></div>
+    </section>
+  </main>
+  <script src="MOTORE/material-host.js"></script>
+  <script>
+    (async function () {
+      const nav = document.querySelector('#materials');
+      const status = document.querySelector('#status');
+      const stage = document.querySelector('#material-stage');
+      const manifest = await MaterialHost.loadManifest();
+      let current = null;
+
+      async function show(material, variant, button) {
+        if (current) MaterialHost.unmount(current);
+        document.querySelectorAll('button[aria-current="true"]').forEach(node => node.removeAttribute('aria-current'));
+        button.setAttribute('aria-current', 'true');
+        current = 'preview-' + material.slug;
+        const buildState = material.build && material.build.state ? material.build.state : 'static';
+        status.textContent = material.title + ' · ' + variant.id + ' · ' + buildState + ' · ' + material.libraries.join(', ');
+        if (buildState === 'source-fallback') {
+          stage.className = 'method-material-host';
+          stage.dataset.materialState = 'ready';
+          stage.innerHTML = '<div style="padding:clamp(2rem,8vw,7rem);max-width:48rem"><h2>Sorgente importata</h2><p>Questo progetto contiene una toolchain npm e richiede una compilazione locale prima dell’esecuzione. I file sono già nella libreria; non è stato eseguito codice di terzi senza autorizzazione.</p></div>';
+          return;
+        }
+        await MaterialHost.mount({
+          id: current,
+          slug: material.slug,
+          variant: variant.id,
+          root: stage,
+          minHeight: 'calc(100vh - 13.5rem)'
+        });
+      }
+
+      const visibleMaterials = manifest.materials.filter(material => material.julesEligible !== false);
+      for (const material of visibleMaterials) {
+        for (const variant of material.variants) {
+          const button = document.createElement('button');
+          button.type = 'button';
+          const buildState = material.build && material.build.state ? material.build.state : 'static';
+          button.dataset.build = buildState;
+          button.innerHTML = material.title + '<small>' + variant.id + ' · ' + buildState + '</small>';
+          button.addEventListener('click', () => show(material, variant, button));
+          nav.appendChild(button);
+        }
+      }
+      const first = nav.querySelector('button');
+      if (first) first.click(); else status.textContent = 'Nessun materiale Vanilla pronto';
+    })().catch(error => {
+      document.querySelector('#status').textContent = error.message;
+      console.error(error);
+    });
+  </script>
+</body>
+</html>

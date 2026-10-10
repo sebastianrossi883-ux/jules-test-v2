@@ -1,9 +1,11 @@
 # Missione operativa
-`METHOD/MISSIONE_JULES.md` e il contratto principale per il lavoro e il risultato. LEGGI ATTENTAMENTE 'I 5 COMANDAMENTI TECNICI' CONTENUTI AL SUO INTERNO PER EVITARE CRASH.
-`METHOD/REGIA_GLOBALE.md` ne riassume soltanto l’architettura e non aggiunge o riduce requisiti.
-Leggere tutti i file e le versioni dei materiali forniti in MOTION_COMPONENTE/COMPONENTI e MOTION_COMPONENTE/SEMI; integrarli tutti come scene effettive.
-Le skill e gli esempi spiegano le API: non possono ridurre gli invarianti delle sorgenti, il movimento centrale delle unità o le verifiche richieste dalla missione.
-Costruire design e regia nella STESSA sessione, verificando il sito nel browser fino al footer e nei raccordi avanti/indietro.
-Eseguire `python3 METHOD/regia_gate.py --repo .` prima della PR e correggere i blocchi strutturali. PASS_STATIC_ONLY non è un PASS visivo.
 
-> **FASE 3 (REGISTA): L'HTML è già stato completato dal Muratore. NON modificare in alcun modo `index.html`. Il tuo unico compito è scrivere il file `assets/js/regia-sito.js` usando la matematica GSAP e rispettando i 6 Comandamenti Tecnici.**
+`METHOD/MISSIONE_JULES.md` è il contratto principale. Il Metodo è risolutivo: non creare gate, audit o cicli ripetuti di controllo.
+
+Per librerie grandi usa `METHOD/import_materials.py` una sola volta e lavora dal manifest generato. Non leggere manualmente centinaia di cartelle e non inventare i path delle dipendenze.
+
+Usa esclusivamente materiali con `julesEligible: true`. React/TSX e React Three Fiber sono conservati ma esclusi per scelta del committente: non installarli, non compilarli e non convertirli durante la costruzione del sito.
+
+I componenti legacy o incompatibili si montano con `MaterialHost` in capsule isolate. Le scene fuse nel DOM usano `SiteScenes.mountAsyncSafe` e il registro `MOTORE/plugin-registry.js`, così un errore non blocca il resto della pagina.
+
+Costruisci design e regia nella stessa sessione. Osserva il risultato finale nel browser senza trasformare l'osservazione in un nuovo sistema di gate.
