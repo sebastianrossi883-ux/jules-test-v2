@@ -1,14 +1,11 @@
 {
-  "site_id": "Metodo21_MotionAtlas_PrimaProva_20261011",
-  "site_name": "",
-  "idea": "",
-  "metaphor": "",
-  "composition_signature": "",
-  "motion_signature": "",
-  "component_slug": "codrops-sticky-grid-scroll-main",
-  "seed_slugs": [
+  "project_name": "Motion Atlas",
+  "creative_signature": "Un atlante oscuro ed elegante (dark mode con accenti grigi/bianchi e tipografia graziata) che trasforma demo di interazione (click/mouse) in una progressione cinematografica guidata esclusivamente dalla gravità dello scroll. La firma è la traslazione del tempo: azioni discrete diventano flussi continui.",
+  "component_used": "codrops-sticky-grid-scroll-main",
+  "seeds_used": [
     "codrops-mwg",
     "codrops-motion-path-transition-main-2"
   ],
-  "keywords": []
+  "engine": "GSAP + ScrollTrigger + Lenis",
+  "notes": "Adattamento di effetti originariamente guidati da eventi (mouse/click) in timeline coordinate dallo scroll per un'esperienza a singola regia."
 }

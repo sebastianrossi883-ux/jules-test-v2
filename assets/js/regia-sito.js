@@ -1,315 +1,4 @@
-/* TABELLA DI TRADUZIONE:
- - Nodo Demo textblock8: .content__text (testi) e .trigger (bottone)
- - Nodo Sito textblock8: .content__text (h2 con data-splitting) e .trigger-textblock8 (button)
- - Traduzione Fisica textblock8: Applicazione di Splitting.js ai nodi di testo e listener sul bottone. Stessa matematica GSAP (scaleY da 1 a 0 e da 0 a 1).
-
- - Nodo Demo parallax: .bg (div con background-image)
- - Nodo Sito parallax: .parallax-img (tag <img>) in .seed-parallax-section
- - Traduzione Fisica parallax: Poiché il sito usa tag <img> anziché background-image, backgroundPosition non funzionerà. Sostituisco con yPercent calcolato tramite getRatio per lo stesso effetto di scorrimento differenziale.
-
- - Nodo Demo paths: #seed-paths > posizioni vuote e .path-img
- - Nodo Sito paths: #seed-paths con .seed-paths-inner (sticky), marcatori (.path-pos1, .path-pos2, .path-pos3) e .path-img
- - Traduzione Fisica paths: Il contenitore è sticky. La geometria dei marcatori (.path-posX) viene calcolata sottraendo le coordinate di .seed-paths-inner (il genitore diretto). Animo width, height, x e y del wrapper dell'immagine (.path-img) tramite MotionPathPlugin e scrollTrigger su .seed-paths. I marcatori sono nascosti con opacity-0 pointer-events-none, mai display:none.
-*/
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Inizializza Splitting globale (richiesto da textblock8)
-    if (typeof Splitting !== 'undefined') {
-        Splitting();
-    }
-});
-
 window.MotionKit.ready.then(() => {
-
-    // =========================================================================
-    // COMPONENTE: textblock8
-    // =========================================================================
-    const tb8Root = document.getElementById("component-textblock8");
-    if (tb8Root) {
-        const texts = [...tb8Root.querySelectorAll('.content__text')];
-        const triggerBtn = tb8Root.querySelector('.trigger-textblock8');
-
-        if (texts.length === 2 && triggerBtn) {
-            let currentTextPos = 0;
-            let isAnimating = false;
-
-            // Impostiamo l'opacità iniziale (il secondo testo ha opacity-0 da CSS)
-            texts[0].style.opacity = '1';
-            texts[1].style.opacity = '0';
-
-            window.SiteScenes.mount({
-                id: "scene-textblock8",
-                root: tb8Root,
-                writes: [
-                    { element: texts[0], property: 'opacity' },
-                    { element: texts[1], property: 'opacity' }
-                ],
-                setup: function(scope) {
-
-                    const switchTexts = () => {
-                        if ( isAnimating ) return false;
-                        isAnimating = true;
-
-                        const upcomingTextPos = currentTextPos ? 0 : 1;
-
-                        // Assumiamo che Splitting abbia creato i .word o possiamo fare fallback
-                        // Le classi .word sono generate da Splitting.
-                        const currentWords = texts[currentTextPos].querySelectorAll('.word');
-                        const upcomingtWords = texts[upcomingTextPos].querySelectorAll('.word');
-
-                        if (!currentWords.length || !upcomingtWords.length) {
-                             isAnimating = false;
-                             return;
-                        }
-
-                        // Registriamo le risorse animate
-                        scope.claim(currentWords, 'transform');
-                        scope.claim(upcomingtWords, 'transform');
-                        scope.claim(texts[upcomingTextPos], 'opacity');
-
-                        gsap.timeline({
-                            defaults: {
-                                duration: 0.05,
-                                ease: 'expo'
-                            },
-                            onComplete: () => {
-                                currentTextPos = upcomingTextPos;
-                                isAnimating = false;
-                            }
-                        })
-                        .fromTo(currentWords, {
-                            willChange: 'transform',
-                            scaleY: 1
-                        }, {
-                            duration: .5,
-                            ease: 'back.in(3)',
-                            scaleY: 0,
-                            stagger: {
-                                each: 0.03,
-                                from: 'start'
-                            },
-                            onComplete: () => {
-                                gsap.set(texts[currentTextPos], { opacity: 0 });
-                            }
-                        }, 0)
-                        .fromTo(upcomingtWords, {
-                            willChange: 'transform',
-                            scaleY: 0,
-                        }, {
-                            onStart: () => {
-                                gsap.set(texts[upcomingTextPos], { opacity: 1 });
-                            },
-                            duration: .7,
-                            ease: 'elastic.out(0.7)',
-                            scaleY: 1,
-                            stagger: {
-                                each: 0.025,
-                                from: 'start'
-                            }
-                        }, '>-=0.65');
-                    };
-
-                    scope.listen(triggerBtn, 'click', switchTexts);
-
-                    return function cleanup() {
-                        // GSAP ripulisce la root tramite context, noi puliamo inline style opacità
-                        gsap.set(texts, { clearProps: 'all' });
-                        gsap.set(texts[0].querySelectorAll('.word'), { clearProps: 'all' });
-                        gsap.set(texts[1].querySelectorAll('.word'), { clearProps: 'all' });
-                    };
-                }
-            });
-        }
-    }
-
-    // =========================================================================
-    // SEME: parallax
-    // =========================================================================
-    const parallaxSections = document.querySelectorAll('.seed-parallax-section');
-
-    // Funzione dal seme per calcolare la ratio
-    let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
-
-    parallaxSections.forEach((section, i) => {
-        // Le demo usa img come .bg
-        const imgs = section.querySelectorAll('.parallax-img');
-        if (!imgs.length) return;
-
-        window.SiteScenes.mount({
-            id: `scene-parallax-${i}`,
-            root: section,
-            writes: Array.from(imgs).map(img => ({ element: img, property: 'transform' })),
-            setup: function(scope) {
-                // Poiché abbiamo img reali anziché background-image in un div vuoto,
-                // dobbiamo animare il transform yPercent in modo analogo alla formula originale di backgroundPosition.
-                // Original: backgroundPosition: 50% ${-window.innerHeight * getRatio(section)}px
-
-                imgs.forEach(img => {
-                    scope.claim(img, 'transform');
-                    // Facciamo in modo che il ratio calcoli l'offset.
-                    // Moltiplichiamo per un fattore per trasformarlo in percentuale di traslazione
-                    // oppure calcoliamo i px e passiamo a y. Usiamo yPercent per responsività.
-                    // Invece di usare yPercent a caso, ci atteniamo all'idea: far muovere l'immagine dal top al bottom
-                    // rispetto all'altezza del contenitore. L'immagine ha h-[120%] e -top-[10%].
-                    // Muoviamola in yPercent da -10% a 10% del SUO size per coprire il 20% di extra.
-                    // Oppure applichiamo esattamente la ratio. Usiamo yPercent per sicurezza CSS.
-
-                    gsap.fromTo(img, {
-                        yPercent: () => i ? -10 * getRatio(section) : 0
-                    }, {
-                        yPercent: () => 10 * (1 - getRatio(section)),
-                        ease: "none",
-                        scrollTrigger: {
-                            trigger: section,
-                            start: () => i ? "top bottom" : "top top",
-                            end: "bottom top",
-                            scrub: true,
-                            invalidateOnRefresh: true
-                        }
-                    });
-                });
-
-                return function cleanup() {
-                    gsap.set(imgs, { clearProps: 'all' });
-                };
-            }
-        });
-    });
-
-    // =========================================================================
-    // SEME: paths
-    // =========================================================================
-    const pathsSection = document.getElementById("seed-paths");
-    if (pathsSection) {
-        const inner = pathsSection.querySelector('.seed-paths-inner');
-        const img = pathsSection.querySelector('.path-img');
-        const pos1 = pathsSection.querySelector('.path-pos1');
-        const pos2 = pathsSection.querySelector('.path-pos2');
-        const pos3 = pathsSection.querySelector('.path-pos3');
-
-        if (inner && img && pos1 && pos2 && pos3) {
-            window.SiteScenes.mount({
-                id: "scene-paths",
-                root: pathsSection,
-                writes: [
-                    { element: img, property: 'transform' },
-                    { element: img, property: 'width' },
-                    { element: img, property: 'height' }
-                ],
-                setup: function(scope) {
-                    gsap.registerPlugin(MotionPathPlugin);
-
-                    let positions = [];
-                    let currentControlPoints = [];
-
-                    function getPositions() {
-                        const rectInner = inner.getBoundingClientRect();
-                        return [pos1, pos2, pos3].map((el) => {
-                            const r = el.getBoundingClientRect();
-                            return {
-                                // GEOMETRIA RELATIVA: offset dal contenitore
-                                x: r.left - rectInner.left + r.width / 2,
-                                y: r.top - rectInner.top + r.height / 2,
-                                width: r.width,
-                                height: r.height,
-                            };
-                        });
-                    }
-
-                    function calculateDefaultControlPoints(pos) {
-                        return [
-                            { x: pos[0].x, y: pos[0].y + (pos[1].y - pos[0].y) * 0.8 },
-                            { x: pos[1].x, y: pos[1].y - Math.min(800, (pos[1].y - pos[0].y) * 0.3) },
-                            { x: pos[1].x, y: pos[1].y + Math.min(80, (pos[2].y - pos[1].y) * 0.3) },
-                            { x: pos[1].x + (pos[2].x - pos[1].x) * 0.6, y: pos[2].y - (pos[2].y - pos[1].y) * 0.2 }
-                        ];
-                    }
-
-                    function buildPathString() {
-                        return `M${positions[0].x},${positions[0].y} ` +
-                            `C${currentControlPoints[0].x},${currentControlPoints[0].y} ${currentControlPoints[1].x},${currentControlPoints[1].y} ${positions[1].x},${positions[1].y} ` +
-                            `C${currentControlPoints[2].x},${currentControlPoints[2].y} ${currentControlPoints[3].x},${currentControlPoints[3].y} ${positions[2].x},${positions[2].y}`;
-                    }
-
-                    let tl;
-                    function buildAnimation() {
-                        if (tl) tl.kill();
-
-                        positions = getPositions();
-                        if (positions[0].width === 0) return; // Non visibile o non pronto
-
-                        currentControlPoints = calculateDefaultControlPoints(positions);
-
-                        gsap.set(img, {
-                            x: positions[0].x,
-                            y: positions[0].y,
-                            xPercent: -50, // Allineiamo il centro all'ancora
-                            yPercent: -50,
-                            width: positions[0].width,
-                            height: positions[0].height,
-                        });
-
-                        tl = gsap.timeline({
-                            scrollTrigger: {
-                                trigger: pathsSection,
-                                start: 'top top',
-                                end: 'bottom bottom',
-                                scrub: true,
-                                invalidateOnRefresh: true
-                            },
-                        });
-
-                        const pathString = buildPathString();
-
-                        tl.to(img, {
-                            duration: 1.5,
-                            motionPath: {
-                                path: pathString,
-                                autoRotate: false,
-                            },
-                            ease: 'none',
-                            onUpdate: function () {
-                                const progress = this.progress();
-                                if (progress <= 0.5) {
-                                    const normalizedProgress = progress * 2;
-                                    const width = positions[0].width + (positions[1].width - positions[0].width) * normalizedProgress;
-                                    const height = positions[0].height + (positions[1].height - positions[0].height) * normalizedProgress;
-                                    img.style.width = `${width}px`;
-                                    img.style.height = `${height}px`;
-                                } else {
-                                    const normalizedProgress = (progress - 0.5) * 2;
-                                    const width = positions[1].width + (positions[2].width - positions[1].width) * normalizedProgress;
-                                    const height = positions[1].height + (positions[2].height - positions[1].height) * normalizedProgress;
-                                    img.style.width = `${width}px`;
-                                    img.style.height = `${height}px`;
-                                }
-                            }
-                        });
-                    }
-
-                    // Ritardiamo leggermente la build per assicurarci che layout e sticky siano a posto
-                    scope.defer(() => {
-                        buildAnimation();
-                    });
-
-                    // Registriamo resize ricalcolo
-                    let resizeTimeout;
-                    const onResize = () => {
-                        clearTimeout(resizeTimeout);
-                        resizeTimeout = setTimeout(() => {
-                            buildAnimation();
-                        }, 200);
-                    };
-                    scope.listen(window, 'resize', onResize);
-
-                    return function cleanup() {
-                        if (tl) tl.kill();
-                        gsap.set(img, { clearProps: 'all' });
-                    };
-                }
-            });
-        }
-    }
 
     // =========================================================================
     // MACRO REGIA: HERO
@@ -320,39 +9,44 @@ window.MotionKit.ready.then(() => {
             id: 'scene-hero',
             root: header,
             writes: [
-                { element: header.querySelector('img'), property: 'transform' },
-                { element: header.querySelector('img'), property: 'scale' },
-                { element: header.querySelector('h1'), property: 'opacity' }
+                { element: header.querySelector('.hero-bg-img'), property: 'transform' },
+                { element: header.querySelector('.hero-bg-img'), property: 'scale' },
+                { element: header.querySelector('#hero-content'), property: 'opacity' },
+                { element: header.querySelector('#hero-content'), property: 'transform' }
             ],
             setup: function(scope) {
-                const img = header.querySelector('img');
-                const h1 = header.querySelector('h1');
-                const texts = header.querySelectorAll('p, span, nav, a');
+                const img = header.querySelector('.hero-bg-img');
+                const content = header.querySelector('#hero-content');
 
                 scope.claim(img, ['scale', 'opacity', 'transform']);
-                scope.claim(h1, ['opacity', 'transform']);
-                scope.claim(texts, ['opacity', 'transform']);
+                scope.claim(content, ['opacity', 'transform']);
 
-                // Beat 1: Ingresso (load) - scala e fade dell'immagine
+                // Beat 1: Ingresso (load) - scala e fade
                 gsap.fromTo(img,
                     { scale: 1.1, opacity: 0 },
                     { scale: 1, opacity: 1, duration: 2.5, ease: 'power3.out' }
                 );
 
-                // Beat 2: Ingresso (load) - comparsa progressiva del testo
-                gsap.fromTo(h1,
+                gsap.fromTo(content,
                     { y: 30, opacity: 0 },
                     { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out', delay: 0.5 }
                 );
 
-                gsap.fromTo(texts,
-                    { y: 20, opacity: 0 },
-                    { y: 0, opacity: 1, duration: 1, ease: 'power3.out', stagger: 0.1, delay: 0.8 }
-                );
-
-                // Beat 3: Sviluppo (scroll) - Parallax leggero all'uscita dalla hero
+                // Beat 2: Sviluppo (scroll)
                 gsap.to(img, {
-                    yPercent: 20,
+                    yPercent: 30,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: header,
+                        start: 'top top',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                });
+
+                gsap.to(content, {
+                    yPercent: 50,
+                    opacity: 0,
                     ease: 'none',
                     scrollTrigger: {
                         trigger: header,
@@ -363,141 +57,266 @@ window.MotionKit.ready.then(() => {
                 });
 
                 return function cleanup() {
-                    gsap.set([img, h1, texts], { clearProps: 'all' });
+                    gsap.set([img, content], { clearProps: 'all' });
                 };
             }
         });
     }
 
     // =========================================================================
-    // MACRO REGIA: SEZIONE 1
+    // MACRO REGIA: CHAPTER 1 (Grid)
     // =========================================================================
     /* TABELLA DI TRADUZIONE:
-     - Nodo Sito: #section-1 (section), h3, p, span
-     - Traduzione Fisica: 3 beat collegati: 1. stagger dei testi; 2. leggera scalatura in ingresso; 3. traslazione sottile dell'intero blocco h3 per chiudere la sequenza (Sviluppo richiesto per evitare scene quasi statiche).
+     - Nodo Componente: .block.block--main (sezione), .block__wrapper (sticky container), .gallery__grid, .gallery__item, .content (text)
+     - Nodo Sito: #chapter-1 (section), .chapter-1-wrapper (sticky container), .chapter-1-grid, .grid-image-wrapper, .chapter-1-content
+     - Traduzione Fisica: Il componente originale 'StickyGridScroll' usa classi JS per gestire il reveal e lo zoom della griglia su scroll. Lo traduciamo in una timeline di ScrollTrigger con scrub legato allo scroll della sezione.
+     - Beat 1: Intro Parallax - Il container generale sale come parallax
+     - Beat 2: Grid Reveal - Le colonne laterali partono da sopra, la centrale da sotto
+     - Beat 3: Grid Zoom - La griglia si ingrandisce, le colonne laterali si separano in X, la centrale si sposta in Y
+     - Beat 4: Text Reveal - Il testo svaniva per lasciare spazio, qui lo facciamo comparire mentre la griglia si apre
     */
-    const section1 = document.getElementById('section-1');
-    if (section1) {
+    const chapter1 = document.getElementById('chapter-1');
+    if (chapter1) {
         window.SiteScenes.mount({
-            id: 'scene-section1',
-            root: section1,
-            writes: [
-                { element: section1, property: 'opacity' }
-            ],
+            id: 'scene-chapter1',
+            root: chapter1,
             setup: function(scope) {
-                const h3 = section1.querySelector('h3');
-                const els = section1.querySelectorAll('p, span');
-                scope.claim(els, ['opacity', 'transform']);
-                scope.claim(h3, ['opacity', 'transform', 'scale']);
+                const wrapper = chapter1.querySelector('.chapter-1-wrapper');
+                const grid = chapter1.querySelector('.chapter-1-grid');
+                const items = chapter1.querySelectorAll('.grid-image-wrapper');
+                const textContent = chapter1.querySelector('.chapter-1-content');
+                const textElements = chapter1.querySelectorAll('.chapter-1-title, .chapter-1-desc');
+
+                scope.claim(wrapper, ['transform']);
+                scope.claim(grid, ['transform', 'scale']);
+                scope.claim(items, ['transform']);
+                scope.claim(textElements, ['opacity', 'transform']);
+
+                // Raggruppa in colonne (3 colonne)
+                const numColumns = 3;
+                const columns = Array.from({ length: numColumns }, () => []);
+                items.forEach((item, index) => {
+                    columns[index % numColumns].push(item);
+                });
+
+                const wh = window.innerHeight;
+
+                // Impostiamo stato iniziale dei testi a 0
+                gsap.set(textElements, { opacity: 0, yPercent: 50 });
 
                 const tl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: section1,
-                        start: 'top 80%',
-                        toggleActions: 'play none none reverse'
+                        trigger: chapter1,
+                        start: 'top top',
+                        end: 'bottom bottom',
+                        scrub: true
                     }
                 });
 
-                // Beat 1 & 2: Ingresso (scale & opacity)
-                tl.fromTo(h3, { y: 40, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 1.2, ease: 'power3.out' });
+                // Beat 2: Grid Reveal (inizia leggermente dopo)
+                const dy = wh; // Partono da fuori schermo
+                columns.forEach((column, colIndex) => {
+                    const fromTop = colIndex % 2 === 0;
+                    tl.from(column, {
+                        y: dy * (fromTop ? -1 : 1),
+                        stagger: {
+                            each: 0.05,
+                            from: fromTop ? "end" : "start"
+                        },
+                        ease: "power1.inOut",
+                        duration: 1
+                    }, 0);
+                });
 
-                // Beat 2: Ingresso elementi testuali (stagger)
-                tl.fromTo(els, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1.0, ease: 'power3.out', stagger: 0.1 }, "-=0.8");
+                // Beat 3: Grid Zoom & Translate
+                tl.to(grid, { scale: 2.5, duration: 1, ease: "power2.inOut" }, 0.8);
+                tl.to(columns[0], { xPercent: -60, duration: 1, ease: "power2.inOut" }, 0.8);
+                tl.to(columns[2], { xPercent: 60, duration: 1, ease: "power2.inOut" }, 0.8);
 
-                // Beat 3: Sviluppo (micro-traslazione in uscita/chiusura)
-                tl.to(h3, { x: 5, duration: 1.5, ease: 'sine.inOut' }, "-=0.5");
+                // Muoviamo la colonna centrale in base all'indice
+                tl.to(columns[1], {
+                    yPercent: (index) => (index < Math.floor(columns[1].length / 2) ? -1 : 1) * 60,
+                    duration: 1,
+                    ease: "power2.inOut"
+                }, 0.8);
+
+                // Beat 4: Text Reveal (mentre la griglia si allarga)
+                tl.to(textElements, {
+                    opacity: 1,
+                    yPercent: 0,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    ease: "power2.out"
+                }, 1.2);
+
 
                 return function cleanup() {
-                    tl.kill();
-                    gsap.set([h3, els], { clearProps: 'all' });
+                    if (tl) tl.kill();
+                    gsap.set([wrapper, grid, items, textElements], { clearProps: 'all' });
                 };
             }
         });
     }
 
     // =========================================================================
-    // MACRO REGIA: SEZIONE 6 E FOOTER
+    // MACRO REGIA: CHAPTER 2 (Gravity / MWG)
     // =========================================================================
     /* TABELLA DI TRADUZIONE:
-     - Nodo Sito: #section-6 (section), h2, p, a, span
-     - Traduzione Fisica: 3 beat collegati: 1. fade/tracking dello span; 2. ingresso h2 e p; 3. bottone che fa un leggero scale.
+     - Nodo Seme: .codrops_mwg (root), .medias img
+     - Nodo Sito: #chapter-2 (section), .chapter-2-canvas, .gravity-img
+     - Traduzione Fisica: Il seme originale crea dinamicamente immagini al movimento del mouse, facendole cadere con un effetto elastico, rimbalzo e rotazione per poi rimuoverle.
+     - Traduzione Regia: Adattiamo l'effetto per lo scroll. Man mano che scendiamo nella sezione, le 10 immagini preesistenti appaiono (cadendo dall'alto o rimbalzando), accumulandosi e ruotando, creando l'illusione della gravità attivata dallo scroll.
     */
-    const section6 = document.getElementById('section-6');
-    if (section6) {
+    const chapter2 = document.getElementById('chapter-2');
+    if (chapter2) {
         window.SiteScenes.mount({
-            id: 'scene-section6',
-            root: section6,
-            writes: [
-                { element: section6, property: 'opacity' }
-            ],
+            id: 'scene-chapter2',
+            root: chapter2,
             setup: function(scope) {
-                const s6Title = section6.querySelector('h2');
-                const s6Subtitle = section6.querySelector('span');
-                const s6Content = section6.querySelector('p');
-                const s6Btn = section6.querySelector('a');
+                const images = chapter2.querySelectorAll('.gravity-img');
+                scope.claim(images, ['transform', 'opacity', 'scale']);
 
-                scope.claim(s6Subtitle, ['opacity', 'transform', 'letter-spacing']);
-                scope.claim(s6Title, ['opacity', 'transform']);
-                scope.claim(s6Content, ['opacity', 'transform']);
-                scope.claim(s6Btn, ['opacity', 'transform', 'scale']);
+                const W = window.innerWidth;
+                const H = window.innerHeight;
 
                 const tl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: section6,
-                        start: 'top 80%',
-                        toggleActions: 'play none none reverse'
+                        trigger: chapter2,
+                        start: 'top top',
+                        end: 'bottom bottom',
+                        scrub: 1
                     }
                 });
 
-                // Beat 1: Subtitle fade up and track out
-                tl.fromTo(s6Subtitle, { opacity: 0, y: 15, letterSpacing: "0px" }, { opacity: 1, y: 0, letterSpacing: "4px", duration: 0.8, ease: "power2.out" });
+                // Posizioniamo inizialmente in modo random, sopra lo schermo
+                images.forEach((img, i) => {
+                    const startX = (Math.random() * (W - 200));
+                    const startY = -300 - (Math.random() * 200);
+                    const endX = startX + (Math.random() - 0.5) * 100;
+                    // Calcoliamo una posizione finale y
+                    const endY = H - 200 - (Math.random() * 200);
 
-                // Beat 2: Title and Content enter
-                tl.fromTo([s6Title, s6Content], { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power2.out" }, "-=0.4");
+                    gsap.set(img, { x: startX, y: startY, opacity: 0, scale: 1.3, rotation: (Math.random() - 0.5) * 40 });
 
-                // Beat 3: Content and button enter, button scales
-                tl.fromTo(s6Btn, { opacity: 0, scale: 0.9, y: 20 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(1.5)" }, "-=0.4");
+                    // Ingresso
+                    tl.to(img, {
+                        y: endY,
+                        x: endX,
+                        opacity: 1,
+                        scale: 1,
+                        rotation: (Math.random() - 0.5) * 20,
+                        duration: 1,
+                        ease: 'bounce.out'
+                    }, i * 0.15); // Stagger progressivo basato sullo scroll
+
+                    // Uscita (caduta ulteriore) alla fine della timeline
+                    tl.to(img, {
+                        y: H + 300,
+                        opacity: 0,
+                        rotation: (Math.random() - 0.5) * 60,
+                        duration: 0.5,
+                        ease: 'power2.in'
+                    }, (images.length * 0.15) + (i * 0.05) + 0.5);
+                });
 
                 return function cleanup() {
-                    tl.kill();
-                    gsap.set([s6Subtitle, s6Title, s6Content, s6Btn], { clearProps: 'all' });
+                    if (tl) tl.kill();
+                    gsap.set(images, { clearProps: 'all' });
                 };
             }
         });
     }
 
-    const footer = document.querySelector('footer');
-    if (footer) {
-        window.SiteScenes.mount({
-            id: 'scene-footer',
-            root: footer,
-            writes: [
-                { element: footer, property: 'opacity' }
-            ],
-            setup: function(scope) {
-                const cols = footer.querySelectorAll('div > div > h4, div > div > p');
-                const bottom = footer.querySelectorAll('.border-t');
-                scope.claim(cols, ['opacity', 'transform']);
-                scope.claim(bottom, ['opacity', 'transform']);
+    // =========================================================================
+    // MACRO REGIA: CHAPTER 3 (Motion Path Transition)
+    // =========================================================================
+    /* TABELLA DI TRADUZIONE:
+     - Nodo Seme: .content (wrapper), .thumbnail
+     - Nodo Sito: #chapter-3 (section), .chapter-3-canvas, .thumbnail
+     - Traduzione Fisica: Il seme originale sposta una pila di miniature (bottom-left) srotolandole lungo un percorso 'motionPath' curvo per disporle a nastro orizzontale o verticale in base ai bottoni.
+     - Traduzione Regia: Attiviamo questo srotolamento con lo scroll. All'inizio (top della sezione) le miniature sono impilate, allo scroll si distribuiscono lungo la curva fino alla loro posizione finale.
+    */
+    const chapter3 = document.getElementById('chapter-3');
+    if (chapter3) {
+        window.SiteScenes.loadDependencies({
+            id: 'scene-chapter3',
+            dependencies: [
+                { name: 'MotionPathPlugin', path: 'MOTORE/vendor/MotionPathPlugin.min.js', global: 'MotionPathPlugin' }
+            ]
+        }).then(() => {
+            gsap.registerPlugin(MotionPathPlugin);
 
-                gsap.fromTo(cols,
-                    { y: 20, opacity: 0 },
-                    { y: 0, opacity: 1, duration: 1, ease: 'power2.out', stagger: 0.05,
-                      scrollTrigger: { trigger: footer, start: 'top 90%' }
-                    }
-                );
+            window.SiteScenes.mount({
+                id: 'scene-chapter3',
+                root: chapter3,
+                setup: function(scope) {
+                    const thumbnails = Array.from(chapter3.querySelectorAll('.thumbnail'));
+                    scope.claim(thumbnails, ['transform', 'opacity', 'scale']);
 
-                gsap.fromTo(bottom,
-                    { opacity: 0 },
-                    { opacity: 1, duration: 1, ease: 'power2.out', delay: 0.5,
-                      scrollTrigger: { trigger: footer, start: 'top 90%' }
-                    }
-                );
+                    // Configurazione layout iniziale come nel seme
+                    // stackOffset (basso a sinistra)
+                    const vh = window.innerHeight;
+                    const vw = window.innerWidth;
 
-                return function cleanup() {
-                    gsap.set([cols, bottom], { clearProps: 'all' });
-                };
-            }
+                    const scale = vw < 768 ? 0.6 : 1;
+                    const thumbRect = thumbnails[0].getBoundingClientRect();
+                    const thumbWidth = thumbRect.width || 120;
+                    const thumbHeight = thumbRect.height || 168;
+                    const padding = 40;
+                    const gap = 15;
+
+                    // Posizione pila (in basso a sinistra)
+                    const stackX = padding;
+                    const stackY = vh - padding - thumbHeight;
+
+                    // Setup iniziale: tutti alla pila
+                    gsap.set(thumbnails, { x: stackX, y: stackY, scale: 0.8, opacity: 0 });
+
+                    const tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: chapter3,
+                            start: 'top top',
+                            end: 'bottom bottom',
+                            scrub: true
+                        }
+                    });
+
+                    // Facciamo comparire la pila all'inizio
+                    tl.to(thumbnails, { opacity: 1, duration: 0.1, ease: 'none' }, 0);
+
+                    // Distribuzione lungo il Path
+                    tl.to(thumbnails, {
+                        motionPath: (index) => {
+                            // Target finale: una riga a metà schermo (come demo-5)
+                            const targetY = (vh / 2) - (thumbHeight / 2);
+                            const targetX = padding + (index * (thumbWidth * scale + gap));
+
+                            if (index === 0) {
+                                return { path: [{ x: targetX, y: targetY, scale: scale }] };
+                            }
+
+                            return {
+                                path: [
+                                    { x: stackX + 100, y: stackY - 100, scale: (1 - scale) * 0.25 + scale }, // Punto intermedio curvo
+                                    { x: targetX, y: targetY, scale: scale }
+                                ],
+                                curviness: 1.2
+                            };
+                        },
+                        stagger: {
+                            from: "start",
+                            each: 0.05
+                        },
+                        ease: "power2.inOut",
+                        duration: 1
+                    }, 0.1);
+
+                    return function cleanup() {
+                        if (tl) tl.kill();
+                        gsap.set(thumbnails, { clearProps: 'all' });
+                    };
+                }
+            });
         });
     }
 
