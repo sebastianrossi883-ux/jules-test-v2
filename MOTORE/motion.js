@@ -5,7 +5,7 @@
 
    R2: i gesti storici convivono con coreografie GSAP originali.
    SiteScenes coordina i proprietari e il lifecycle di ENTRAMBI.
-   L'archivio RIFERIMENTO_12_ORIGINALE conserva il motore originale.
+   Le sorgenti dei materiali sono separate in MOTION_COMPONENTE/ARCHIVIO.
    ========================================================================== */
 
 (function () {
@@ -108,6 +108,40 @@
     unit.textContent = txt;
     mask.appendChild(unit);
     return mask;
+  }
+
+  // Testo con markup in linea: ogni parola viene avvolta dove si trova, <em>/<strong>/<br> restano.
+  // Le righe si ricavano dalla posizione delle parole; ogni unita' porta l'indice della sua riga.
+  function splitInline(el, mode) {
+    if (el.__mSplit) return el.__mSplit;
+    var text = (el.textContent || "").replace(/\s+/g, " ").trim();
+    if (!text) return [];
+    el.__mHTML = el.innerHTML;
+    if (!el.getAttribute("aria-label")) el.setAttribute("aria-label", text);
+    var units = [];
+    (function walk(node) {
+      Array.from(node.childNodes).forEach(function (child) {
+        if (child.nodeType === 1) { walk(child); return; }
+        if (child.nodeType !== 3 || !child.textContent) return;
+        var frag = document.createDocumentFragment();
+        child.textContent.split(/(\s+)/).forEach(function (part) {
+          if (!part) return;
+          if (!part.trim()) { frag.appendChild(document.createTextNode(" ")); return; }
+          var m = makeUnit(part);
+          frag.appendChild(m);
+          units.push(m.firstChild);
+        });
+        child.parentNode.replaceChild(frag, child);
+      });
+    })(el);
+    var last = null, line = -1;
+    units.forEach(function (u) {
+      var top = Math.round(u.parentNode.getBoundingClientRect().top);
+      if (last === null || Math.abs(top - last) > 2) { line++; last = top; }
+      u.__mLine = line;
+    });
+    el.__mSplit = units;
+    return units;
   }
 
   function split(el, mode) {
@@ -254,7 +288,9 @@
   }
 
   function splitOwned(el, mode, scope) {
-    if (el.children.length) throw Error('[motion] split di markup inline: usare una coreografia che preservi il DOM');
+    var inline = el.children.length > 0;
+    // Un link o un controllo dentro il testo perderebbe il suo nome accessibile: il blocco entra intero.
+    if (inline && el.querySelector('a, button, input, select, textarea, [tabindex]')) return null;
     scope.claim(el, 'content');
     var oldHTML = el.innerHTML, oldLabel = el.getAttribute('aria-label');
     scope.defer(function () {
@@ -262,7 +298,7 @@
       if (oldLabel === null) el.removeAttribute('aria-label'); else el.setAttribute('aria-label', oldLabel);
       delete el.__mHTML; delete el.__mSplit;
     });
-    return split(el, mode);
+    return inline ? splitInline(el, mode) : split(el, mode);
   }
   function claimMany(scope, elements, props) {
     Array.from(elements).forEach(function (el) { scope.claim(el, props); });
@@ -273,11 +309,19 @@
   function buildText(el, hero, scope, progress) {
     var mode = el.dataset.split || "lines";
     var units = splitOwned(el, mode, scope);
+    if (units === null) {
+      scope.claim(el, ['transform', 'autoAlpha']);
+      return play(el, Object.assign({ duration: 0.9 * D }, PRESET["fade-up"]), hero, progress && progress.slot);
+    }
     scope.claim(el, 'opacity');
     claimMany(scope, units, ['transform', 'autoAlpha', 'filter']);
     gsap.set(el, { opacity: 1 });
     if (!units.length) return;
     var stagger = { lines: 0.11, words: 0.055, chars: 0.022 }[mode] * (hero ? 1.2 : 1);
+    if (mode === "lines" && units.length && units[0].__mLine != null) {
+      var perLine = stagger;
+      stagger = function (i, target) { return (target.__mLine || 0) * perLine; };
+    }
     var tween = play(units, {
       yPercent: 110,
       autoAlpha: 0,
@@ -288,6 +332,11 @@
     }, hero, progress && progress.slot);
     if (progress != null) tween.progress(progress.value);
     return tween;
+  }
+
+  function safeGesture(el, id, previousProgress) {
+    try { mountGesture(el, id, previousProgress); }
+    catch (error) { console.error('[motion] gesto saltato (' + id + '):', error && error.message ? error.message : error, el); }
   }
 
   function mountGesture(el, id, previousProgress) {
@@ -308,7 +357,7 @@
           if (nextKey === textKey || !el.isConnected) return;
           var at = { value: textTween ? textTween.progress() : 1, slot: textTween ? textTween.startTime() : 0 };
           Scenes.unmount(id);
-          mountGesture(el, id, at);
+          safeGesture(el, id, at);
         });
         break;
 
@@ -403,7 +452,7 @@
           var nextHasDistance = el.firstElementChild.scrollWidth > el.clientWidth;
           if (nextHasDistance === railHasDistance || !el.isConnected) return;
           Scenes.unmount(id);
-          mountGesture(el, id);
+          safeGesture(el, id);
         });
         scope.media(DESKTOP, function (local) {
           var track = el.firstElementChild;
@@ -670,7 +719,7 @@
     'monochrome','outline-fill','scatter-stack','typewriter','count']);
   document.querySelectorAll('[data-m]').forEach(function (el, i) {
     if (el.closest('[data-m-skip]') || !gestures.has(el.dataset.m)) return;
-    mountGesture(el, 'motion:g:' + i);
+    safeGesture(el, 'motion:g:' + i);
   });
 
   // =========================================================================

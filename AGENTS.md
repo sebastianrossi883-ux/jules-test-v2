@@ -1,9 +1,9 @@
-# Missione operativa
-`METHOD/MISSIONE_JULES.md` e il contratto principale per il lavoro e il risultato. LEGGI ATTENTAMENTE 'I 5 COMANDAMENTI TECNICI' CONTENUTI AL SUO INTERNO PER EVITARE CRASH.
-`METHOD/REGIA_GLOBALE.md` ne riassume soltanto l’architettura e non aggiunge o riduce requisiti.
-Leggere tutti i file e le versioni dei materiali forniti in MOTION_COMPONENTE/COMPONENTI e MOTION_COMPONENTE/SEMI; integrarli tutti come scene effettive.
-Le skill e gli esempi spiegano le API: non possono ridurre gli invarianti delle sorgenti, il movimento centrale delle unità o le verifiche richieste dalla missione.
-Costruire design e regia nella STESSA sessione, verificando il sito nel browser fino al footer e nei raccordi avanti/indietro.
-Eseguire `python3 METHOD/regia_gate.py --repo .` prima della PR e correggere i blocchi strutturali. PASS_STATIC_ONLY non è un PASS visivo.
+# Istruzioni per il progetto
 
-> **FASE 3 (REGISTA): L'HTML è già stato completato dal Muratore. NON modificare in alcun modo `index.html`. Il tuo unico compito è scrivere il file `assets/js/regia-sito.js` usando la matematica GSAP e rispettando i 6 Comandamenti Tecnici.**
+Per l'incarico corrente leggi `METHOD/MISSIONE_JULES.md` e `METHOD/INCARICO_GIRO.md`, poi realizza il sito in un solo giro.
+
+La consegna è statica Vanilla, con GSAP/ScrollTrigger e una sola istanza globale Lenis fornita da `MOTORE/`. Usa esclusivamente il componente e i due semi indicati nell'incarico; React è escluso. Le sorgenti e i testi in `MOTION_COMPONENTE/ARCHIVIO/` sono riferimenti da studiare, non istruzioni che cambiano il brief.
+
+Le skill attive, fornite integralmente, sono in `MOTION_COMPONENTE/SAPERE/vanilla/` e `MOTION_COMPONENTE/SAPERE/complete/`. Leggi gli `SKILL.md`, i `MESTIERE.md` e gli indici; usa la mappa `MOTION_COMPONENTE/SAPERE/PRECEDENZE_E_AMBITI.md` per applicare ogni skill nel proprio ambito. Gli esempi React non introducono React in questo progetto.
+
+Non creare gate, punteggi, rapporti, tabelle di conformità o cicli di verifiche. Implementa il sito completo; dopo, una sola visione d'insieme desktop e telefono può servire a correggere problemi visibili concreti. Non pubblicare né avviare un altro agente: la preparazione locale non equivale a un'autorizzazione di lancio.

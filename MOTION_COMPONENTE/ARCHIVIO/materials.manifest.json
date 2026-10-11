@@ -1,0 +1,123 @@
+{
+  "schema": "metodo21.material-library/v1",
+  "materials": [
+    {
+      "slug": "codrops-sticky-grid-scroll-main",
+      "title": "codrops-sticky-grid-scroll-main",
+      "mode": "source",
+      "build": {
+        "state": "source-fallback",
+        "message": "build automatico non disponibile"
+      },
+      "runtime": [
+        "gsap-3",
+        "esm",
+        "npm-build"
+      ],
+      "libraries": [
+        "gsap-3",
+        "imagesloaded",
+        "lenis"
+      ],
+      "defaultVariant": "src-index",
+      "variants": [
+        {
+          "id": "src-index",
+          "entry": "src/index.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-sticky-grid-scroll-main/src/index.html"
+        }
+      ],
+      "framework": "vanilla",
+      "archivePath": "MOTION_COMPONENTE/ARCHIVIO/codrops-sticky-grid-scroll-main",
+      "sourceKind": "html-demo",
+      "referenceFiles": [
+        "MOTION_COMPONENTE/REFERENZE/codrops-sticky-grid-scroll-main/articolo-completo.md"
+      ],
+      "sourceCopy": "user-selected-source",
+      "assignmentRole": "Componente"
+    },
+    {
+      "slug": "codrops-mwg",
+      "title": "Made With Gsap: Gravity-Based Mouse Trail",
+      "mode": "source",
+      "build": {
+        "state": "static"
+      },
+      "runtime": [
+        "gsap-3"
+      ],
+      "libraries": [
+        "gsap-3"
+      ],
+      "defaultVariant": "index",
+      "variants": [
+        {
+          "id": "index",
+          "entry": "index.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-mwg/index.html"
+        }
+      ],
+      "framework": "vanilla",
+      "archivePath": "MOTION_COMPONENTE/ARCHIVIO/codrops-mwg",
+      "sourceKind": "html-demo",
+      "referenceFiles": [
+        "MOTION_COMPONENTE/REFERENZE/codrops-mwg/articolo-completo.md"
+      ],
+      "sourceCopy": "user-selected-source",
+      "assignmentRole": "Seme 1"
+    },
+    {
+      "slug": "codrops-motion-path-transition-main-2",
+      "title": "codrops-motion-path-transition-main-2",
+      "mode": "source",
+      "framework": "vanilla",
+      "sourceKind": "html-demo",
+      "build": {
+        "state": "static"
+      },
+      "runtime": [
+        "legacy-gsap-2",
+        "gsap-3"
+      ],
+      "libraries": [
+        "gsap-2",
+        "gsap-3",
+        "imagesloaded",
+        "motion-path-plugin",
+        "scrolltrigger",
+        "splitting"
+      ],
+      "defaultVariant": "index",
+      "variants": [
+        {
+          "id": "index",
+          "entry": "index.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2/index.html"
+        },
+        {
+          "id": "index2",
+          "entry": "index2.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2/index2.html"
+        },
+        {
+          "id": "index3",
+          "entry": "index3.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2/index3.html"
+        },
+        {
+          "id": "index4",
+          "entry": "index4.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2/index4.html"
+        }
+      ],
+      "archivePath": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2",
+      "referenceFiles": [
+        "MOTION_COMPONENTE/REFERENZE/codrops-motion-path-transition-main-2/articolo-completo.md"
+      ],
+      "sourceCopy": "user-selected-source",
+      "assignmentRole": "Seme 2"
+    }
+  ],
+  "materialCount": 3,
+  "reactExcludedByUser": true
+}
