@@ -1,14 +1,20 @@
 {
   "site_id": "podere-20261012",
-  "site_name": "",
-  "idea": "",
-  "metaphor": "",
-  "composition_signature": "",
-  "motion_signature": "",
+  "site_name": "Podere Bricco Sereno",
+  "idea": "Il percorso del tempo e della memoria vitivinicola.",
+  "metaphor": "Cantina come scrigno di memoria; vigna come organismo in adattamento.",
+  "composition_signature": "Sfondo dinamico e testi in dissolvenza asincrona.",
+  "motion_signature": "Colore oro polvere guida l'occhio lungo le sezioni.",
   "component_slug": "codrops-sticky-grid-scroll-main",
   "seed_slugs": [
     "codrops-mwg",
     "codrops-motion-path-transition-main-2"
   ],
-  "keywords": []
+  "keywords": [
+    "scroll",
+    "vino",
+    "parallasse",
+    "motion-path",
+    "memoria"
+  ]
 }
