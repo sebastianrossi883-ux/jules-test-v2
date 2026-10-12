@@ -1,0 +1,235 @@
+{
+  "schema": "metodo21.ast-dossier/v1",
+  "root": "/Users/adrianciocaianu/Downloads/Metodo21_Atlas_Unificato/MOTION_COMPONENTE/ARCHIVIO/codrops-mwg",
+  "files": [
+    {
+      "file": "assets/script.js",
+      "status": "complete",
+      "parser": "acorn:module",
+      "error": null,
+      "imports": [],
+      "units": [
+        {
+          "name": "modulo",
+          "from": 1,
+          "to": 139,
+          "events": [
+            {
+              "line": 1,
+              "type": "DOMContentLoaded",
+              "target": "window",
+              "code": "window.addEventListener(\"DOMContentLoaded\", () => { const root = document.querySelector('.codrops_mwg') const images = [] root.querySelectorAll('.medias img').forEach(image => { images.push(image.getAttribute('src')) }) let incr = 0, oldIncrX = 0, oldIncrY = 0, firstMove = true, indexImg = 0 const isCoarsePointer = window.matchMedia('(hover: none)').matches const resetDist = window.innerWidth / (isCoarsePointer ? 6 …"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 1,
+              "call": "window.addEventListener"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "window.addEventListener(DOMContentLoaded)",
+          "from": 1,
+          "to": 139,
+          "events": [
+            {
+              "line": 53,
+              "type": "mousemove",
+              "target": "root",
+              "code": "root.addEventListener('mousemove', handleMouseMove)"
+            },
+            {
+              "line": 54,
+              "type": "touchstart",
+              "target": "root",
+              "code": "root.addEventListener('touchstart', handleTouchMove, { passive: true })"
+            },
+            {
+              "line": 55,
+              "type": "touchmove",
+              "target": "root",
+              "code": "root.addEventListener('touchmove', handleTouchMove, { passive: true })"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 15,
+              "name": "resetDist",
+              "expression": "window.innerWidth / (isCoarsePointer ? 6 : 8)"
+            },
+            {
+              "line": 17,
+              "name": "W",
+              "expression": "window.innerWidth"
+            },
+            {
+              "line": 18,
+              "name": "H",
+              "expression": "window.innerHeight"
+            }
+          ],
+          "calls": [
+            {
+              "line": 2,
+              "call": "document.querySelector"
+            },
+            {
+              "line": 4,
+              "call": "root.querySelectorAll"
+            },
+            {
+              "line": 4,
+              "call": "root.querySelectorAll.forEach"
+            },
+            {
+              "line": 14,
+              "call": "window.matchMedia"
+            },
+            {
+              "line": 19,
+              "call": "gsap.utils.clamp"
+            },
+            {
+              "line": 20,
+              "call": "gsap.utils.clamp"
+            },
+            {
+              "line": 53,
+              "call": "root.addEventListener"
+            },
+            {
+              "line": 54,
+              "call": "root.addEventListener"
+            },
+            {
+              "line": 55,
+              "call": "root.addEventListener"
+            },
+            {
+              "line": 138,
+              "call": "observer.observe"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "createMedia",
+          "from": 57,
+          "to": 121,
+          "events": [],
+          "motion": [
+            {
+              "line": 68,
+              "call": "gsap.timeline",
+              "code": "gsap.timeline({ onComplete: () => { root.removeChild(image); tl && tl.kill() } })"
+            }
+          ],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 58,
+              "name": "H",
+              "expression": "window.innerHeight"
+            }
+          ],
+          "calls": [
+            {
+              "line": 62,
+              "call": "document.createElement"
+            },
+            {
+              "line": 65,
+              "call": "image.setAttribute"
+            },
+            {
+              "line": 66,
+              "call": "root.appendChild"
+            },
+            {
+              "line": 68,
+              "call": "gsap.timeline"
+            },
+            {
+              "line": 76,
+              "call": "Math.random"
+            },
+            {
+              "line": 77,
+              "call": "Math.random"
+            },
+            {
+              "line": 80,
+              "call": "Math.random"
+            },
+            {
+              "line": 75,
+              "call": "tl.fromTo"
+            },
+            {
+              "line": 88,
+              "call": "tl.fromTo"
+            },
+            {
+              "line": 97,
+              "call": "tl.fromTo"
+            },
+            {
+              "line": 110,
+              "call": "Math.random"
+            },
+            {
+              "line": 108,
+              "call": "tl.to"
+            },
+            {
+              "line": 114,
+              "call": "tl.to"
+            }
+          ],
+          "creates": [
+            {
+              "line": 68,
+              "name": "tl",
+              "expression": "gsap.timeline({ onComplete: () => { root.removeChild(image); tl && tl.kill() } })"
+            }
+          ]
+        },
+        {
+          "name": "onComplete",
+          "from": 69,
+          "to": 72,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 71,
+              "call": "tl.kill",
+              "code": "tl.kill()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 70,
+              "call": "root.removeChild"
+            },
+            {
+              "line": 71,
+              "call": "tl.kill"
+            }
+          ],
+          "creates": []
+        }
+      ]
+    }
+  ],
+  "status": "complete",
+  "material": "codrops-mwg"
+}

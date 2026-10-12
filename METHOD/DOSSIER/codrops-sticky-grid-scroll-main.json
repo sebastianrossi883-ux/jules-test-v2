@@ -1,0 +1,318 @@
+{
+  "schema": "metodo21.ast-dossier/v1",
+  "root": "/Users/adrianciocaianu/Downloads/Metodo21_Atlas_Unificato/MOTION_COMPONENTE/ARCHIVIO/codrops-sticky-grid-scroll-main",
+  "files": [
+    {
+      "file": "src/scripts/index.js",
+      "status": "complete",
+      "parser": "acorn:module",
+      "error": null,
+      "imports": [
+        {
+          "line": 1,
+          "source": "lenis",
+          "kind": "ImportDeclaration"
+        },
+        {
+          "line": 2,
+          "source": "gsap",
+          "kind": "ImportDeclaration"
+        },
+        {
+          "line": 3,
+          "source": "gsap/ScrollTrigger",
+          "kind": "ImportDeclaration"
+        },
+        {
+          "line": 4,
+          "source": "./utils.js",
+          "kind": "ImportDeclaration"
+        }
+      ],
+      "units": [
+        {
+          "name": "initContent",
+          "from": 42,
+          "to": 58,
+          "events": [],
+          "motion": [
+            {
+              "line": 45,
+              "call": "gsap.set",
+              "code": "gsap.set([this.description, this.button], { opacity: 0, pointerEvents: \"none\" })"
+            },
+            {
+              "line": 56,
+              "call": "gsap.set",
+              "code": "gsap.set(this.title, { yPercent: this.titleOffsetY })"
+            }
+          ],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 45,
+              "call": "gsap.set"
+            },
+            {
+              "line": 56,
+              "call": "gsap.set"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "addParallaxOnScroll",
+          "from": 80,
+          "to": 97,
+          "events": [],
+          "motion": [
+            {
+              "line": 87,
+              "call": "gsap.from",
+              "code": "gsap.from(this.wrapper, { yPercent: -100, ease: \"none\", scrollTrigger: { trigger: this.block, start: \"top bottom\", // Start when top of block hits bottom of viewport end: \"top top\", // End when top of block hits top of viewport scrub: true, // Smooth animation based on scroll position }, })"
+            }
+          ],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 87,
+              "call": "gsap.from"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "animateTitleOnScroll",
+          "from": 103,
+          "to": 120,
+          "events": [],
+          "motion": [
+            {
+              "line": 110,
+              "call": "gsap.from",
+              "code": "gsap.from(this.title, { opacity: 0, duration: 0.7, ease: \"power1.out\", scrollTrigger: { trigger: this.block, start: \"top 57%\", // Start when top of block hits 57% of viewport toggleActions: \"play none none reset\", // Play on enter, reset on leave back }, })"
+            }
+          ],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 110,
+              "call": "gsap.from"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "gridRevealTimeline",
+          "from": 129,
+          "to": 157,
+          "events": [],
+          "motion": [
+            {
+              "line": 131,
+              "call": "gsap.timeline",
+              "code": "gsap.timeline()"
+            }
+          ],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 133,
+              "name": "wh",
+              "expression": "window.innerHeight"
+            }
+          ],
+          "calls": [
+            {
+              "line": 131,
+              "call": "gsap.timeline"
+            },
+            {
+              "line": 137,
+              "call": "columns.forEach"
+            }
+          ],
+          "creates": [
+            {
+              "line": 131,
+              "name": "timeline",
+              "expression": "gsap.timeline()"
+            }
+          ]
+        },
+        {
+          "name": "gridZoomTimeline",
+          "from": 166,
+          "to": 190,
+          "events": [],
+          "motion": [
+            {
+              "line": 168,
+              "call": "gsap.timeline",
+              "code": "gsap.timeline({ defaults: { duration: 1, ease: \"power3.inOut\" } })"
+            }
+          ],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 168,
+              "call": "gsap.timeline"
+            },
+            {
+              "line": 171,
+              "call": "timeline.to"
+            },
+            {
+              "line": 174,
+              "call": "timeline.to"
+            },
+            {
+              "line": 175,
+              "call": "timeline.to"
+            },
+            {
+              "line": 178,
+              "call": "timeline.to"
+            }
+          ],
+          "creates": [
+            {
+              "line": 168,
+              "name": "timeline",
+              "expression": "gsap.timeline({ defaults: { duration: 1, ease: \"power3.inOut\" } })"
+            }
+          ]
+        },
+        {
+          "name": "toggleContent",
+          "from": 198,
+          "to": 222,
+          "events": [],
+          "motion": [
+            {
+              "line": 204,
+              "call": "gsap.timeline",
+              "code": "gsap.timeline({ defaults: { overwrite: true } })"
+            }
+          ],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 204,
+              "call": "gsap.timeline"
+            },
+            {
+              "line": 204,
+              "call": "gsap.timeline.to"
+            },
+            {
+              "line": 204,
+              "call": "gsap.timeline.to.to"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "animateGridOnScroll",
+          "from": 230,
+          "to": 251,
+          "events": [],
+          "motion": [
+            {
+              "line": 232,
+              "call": "gsap.timeline",
+              "code": "gsap.timeline({ scrollTrigger: { trigger: this.block, start: \"top 25%\", // Start when top of block hits 25% of viewport end: \"bottom bottom\", // End when bottom of block hits bottom of viewport scrub: true, // Smooth animation based on scroll position }, })"
+            }
+          ],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 232,
+              "call": "gsap.timeline"
+            },
+            {
+              "line": 243,
+              "call": "this.gridRevealTimeline"
+            },
+            {
+              "line": 241,
+              "call": "timeline.add"
+            },
+            {
+              "line": 246,
+              "call": "this.gridZoomTimeline"
+            },
+            {
+              "line": 241,
+              "call": "timeline.add.add"
+            },
+            {
+              "line": 241,
+              "call": "timeline.add.add.add"
+            }
+          ],
+          "creates": [
+            {
+              "line": 232,
+              "name": "timeline",
+              "expression": "gsap.timeline({ scrollTrigger: { trigger: this.block, start: \"top 25%\", // Start when top of block hits 25% of viewport end: \"bottom bottom\", // End when bottom of block hits bottom of viewport scrub: true, // Smooth animation based on scroll position }, })"
+            }
+          ]
+        },
+        {
+          "name": "initSmoothScrolling",
+          "from": 255,
+          "to": 273,
+          "events": [
+            {
+              "line": 263,
+              "type": "scroll",
+              "target": "lenis",
+              "code": "lenis.on(\"scroll\", ScrollTrigger.update)"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 263,
+              "call": "lenis.on"
+            },
+            {
+              "line": 267,
+              "call": "gsap.ticker.add"
+            },
+            {
+              "line": 272,
+              "call": "gsap.ticker.lagSmoothing"
+            }
+          ],
+          "creates": []
+        }
+      ]
+    },
+    {
+      "file": "src/scripts/utils.js",
+      "status": "complete",
+      "parser": "acorn:module",
+      "error": null,
+      "imports": [
+        {
+          "line": 1,
+          "source": "imagesloaded",
+          "kind": "ImportDeclaration"
+        }
+      ],
+      "units": []
+    }
+  ],
+  "status": "complete",
+  "material": "codrops-sticky-grid-scroll-main"
+}

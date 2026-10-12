@@ -1,0 +1,272 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 12px;
+  --color-text: #000;
+  --color-bg: #fff;
+  --color-link: #000;
+  --color-link-hover: #000;
+  --page-padding: 1.5rem;
+  --width-thumbnail: 10rem;
+  --height-thumbnail: calc(var(--width-thumbnail) * 7 / 5);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  letter-spacing: -0.0125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (scripting: enabled) {
+  .loading {
+    &::before,
+    &::after {
+      content: "";
+      position: fixed;
+      z-index: 10000;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-bg);
+    }
+
+    &::after {
+      top: 50%;
+      left: 50%;
+      width: 100px;
+      height: 1px;
+      margin: 0 0 0 -50px;
+      background: var(--color-link);
+      animation: loaderAnim 1.5s ease-in-out infinite alternate forwards;
+    }
+  }
+}
+
+@keyframes loaderAnim {
+  0% {
+    transform: scaleX(0);
+    transform-origin: 0% 50%;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+  }
+
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: 100% 50%;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    background: lightgrey;
+
+    &:not(:focus-visible) {
+      background: transparent;
+    }
+
+    &:focus-visible {
+      outline: 2px solid red;
+      background: transparent;
+    }
+  }
+}
+
+.frame {
+  padding: var(--page-padding);
+  display: grid;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  grid-row-gap: 1rem;
+  grid-column-gap: 3rem;
+  pointer-events: none;
+  justify-items: start;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "title"
+    "links"
+    "demos"
+    "tags"
+    "sponsor";
+
+  #cdawrap {
+    justify-self: start;
+    grid-area: sponsor;
+  }
+
+  a,
+  button {
+    pointer-events: auto;
+  }
+
+  .frame__title {
+    grid-area: title;
+    font-size: inherit;
+    margin: 0;
+  }
+
+  .frame__tags {
+    grid-area: tags;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .frame__links,
+  .frame__demos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .frame__links {
+    grid-area: links;
+  }
+
+  .frame__demos {
+    grid-area: demos;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .frame__demos-label {
+      margin: 0;
+      text-transform: capitalize;
+    }
+
+    .effects-list {
+      display: flex;
+      gap: 0.75rem;
+      margin: 0;
+    }
+
+    .effects-list__item {
+      opacity: 0.5;
+      text-decoration: underline;
+    }
+
+    .effects-list__item--active {
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (min-width: 53em) {
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto auto;
+    align-content: space-between;
+    grid-template-areas:
+      "title links demos"
+      "tags tags sponsor";
+
+    .frame__demos,
+    #cdawrap {
+      max-width: 300px;
+    }
+  }
+}
+
+.demo-1 .frame,
+.demo-5 .frame {
+  @media screen and (min-width: 53em) {
+    grid-template-areas:
+      "title links ..."
+      "demos demos ..."
+      "sponsor sponsor sponsor";
+  }
+}
+
+.demo-2 .frame,
+.demo-4 .frame {
+  grid-template-columns: 1fr;
+  justify-items: end;
+  grid-template-areas:
+    "title"
+    "links"
+    "demos"
+    "sponsor";
+  grid-template-rows: auto auto auto 1fr;
+}
+
+.demo-4 .frame {
+  padding-left: 7rem;
+}
+
+.demo-3 .frame {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "links"
+    "demos"
+    "sponsor";
+  grid-template-rows: auto auto auto 1fr;
+  .frame__demos {
+    justify-self: start;
+  }
+}
+
+.content {
+  padding: var(--page-padding);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  height: 100svh;
+  max-height: 100svh;
+  justify-content: center;
+  align-items: center;
+}

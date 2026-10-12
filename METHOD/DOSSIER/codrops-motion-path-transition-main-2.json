@@ -1,0 +1,1208 @@
+{
+  "schema": "metodo21.ast-dossier/v1",
+  "root": "/Users/adrianciocaianu/Downloads/Metodo21_Atlas_Unificato/MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2",
+  "files": [
+    {
+      "file": "js/script.js",
+      "status": "complete",
+      "parser": "acorn:module",
+      "error": null,
+      "imports": [],
+      "units": [
+        {
+          "name": "modulo",
+          "from": 1,
+          "to": 162,
+          "events": [
+            {
+              "line": 153,
+              "type": "DOMContentLoaded",
+              "target": "window",
+              "code": "window.addEventListener(\"DOMContentLoaded\", async () => { gsap.set(\".thumbnail\", { zIndex: (i, _, arr) => arr.length - i, }); await preloadImages(); document.body.classList.remove(\"loading\"); gsap.registerPlugin(MotionPathPlugin); new App(); })"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 153,
+              "call": "window.addEventListener"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "updateMeasurements",
+          "from": 30,
+          "to": 47,
+          "events": [],
+          "motion": [],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 36,
+              "name": "scaledWidth",
+              "expression": "this.thumbnailRect.width * this.scale"
+            }
+          ],
+          "calls": [
+            {
+              "line": 31,
+              "call": "this.thumbnails[0].getBoundingClientRect"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "buildTimeline",
+          "from": 49,
+          "to": 119,
+          "events": [],
+          "motion": [
+            {
+              "line": 54,
+              "call": "gsap.timeline",
+              "code": "gsap.timeline({ defaults: { duration: 1.2, ease: \"expo.inOut\", easeReverse: true, }, paused: true, })"
+            }
+          ],
+          "controls": [
+            {
+              "line": 51,
+              "call": "this.tl.kill",
+              "code": "this.tl.kill()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 51,
+              "call": "this.tl.kill"
+            },
+            {
+              "line": 54,
+              "call": "gsap.timeline"
+            },
+            {
+              "line": 63,
+              "call": "this.tl.to"
+            },
+            {
+              "line": 68,
+              "call": "this.tl.to"
+            },
+            {
+              "line": 100,
+              "call": "this.tl.fromTo"
+            },
+            {
+              "line": 111,
+              "call": "this.tl.to"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "motionPath",
+          "from": 71,
+          "to": 91,
+          "events": [],
+          "motion": [],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 72,
+              "name": "targetYItem",
+              "expression": "this.targetY - index * (this.thumbnailRect.height * this.scale + this.gap)"
+            }
+          ],
+          "calls": [],
+          "creates": []
+        },
+        {
+          "name": "onResize",
+          "from": 121,
+          "to": 132,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 122,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress()"
+            },
+            {
+              "line": 125,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress(0)"
+            },
+            {
+              "line": 125,
+              "call": "this.tl.progress.pause",
+              "code": "this.tl.progress(0).pause()"
+            },
+            {
+              "line": 131,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress(progress)"
+            },
+            {
+              "line": 131,
+              "call": "this.tl.progress.pause",
+              "code": "this.tl.progress(progress).pause()"
+            }
+          ],
+          "formulas": [
+            {
+              "line": 122,
+              "name": "progress",
+              "expression": "this.tl.progress()"
+            }
+          ],
+          "calls": [
+            {
+              "line": 122,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 125,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 125,
+              "call": "this.tl.progress.pause"
+            },
+            {
+              "line": 127,
+              "call": "this.updateMeasurements"
+            },
+            {
+              "line": 128,
+              "call": "this.buildTimeline"
+            },
+            {
+              "line": 131,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 131,
+              "call": "this.tl.progress.pause"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "addEventListeners",
+          "from": 134,
+          "to": 150,
+          "events": [
+            {
+              "line": 135,
+              "type": "resize",
+              "target": "window",
+              "code": "window.addEventListener(\"resize\", this.onResize.bind(this))"
+            },
+            {
+              "line": 137,
+              "type": "click",
+              "target": "this.btnOpen",
+              "code": "this.btnOpen.addEventListener(\"click\", () => { this.btnOpen.style.pointerEvents = \"none\"; this.btnClose.style.pointerEvents = \"auto\"; this.tl.play(); })"
+            },
+            {
+              "line": 144,
+              "type": "click",
+              "target": "this.btnClose",
+              "code": "this.btnClose.addEventListener(\"click\", () => { this.btnOpen.style.pointerEvents = \"auto\"; this.btnClose.style.pointerEvents = \"none\"; this.tl.reverse(); })"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 135,
+              "call": "this.onResize.bind"
+            },
+            {
+              "line": 135,
+              "call": "window.addEventListener"
+            },
+            {
+              "line": 137,
+              "call": "this.btnOpen.addEventListener"
+            },
+            {
+              "line": 144,
+              "call": "this.btnClose.addEventListener"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "this.btnOpen.addEventListener(click)",
+          "from": 137,
+          "to": 142,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 141,
+              "call": "this.tl.play",
+              "code": "this.tl.play()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 141,
+              "call": "this.tl.play"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "this.btnClose.addEventListener(click)",
+          "from": 144,
+          "to": 149,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 148,
+              "call": "this.tl.reverse",
+              "code": "this.tl.reverse()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 148,
+              "call": "this.tl.reverse"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "window.addEventListener(DOMContentLoaded)",
+          "from": 153,
+          "to": 161,
+          "events": [],
+          "motion": [
+            {
+              "line": 154,
+              "call": "gsap.set",
+              "code": "gsap.set(\".thumbnail\", { zIndex: (i, _, arr) => arr.length - i, })"
+            }
+          ],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 154,
+              "call": "gsap.set"
+            },
+            {
+              "line": 157,
+              "call": "preloadImages"
+            },
+            {
+              "line": 158,
+              "call": "document.body.classList.remove"
+            },
+            {
+              "line": 159,
+              "call": "gsap.registerPlugin"
+            }
+          ],
+          "creates": []
+        }
+      ]
+    },
+    {
+      "file": "js/script2.js",
+      "status": "complete",
+      "parser": "acorn:module",
+      "error": null,
+      "imports": [],
+      "units": [
+        {
+          "name": "modulo",
+          "from": 1,
+          "to": 168,
+          "events": [
+            {
+              "line": 155,
+              "type": "DOMContentLoaded",
+              "target": "window",
+              "code": "window.addEventListener(\"DOMContentLoaded\", async () => { gsap.set(\".thumbnail\", { zIndex: (i, _, arr) => arr.length - i, }); await preloadImages(); document.body.classList.remove(\"loading\"); gsap.registerPlugin(MotionPathPlugin); new App(); })"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 155,
+              "call": "window.addEventListener"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "buildTimeline",
+          "from": 43,
+          "to": 116,
+          "events": [],
+          "motion": [
+            {
+              "line": 48,
+              "call": "gsap.timeline",
+              "code": "gsap.timeline({ defaults: { duration: 1.2, ease: \"expo.inOut\", easeReverse: true, }, paused: true, })"
+            }
+          ],
+          "controls": [
+            {
+              "line": 45,
+              "call": "this.tl.kill",
+              "code": "this.tl.kill()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 45,
+              "call": "this.tl.kill"
+            },
+            {
+              "line": 48,
+              "call": "gsap.timeline"
+            },
+            {
+              "line": 57,
+              "call": "this.tl.to"
+            },
+            {
+              "line": 61,
+              "call": "this.tl.to"
+            },
+            {
+              "line": 109,
+              "call": "this.tl.to"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "motionPath",
+          "from": 64,
+          "to": 100,
+          "events": [],
+          "motion": [],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 65,
+              "name": "targetXItem",
+              "expression": "this.targetX + index * (this.thumbnailRect.width * this.scale + this.gap)"
+            }
+          ],
+          "calls": [],
+          "creates": []
+        },
+        {
+          "name": "onResize",
+          "from": 118,
+          "to": 130,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 119,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress()"
+            },
+            {
+              "line": 122,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress(0)"
+            },
+            {
+              "line": 122,
+              "call": "this.tl.progress.pause",
+              "code": "this.tl.progress(0).pause()"
+            },
+            {
+              "line": 129,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress(progress)"
+            },
+            {
+              "line": 129,
+              "call": "this.tl.progress.pause",
+              "code": "this.tl.progress(progress).pause()"
+            }
+          ],
+          "formulas": [
+            {
+              "line": 119,
+              "name": "progress",
+              "expression": "this.tl.progress()"
+            }
+          ],
+          "calls": [
+            {
+              "line": 119,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 122,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 122,
+              "call": "this.tl.progress.pause"
+            },
+            {
+              "line": 124,
+              "call": "this.updateMeasurements"
+            },
+            {
+              "line": 126,
+              "call": "this.buildTimeline"
+            },
+            {
+              "line": 129,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 129,
+              "call": "this.tl.progress.pause"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "addEventListeners",
+          "from": 132,
+          "to": 152,
+          "events": [
+            {
+              "line": 133,
+              "type": "resize",
+              "target": "window",
+              "code": "window.addEventListener(\"resize\", this.onResize.bind(this))"
+            },
+            {
+              "line": 135,
+              "type": "click",
+              "target": "this.btnOpen",
+              "code": "this.btnOpen.addEventListener(\"click\", () => { if (this.tl.progress() !== 0 && this.tl.reversed()) return; this.btnOpen.style.pointerEvents = \"none\"; this.btnClose.style.pointerEvents = \"auto\"; this.tl.play(); })"
+            },
+            {
+              "line": 144,
+              "type": "click",
+              "target": "this.btnClose",
+              "code": "this.btnClose.addEventListener(\"click\", () => { if (this.tl.progress() === 0 && !this.tl.reversed()) return; this.btnOpen.style.pointerEvents = \"auto\"; this.btnClose.style.pointerEvents = \"none\"; this.tl.reverse(); })"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 133,
+              "call": "this.onResize.bind"
+            },
+            {
+              "line": 133,
+              "call": "window.addEventListener"
+            },
+            {
+              "line": 135,
+              "call": "this.btnOpen.addEventListener"
+            },
+            {
+              "line": 144,
+              "call": "this.btnClose.addEventListener"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "this.btnOpen.addEventListener(click)",
+          "from": 135,
+          "to": 142,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 136,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress()"
+            },
+            {
+              "line": 141,
+              "call": "this.tl.play",
+              "code": "this.tl.play()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 136,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 136,
+              "call": "this.tl.reversed"
+            },
+            {
+              "line": 141,
+              "call": "this.tl.play"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "this.btnClose.addEventListener(click)",
+          "from": 144,
+          "to": 151,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 145,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress()"
+            },
+            {
+              "line": 150,
+              "call": "this.tl.reverse",
+              "code": "this.tl.reverse()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 145,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 145,
+              "call": "this.tl.reversed"
+            },
+            {
+              "line": 150,
+              "call": "this.tl.reverse"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "window.addEventListener(DOMContentLoaded)",
+          "from": 155,
+          "to": 167,
+          "events": [],
+          "motion": [
+            {
+              "line": 156,
+              "call": "gsap.set",
+              "code": "gsap.set(\".thumbnail\", { zIndex: (i, _, arr) => arr.length - i, })"
+            }
+          ],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 156,
+              "call": "gsap.set"
+            },
+            {
+              "line": 160,
+              "call": "preloadImages"
+            },
+            {
+              "line": 162,
+              "call": "document.body.classList.remove"
+            },
+            {
+              "line": 164,
+              "call": "gsap.registerPlugin"
+            }
+          ],
+          "creates": []
+        }
+      ]
+    },
+    {
+      "file": "js/script3.js",
+      "status": "complete",
+      "parser": "acorn:module",
+      "error": null,
+      "imports": [],
+      "units": [
+        {
+          "name": "modulo",
+          "from": 1,
+          "to": 157,
+          "events": [
+            {
+              "line": 144,
+              "type": "DOMContentLoaded",
+              "target": "window",
+              "code": "window.addEventListener(\"DOMContentLoaded\", async () => { gsap.set(\".thumbnail\", { zIndex: (i, _, arr) => arr.length - i, }); await preloadImages(); document.body.classList.remove(\"loading\"); gsap.registerPlugin(MotionPathPlugin); new App(); })"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 144,
+              "call": "window.addEventListener"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "buildTimeline",
+          "from": 45,
+          "to": 109,
+          "events": [],
+          "motion": [
+            {
+              "line": 50,
+              "call": "gsap.timeline",
+              "code": "gsap.timeline({ defaults: { duration: 1.2, ease: \"expo.inOut\", easeReverse: \"expo\", }, paused: true, })"
+            }
+          ],
+          "controls": [
+            {
+              "line": 47,
+              "call": "this.tl.kill",
+              "code": "this.tl.kill()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 47,
+              "call": "this.tl.kill"
+            },
+            {
+              "line": 50,
+              "call": "gsap.timeline"
+            },
+            {
+              "line": 59,
+              "call": "this.tl.to"
+            },
+            {
+              "line": 63,
+              "call": "this.tl.to"
+            },
+            {
+              "line": 91,
+              "call": "this.tl.fromTo"
+            },
+            {
+              "line": 102,
+              "call": "this.tl.to"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "motionPath",
+          "from": 66,
+          "to": 82,
+          "events": [],
+          "motion": [],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 67,
+              "name": "targetYItem",
+              "expression": "this.targetY + index * (this.thumbnailRect.height + this.gap)"
+            }
+          ],
+          "calls": [],
+          "creates": []
+        },
+        {
+          "name": "onResize",
+          "from": 111,
+          "to": 123,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 112,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress()"
+            },
+            {
+              "line": 115,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress(0)"
+            },
+            {
+              "line": 115,
+              "call": "this.tl.progress.pause",
+              "code": "this.tl.progress(0).pause()"
+            },
+            {
+              "line": 122,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress(progress)"
+            },
+            {
+              "line": 122,
+              "call": "this.tl.progress.pause",
+              "code": "this.tl.progress(progress).pause()"
+            }
+          ],
+          "formulas": [
+            {
+              "line": 112,
+              "name": "progress",
+              "expression": "this.tl.progress()"
+            }
+          ],
+          "calls": [
+            {
+              "line": 112,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 115,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 115,
+              "call": "this.tl.progress.pause"
+            },
+            {
+              "line": 117,
+              "call": "this.updateMeasurements"
+            },
+            {
+              "line": 119,
+              "call": "this.buildTimeline"
+            },
+            {
+              "line": 122,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 122,
+              "call": "this.tl.progress.pause"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "addEventListeners",
+          "from": 125,
+          "to": 141,
+          "events": [
+            {
+              "line": 126,
+              "type": "resize",
+              "target": "window",
+              "code": "window.addEventListener(\"resize\", this.onResize.bind(this))"
+            },
+            {
+              "line": 128,
+              "type": "click",
+              "target": "this.btnOpen",
+              "code": "this.btnOpen.addEventListener(\"click\", () => { this.btnOpen.style.pointerEvents = \"none\"; this.btnClose.style.pointerEvents = \"auto\"; this.tl.play(); })"
+            },
+            {
+              "line": 135,
+              "type": "click",
+              "target": "this.btnClose",
+              "code": "this.btnClose.addEventListener(\"click\", () => { this.btnOpen.style.pointerEvents = \"auto\"; this.btnClose.style.pointerEvents = \"none\"; this.tl.reverse(); })"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 126,
+              "call": "this.onResize.bind"
+            },
+            {
+              "line": 126,
+              "call": "window.addEventListener"
+            },
+            {
+              "line": 128,
+              "call": "this.btnOpen.addEventListener"
+            },
+            {
+              "line": 135,
+              "call": "this.btnClose.addEventListener"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "this.btnOpen.addEventListener(click)",
+          "from": 128,
+          "to": 133,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 132,
+              "call": "this.tl.play",
+              "code": "this.tl.play()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 132,
+              "call": "this.tl.play"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "this.btnClose.addEventListener(click)",
+          "from": 135,
+          "to": 140,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 139,
+              "call": "this.tl.reverse",
+              "code": "this.tl.reverse()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 139,
+              "call": "this.tl.reverse"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "window.addEventListener(DOMContentLoaded)",
+          "from": 144,
+          "to": 156,
+          "events": [],
+          "motion": [
+            {
+              "line": 145,
+              "call": "gsap.set",
+              "code": "gsap.set(\".thumbnail\", { zIndex: (i, _, arr) => arr.length - i, })"
+            }
+          ],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 145,
+              "call": "gsap.set"
+            },
+            {
+              "line": 149,
+              "call": "preloadImages"
+            },
+            {
+              "line": 151,
+              "call": "document.body.classList.remove"
+            },
+            {
+              "line": 153,
+              "call": "gsap.registerPlugin"
+            }
+          ],
+          "creates": []
+        }
+      ]
+    },
+    {
+      "file": "js/script4.js",
+      "status": "complete",
+      "parser": "acorn:module",
+      "error": null,
+      "imports": [],
+      "units": [
+        {
+          "name": "modulo",
+          "from": 1,
+          "to": 146,
+          "events": [
+            {
+              "line": 137,
+              "type": "DOMContentLoaded",
+              "target": "window",
+              "code": "window.addEventListener(\"DOMContentLoaded\", async () => { await preloadImages(); document.body.classList.remove(\"loading\"); gsap.registerPlugin(MotionPathPlugin); new App(); })"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 137,
+              "call": "window.addEventListener"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "buildTimeline",
+          "from": 45,
+          "to": 102,
+          "events": [],
+          "motion": [
+            {
+              "line": 50,
+              "call": "gsap.timeline",
+              "code": "gsap.timeline({ defaults: { duration: 1.1, ease: \"expo.inOut\", easeReverse: true, }, paused: true, })"
+            }
+          ],
+          "controls": [
+            {
+              "line": 47,
+              "call": "this.tl.kill",
+              "code": "this.tl.kill()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 47,
+              "call": "this.tl.kill"
+            },
+            {
+              "line": 50,
+              "call": "gsap.timeline"
+            },
+            {
+              "line": 59,
+              "call": "this.tl.to"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "motionPath",
+          "from": 60,
+          "to": 96,
+          "events": [],
+          "motion": [],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 61,
+              "name": "top",
+              "expression": "this.thumbnails[index].getBoundingClientRect().top"
+            },
+            {
+              "line": 63,
+              "name": "targetYItem",
+              "expression": "this.targetY + index * (this.thumbnailRect.height * this.scale + this.gap)"
+            }
+          ],
+          "calls": [
+            {
+              "line": 61,
+              "call": "this.thumbnails[index].getBoundingClientRect"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "onResize",
+          "from": 104,
+          "to": 116,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 105,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress()"
+            },
+            {
+              "line": 108,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress(0)"
+            },
+            {
+              "line": 108,
+              "call": "this.tl.progress.pause",
+              "code": "this.tl.progress(0).pause()"
+            },
+            {
+              "line": 115,
+              "call": "this.tl.progress",
+              "code": "this.tl.progress(progress)"
+            },
+            {
+              "line": 115,
+              "call": "this.tl.progress.pause",
+              "code": "this.tl.progress(progress).pause()"
+            }
+          ],
+          "formulas": [
+            {
+              "line": 105,
+              "name": "progress",
+              "expression": "this.tl.progress()"
+            }
+          ],
+          "calls": [
+            {
+              "line": 105,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 108,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 108,
+              "call": "this.tl.progress.pause"
+            },
+            {
+              "line": 110,
+              "call": "this.updateMeasurements"
+            },
+            {
+              "line": 112,
+              "call": "this.buildTimeline"
+            },
+            {
+              "line": 115,
+              "call": "this.tl.progress"
+            },
+            {
+              "line": 115,
+              "call": "this.tl.progress.pause"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "addEventListeners",
+          "from": 118,
+          "to": 134,
+          "events": [
+            {
+              "line": 119,
+              "type": "resize",
+              "target": "window",
+              "code": "window.addEventListener(\"resize\", this.onResize.bind(this))"
+            },
+            {
+              "line": 121,
+              "type": "click",
+              "target": "this.leftBtn",
+              "code": "this.leftBtn.addEventListener(\"click\", () => { this.leftBtn.classList.add(\"trigger__button--active\"); this.bottomBtn.classList.remove(\"trigger__button--active\"); this.tl.play(); })"
+            },
+            {
+              "line": 128,
+              "type": "click",
+              "target": "this.bottomBtn",
+              "code": "this.bottomBtn.addEventListener(\"click\", () => { this.bottomBtn.classList.add(\"trigger__button--active\"); this.leftBtn.classList.remove(\"trigger__button--active\"); this.tl.reverse(); })"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 119,
+              "call": "this.onResize.bind"
+            },
+            {
+              "line": 119,
+              "call": "window.addEventListener"
+            },
+            {
+              "line": 121,
+              "call": "this.leftBtn.addEventListener"
+            },
+            {
+              "line": 128,
+              "call": "this.bottomBtn.addEventListener"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "this.leftBtn.addEventListener(click)",
+          "from": 121,
+          "to": 126,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 125,
+              "call": "this.tl.play",
+              "code": "this.tl.play()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 122,
+              "call": "this.leftBtn.classList.add"
+            },
+            {
+              "line": 123,
+              "call": "this.bottomBtn.classList.remove"
+            },
+            {
+              "line": 125,
+              "call": "this.tl.play"
+            }
+          ],
+          "creates": []
+        },
+        {
+          "name": "this.bottomBtn.addEventListener(click)",
+          "from": 128,
+          "to": 133,
+          "events": [],
+          "motion": [],
+          "controls": [
+            {
+              "line": 132,
+              "call": "this.tl.reverse",
+              "code": "this.tl.reverse()"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 129,
+              "call": "this.bottomBtn.classList.add"
+            },
+            {
+              "line": 130,
+              "call": "this.leftBtn.classList.remove"
+            },
+            {
+              "line": 132,
+              "call": "this.tl.reverse"
+            }
+          ],
+          "creates": []
+        }
+      ]
+    }
+  ],
+  "status": "complete",
+  "material": "codrops-motion-path-transition-main-2"
+}

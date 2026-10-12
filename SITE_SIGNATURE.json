@@ -1,0 +1,19 @@
+{
+  "site_id": "Metodo21_MotionAtlas_Unificato_20261012",
+  "site_name": "",
+  "idea": "",
+  "metaphor": "",
+  "composition_signature": "",
+  "motion_signature": "",
+  "thread": "",
+  "dominant_curve": "",
+  "accent_curve": "",
+  "rhythm": "",
+  "transition_grammar": "",
+  "component_slug": "codrops-sticky-grid-scroll-main",
+  "seed_slugs": [
+    "codrops-mwg",
+    "codrops-motion-path-transition-main-2"
+  ],
+  "keywords": []
+}

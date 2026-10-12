@@ -1,0 +1,1 @@
+Realizza integralmente questo incarico in un'unica esecuzione. Leggi per intero prima `METHOD/MISSIONE_JULES.md`, poi `METHOD/INCARICO_GIRO.md`, la mappa delle skill e tutte le fonti lì indicate. Definisci la regia globale e portala fino al sito completo, senza fermarti per approvazioni e senza creare cicli di verifica o rapporti di conformità.
