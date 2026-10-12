@@ -1,33 +1,17 @@
-# SKILLS_VANILLA — riferimenti tecnici
+# Riferimenti Vanilla
 
-## Autorità in questa missione
+Queste guide sono la raccolta tecnica di movimento per pagine statiche. La mappa `../PRECEDENZE_E_AMBITI.md` chiarisce le responsabilità di ogni skill e la precedenza tra brief, materiali, skill e motore.
 
-`METHOD/MISSIONE_JULES.md` stabilisce il risultato creativo e la copertura richiesta. Queste skill descrivono API, compatibilità, lifecycle, accessibilità e prestazioni. Indicazioni generiche come "prefer subtlety", limiti di frequenza per prodotti d'uso quotidiano o "2-4 scroll moments" non sono un tetto per questo sito editoriale cinematografico e non possono ridurre scene e invarianti dei materiali forniti. Applicale dove compatibili con contenuto, sorgente, leggibilità e missione.
+| Cartella | Ambito |
+|---|---|
+| `cinematic-gsap-lenis-motion-system/` | Composizione di una grammatica di movimento editoriale con GSAP, ScrollTrigger e Lenis. Gli esempi e i token sono spunti, non un preset da ripetere. |
+| `gsap-core/SKILL.md` | Tween, valori, easing e configurazione GSAP. |
+| `gsap-timeline/SKILL.md` | Sequenze, etichette, posizionamento e composizione delle timeline. |
+| `gsap-scrolltrigger/SKILL.md` | Collegamento tra progresso della pagina e scene, trigger, scrub e pin. |
+| `gsap-plugins/SKILL.md` | API e plugin GSAP: caricare solo quelli utili, già disponibili nel motore. |
+| `gsap-utils/SKILL.md` | Funzioni e utilità per distribuire o derivare valori. |
+| `gsap-performance/SKILL.md` | Prestazioni, lifecycle e scelte di implementazione. |
+| `emil-design-eng/MESTIERE.md` | Easing, trasformazioni, profondità, gesture, prestazioni e accessibilità; gli esempi React/Motion sono concettuali. |
+| `ui-animation/` | Stati, timing, curve, gesture e coreografia di transizioni; gli esempi con framework non cambiano lo stack. |
 
-8 skill, **zero React**. Tutto qui dentro funziona su HTML statico con tag `<script>`.
-Se il tuo ambiente supporta le Agent Skills, caricale per nome. Se non le supporta, leggi i file di questa cartella.
-
-## Ordine di lettura
-
-| # | Skill | Leggila per |
-|---|---|---|
-| 1 | `cinematic-gsap-lenis-motion-system/SKILL.md` | La regia: init order, token, reveal/parallax/pin/cursore, QA checklist finale |
-| 2 | `gsap-core/SKILL.md` | Tween, stagger, `matchMedia`, reduced-motion |
-| 3 | `gsap-timeline/SKILL.md` | Timeline hero, position parameter, sequenze |
-| 4 | `gsap-scrolltrigger/SKILL.md` | `start`/`end`, scrub, pin, `refresh()`, cleanup |
-| 5 | `gsap-plugins/SKILL.md` | SplitText, Flip, CustomEase, Observer, Draggable+Inertia — tutti gratuiti |
-| 6 | `gsap-utils/SKILL.md` | `random`, `snap`, `mapRange`: varietà misurata |
-| 7 | `gsap-performance/SKILL.md` | Solo transform, batching, niente layout thrashing |
-| 8 | `ui-animation/` | Riferimenti tecnici per easing, sequenziamento, accessibilità e prestazioni; la missione decide copertura e intensità complessive |
-
-## Cosa è stato tolto di proposito
-
-- `gsap-react` e `gsap-frameworks` (Vue/Svelte): fuori stack.
-- `gsap-awwwards-website`: è React 19 + Tailwind 4.
-- I reference framer-motion di `ui-animation` (`contextual-animations`, `component-patterns`, `svg-animation`, `code-output`, `clip-path-techniques`, `gesture-drag`).
-
-## Limite di autorità
-
-Le skill danno il **come** (API corretta, cleanup, performance), non scelgono i materiali né sostituiscono le loro formule.
-I componenti e i semi consegnati in `MOTION_COMPONENTE/COMPONENTI/` e `MOTION_COMPONENTE/SEMI/` sono la fonte per meccanismi, stati e invarianti matematici.
-In caso di conflitto tra un esempio della skill e una sorgente fornita, **vince la sorgente**. La regia visiva originale si progetta sul sito concreto.
+`apple-design/MESTIERE.md` è conservato nella copia sorgente come archivio, ma non è attivo e non viene inviato a Jules.
