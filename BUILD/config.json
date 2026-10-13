@@ -1,0 +1,22 @@
+{
+  "entry": "assets/js/regia-sito.js",
+  "output": "assets/js/regia-sito.bundle.js",
+  "aliases": {},
+  "materials": {
+    "codrops-sticky-grid-scroll-main": {
+      "sourceRoot": "MOTION_COMPONENTE/ARCHIVIO/codrops-sticky-grid-scroll-main",
+      "libraryRoot": "BUILD/librerie/codrops-sticky-grid-scroll-main",
+      "aliases": {}
+    },
+    "codrops-mwg": {
+      "sourceRoot": "MOTION_COMPONENTE/ARCHIVIO/codrops-mwg",
+      "libraryRoot": "BUILD/librerie/codrops-mwg",
+      "aliases": {}
+    },
+    "codrops-motion-path-transition-main-2": {
+      "sourceRoot": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2",
+      "libraryRoot": "BUILD/librerie/codrops-motion-path-transition-main-2",
+      "aliases": {}
+    }
+  }
+}

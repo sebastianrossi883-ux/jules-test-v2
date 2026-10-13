@@ -1,0 +1,13 @@
+{
+  "name": "metodo21-strumenti-offline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Strumenti tecnici portabili; nessun runtime React e nessuna scena precostruita",
+  "dependencies": {
+    "parse5": "8.0.1",
+    "esbuild-wasm": "0.25.12",
+    "sass": "1.93.2",
+    "glslify": "7.1.1"
+  }
+}

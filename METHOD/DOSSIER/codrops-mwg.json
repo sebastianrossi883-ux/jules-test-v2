@@ -1,0 +1,4940 @@
+{
+  "schema": "metodo21.ast-dossier/v2",
+  "root": "MOTION_COMPONENTE/ARCHIVIO/codrops-mwg",
+  "status": "indexed",
+  "parseStatus": "parsed",
+  "coverage": {
+    "status": "partial",
+    "limits": [
+      "Parsing riuscito non significa comprensione completa o fedeltà della meccanica.",
+      "HTML/CSS/GLSL/Astro e valori runtime richiedono la lettura integrale delle sorgenti.",
+      "Import, chiamate e controller dinamici non risolti restano elencati nel JSON."
+    ]
+  },
+  "files": [
+    {
+      "file": "assets/script.js",
+      "status": "indexed",
+      "parseStatus": "parsed",
+      "parser": "acorn:module",
+      "error": null,
+      "coverage": {
+        "status": "partial",
+        "indexedFunctions": 9,
+        "limits": [
+          "Indice sintattico, non prova di studio o equivalenza della meccanica.",
+          "Risoluzione conservativa: proprietà dinamiche, runtime e pacchetti esterni restano espliciti.",
+          "Geometria, fisica e fasi narrative richiedono lettura di HTML, CSS, sorgenti e tutorial."
+        ]
+      },
+      "imports": [],
+      "aliases": [
+        {
+          "line": 2,
+          "endLine": 2,
+          "start": 62,
+          "end": 107,
+          "unitId": "assets/script.js:44:3992",
+          "name": "root",
+          "target": "document.querySelector",
+          "kind": "CallExpression"
+        },
+        {
+          "line": 14,
+          "endLine": 14,
+          "start": 365,
+          "end": 425,
+          "unitId": "assets/script.js:44:3992",
+          "name": "isCoarsePointer",
+          "target": "window.matchMedia.matches",
+          "kind": "MemberExpression"
+        },
+        {
+          "line": 17,
+          "endLine": 17,
+          "start": 505,
+          "end": 526,
+          "unitId": "assets/script.js:44:3992",
+          "name": "W",
+          "target": "window.innerWidth",
+          "kind": "MemberExpression"
+        },
+        {
+          "line": 18,
+          "endLine": 18,
+          "start": 537,
+          "end": 559,
+          "unitId": "assets/script.js:44:3992",
+          "name": "H",
+          "target": "window.innerHeight",
+          "kind": "MemberExpression"
+        },
+        {
+          "line": 19,
+          "endLine": 19,
+          "start": 570,
+          "end": 601,
+          "unitId": "assets/script.js:44:3992",
+          "name": "clampX",
+          "target": "gsap.utils.clamp",
+          "kind": "CallExpression"
+        },
+        {
+          "line": 20,
+          "endLine": 20,
+          "start": 612,
+          "end": 643,
+          "unitId": "assets/script.js:44:3992",
+          "name": "clampY",
+          "target": "gsap.utils.clamp",
+          "kind": "CallExpression"
+        },
+        {
+          "line": 23,
+          "endLine": 23,
+          "start": 702,
+          "end": 724,
+          "unitId": "assets/script.js:649:1197",
+          "name": "valX",
+          "target": "clampX",
+          "kind": "CallExpression"
+        },
+        {
+          "line": 24,
+          "endLine": 24,
+          "start": 739,
+          "end": 761,
+          "unitId": "assets/script.js:649:1197",
+          "name": "valY",
+          "target": "clampY",
+          "kind": "CallExpression"
+        },
+        {
+          "line": 28,
+          "endLine": 28,
+          "start": 830,
+          "end": 845,
+          "unitId": "assets/script.js:649:1197",
+          "name": "oldIncrX",
+          "target": "valX",
+          "kind": "Identifier"
+        },
+        {
+          "line": 29,
+          "endLine": 29,
+          "start": 858,
+          "end": 873,
+          "unitId": "assets/script.js:649:1197",
+          "name": "oldIncrY",
+          "target": "valY",
+          "kind": "Identifier"
+        },
+        {
+          "line": 40,
+          "endLine": 40,
+          "start": 1152,
+          "end": 1167,
+          "unitId": "assets/script.js:649:1197",
+          "name": "oldIncrX",
+          "target": "valX",
+          "kind": "Identifier"
+        },
+        {
+          "line": 41,
+          "endLine": 41,
+          "start": 1176,
+          "end": 1191,
+          "unitId": "assets/script.js:649:1197",
+          "name": "oldIncrY",
+          "target": "valY",
+          "kind": "Identifier"
+        },
+        {
+          "line": 58,
+          "endLine": 58,
+          "start": 1702,
+          "end": 1724,
+          "unitId": "assets/script.js:1643:3345",
+          "name": "H",
+          "target": "window.innerHeight",
+          "kind": "MemberExpression"
+        },
+        {
+          "line": 62,
+          "endLine": 62,
+          "start": 1773,
+          "end": 1810,
+          "unitId": "assets/script.js:1643:3345",
+          "name": "image",
+          "target": "document.createElement",
+          "kind": "CallExpression"
+        },
+        {
+          "line": 68,
+          "endLine": 73,
+          "start": 1916,
+          "end": 2066,
+          "unitId": "assets/script.js:1643:3345",
+          "name": "tl",
+          "target": "gsap.timeline",
+          "kind": "CallExpression"
+        },
+        {
+          "line": 126,
+          "endLine": 129,
+          "start": 3431,
+          "end": 3591,
+          "unitId": "assets/script.js:3402:3919",
+          "name": "isRootRemoved",
+          "target": "mutations.some",
+          "kind": "CallExpression"
+        }
+      ],
+      "units": [
+        {
+          "id": "assets/script.js:0:3993",
+          "name": "modulo",
+          "binding": "modulo",
+          "kind": "module",
+          "className": null,
+          "classId": null,
+          "ownerId": null,
+          "from": 1,
+          "to": 139,
+          "parameters": [],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [
+            {
+              "line": 1,
+              "endLine": 139,
+              "start": 0,
+              "end": 3993,
+              "call": "window.addEventListener",
+              "canonicalCall": "window.addEventListener",
+              "receiver": "window",
+              "method": "addEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "\"DOMContentLoaded\"",
+                  "line": 1,
+                  "endLine": 1,
+                  "start": 24,
+                  "end": 42
+                },
+                {
+                  "type": "ArrowFunctionExpression",
+                  "code": "() => {\n    const root = document.querySelector('.codrops_mwg')\n    const images = []\n    root.querySelectorAll('.medias img').forEach(image => {\n        images.push(image.getAttribute('src'))\n    })\n\n    let incr = 0,\n        oldIncrX = 0,\n        oldIncrY = 0,\n        firstMove = true,\n        indexImg = 0\n\n    const isCoarsePointer = window.matchMedia('(hover: none)').matches\n    const resetDist = window.innerWidth / (isCoarsePointer ? 6 : 8)\n\n    const W = window.innerWidth\n    const H = window.innerHeight\n    const clampX = gsap.utils.clamp(0, W)\n    const clampY = gsap.utils.clamp(0, H)\n\n    function applyMove(clientX, clientY) {\n        const valX = clampX(clientX)\n        const valY = clampY(clientY)\n\n        if (firstMove) {\n            firstMove = false\n            oldIncrX = valX\n            oldIncrY = valY\n            return\n        }\n\n        incr += Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)\n\n        if (incr > resetDist) {\n            incr = 0\n            createMedia(valX, valY - root.getBoundingClientRect().top, valX - oldIncrX, valY - oldIncrY)\n        }\n\n        oldIncrX = valX\n        oldIncrY = valY\n    }\n\n    function handleMouseMove(e) {\n        applyMove(e.clientX, e.clientY)\n    }\n\n    function handleTouchMove(e) {\n        if (!e.touches || !e.touches[0]) return\n        applyMove(e.touches[0].clientX, e.touches[0].clientY)\n    }\n\n    root.addEventListener('mousemove', handleMouseMove)\n    root.addEventListener('touchstart', handleTouchMove, { passive: true })\n    root.addEventListener('touchmove', handleTouchMove, { passive: true })\n\n    function createMedia(x, y, deltaX, deltaY) {\n        const H = window.innerHeight\n\n        if (y > H - 200) return\n\n        const image = document.createElement(\"img\")\n\n\n        image.setAttribute('src', images[indexImg])\n        root.appendChild(image)\n    \n        const tl = gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })\n    \n        tl.fromTo(image, {\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }, {\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        })\n\n        tl.fromTo(image, {\n            x,\n        }, {\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }, '<')\n    \n        tl.fromTo(image, {\n            y\n        }, {\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }, '<')\n        \n        // BOUNCE\n        tl.to(image, {\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        })\n        tl.to(image, {\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }, '<')\n    \n        indexImg = (indexImg + 1) % images.length\n    }\n\n\n    // KILL\n    const observer = new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })\n    observer.observe(document.body, {childList: true, subtree: true})\n}",
+                  "line": 1,
+                  "endLine": 139,
+                  "start": 44,
+                  "end": 3992
+                }
+              ],
+              "targetIds": [],
+              "resolution": "unresolved",
+              "code": "window.addEventListener(\"DOMContentLoaded\", () => {\n    const root = document.querySelector('.codrops_mwg')\n    const images = []\n    root.querySelectorAll('.medias img').forEach(image => {\n        images.push(image.getAttribute('src'))\n    })\n\n    let incr = 0,\n        oldIncrX = 0,\n        oldIncrY = 0,\n        firstMove = true,\n        indexImg = 0\n\n    const isCoarsePointer = window.matchMedia('(hover: none)').matches\n    const resetDist = window.innerWidth / (isCoarsePointer ? 6 : 8)\n\n    const W = window.innerWidth\n    const H = window.innerHeight\n    const clampX = gsap.utils.clamp(0, W)\n    const clampY = gsap.utils.clamp(0, H)\n\n    function applyMove(clientX, clientY) {\n        const valX = clampX(clientX)\n        const valY = clampY(clientY)\n\n        if (firstMove) {\n            firstMove = false\n            oldIncrX = valX\n            oldIncrY = valY\n            return\n        }\n\n        incr += Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)\n\n        if (incr > resetDist) {\n            incr = 0\n            createMedia(valX, valY - root.getBoundingClientRect().top, valX - oldIncrX, valY - oldIncrY)\n        }\n\n        oldIncrX = valX\n        oldIncrY = valY\n    }\n\n    function handleMouseMove(e) {\n        applyMove(e.clientX, e.clientY)\n    }\n\n    function handleTouchMove(e) {\n        if (!e.touches || !e.touches[0]) return\n        applyMove(e.touches[0].clientX, e.touches[0].clientY)\n    }\n\n    root.addEventListener('mousemove', handleMouseMove)\n    root.addEventListener('touchstart', handleTouchMove, { passive: true })\n    root.addEventListener('touchmove', handleTouchMove, { passive: true })\n\n    function createMedia(x, y, deltaX, deltaY) {\n        const H = window.innerHeight\n\n        if (y > H - 200) return\n\n        const image = document.createElement(\"img\")\n\n\n        image.setAttribute('src', images[indexImg])\n        root.appendChild(image)\n    \n        const tl = gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })\n    \n        tl.fromTo(image, {\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }, {\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        })\n\n        tl.fromTo(image, {\n            x,\n        }, {\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }, '<')\n    \n        tl.fromTo(image, {\n            y\n        }, {\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }, '<')\n        \n        // BOUNCE\n        tl.to(image, {\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        })\n        tl.to(image, {\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }, '<')\n    \n        indexImg = (indexImg + 1) % images.length\n    }\n\n\n    // KILL\n    const observer = new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })\n    observer.observe(document.body, {childList: true, subtree: true})\n})",
+              "type": "DOMContentLoaded",
+              "target": "window",
+              "operation": "listen",
+              "handler": "() => {\n    const root = document.querySelector('.codrops_mwg')\n    const images = []\n    root.querySelectorAll('.medias img').forEach(image => {\n        images.push(image.getAttribute('src'))\n    })\n\n    let incr = 0,\n        oldIncrX = 0,\n        oldIncrY = 0,\n        firstMove = true,\n        indexImg = 0\n\n    const isCoarsePointer = window.matchMedia('(hover: none)').matches\n    const resetDist = window.innerWidth / (isCoarsePointer ? 6 : 8)\n\n    const W = window.innerWidth\n    const H = window.innerHeight\n    const clampX = gsap.utils.clamp(0, W)\n    const clampY = gsap.utils.clamp(0, H)\n\n    function applyMove(clientX, clientY) {\n        const valX = clampX(clientX)\n        const valY = clampY(clientY)\n\n        if (firstMove) {\n            firstMove = false\n            oldIncrX = valX\n            oldIncrY = valY\n            return\n        }\n\n        incr += Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)\n\n        if (incr > resetDist) {\n            incr = 0\n            createMedia(valX, valY - root.getBoundingClientRect().top, valX - oldIncrX, valY - oldIncrY)\n        }\n\n        oldIncrX = valX\n        oldIncrY = valY\n    }\n\n    function handleMouseMove(e) {\n        applyMove(e.clientX, e.clientY)\n    }\n\n    function handleTouchMove(e) {\n        if (!e.touches || !e.touches[0]) return\n        applyMove(e.touches[0].clientX, e.touches[0].clientY)\n    }\n\n    root.addEventListener('mousemove', handleMouseMove)\n    root.addEventListener('touchstart', handleTouchMove, { passive: true })\n    root.addEventListener('touchmove', handleTouchMove, { passive: true })\n\n    function createMedia(x, y, deltaX, deltaY) {\n        const H = window.innerHeight\n\n        if (y > H - 200) return\n\n        const image = document.createElement(\"img\")\n\n\n        image.setAttribute('src', images[indexImg])\n        root.appendChild(image)\n    \n        const tl = gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })\n    \n        tl.fromTo(image, {\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }, {\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        })\n\n        tl.fromTo(image, {\n            x,\n        }, {\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }, '<')\n    \n        tl.fromTo(image, {\n            y\n        }, {\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }, '<')\n        \n        // BOUNCE\n        tl.to(image, {\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        })\n        tl.to(image, {\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }, '<')\n    \n        indexImg = (indexImg + 1) % images.length\n    }\n\n\n    // KILL\n    const observer = new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })\n    observer.observe(document.body, {childList: true, subtree: true})\n}"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 1,
+              "endLine": 139,
+              "start": 0,
+              "end": 3993,
+              "call": "window.addEventListener",
+              "canonicalCall": "window.addEventListener",
+              "receiver": "window",
+              "method": "addEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "\"DOMContentLoaded\"",
+                  "line": 1,
+                  "endLine": 1,
+                  "start": 24,
+                  "end": 42
+                },
+                {
+                  "type": "ArrowFunctionExpression",
+                  "code": "() => {\n    const root = document.querySelector('.codrops_mwg')\n    const images = []\n    root.querySelectorAll('.medias img').forEach(image => {\n        images.push(image.getAttribute('src'))\n    })\n\n    let incr = 0,\n        oldIncrX = 0,\n        oldIncrY = 0,\n        firstMove = true,\n        indexImg = 0\n\n    const isCoarsePointer = window.matchMedia('(hover: none)').matches\n    const resetDist = window.innerWidth / (isCoarsePointer ? 6 : 8)\n\n    const W = window.innerWidth\n    const H = window.innerHeight\n    const clampX = gsap.utils.clamp(0, W)\n    const clampY = gsap.utils.clamp(0, H)\n\n    function applyMove(clientX, clientY) {\n        const valX = clampX(clientX)\n        const valY = clampY(clientY)\n\n        if (firstMove) {\n            firstMove = false\n            oldIncrX = valX\n            oldIncrY = valY\n            return\n        }\n\n        incr += Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)\n\n        if (incr > resetDist) {\n            incr = 0\n            createMedia(valX, valY - root.getBoundingClientRect().top, valX - oldIncrX, valY - oldIncrY)\n        }\n\n        oldIncrX = valX\n        oldIncrY = valY\n    }\n\n    function handleMouseMove(e) {\n        applyMove(e.clientX, e.clientY)\n    }\n\n    function handleTouchMove(e) {\n        if (!e.touches || !e.touches[0]) return\n        applyMove(e.touches[0].clientX, e.touches[0].clientY)\n    }\n\n    root.addEventListener('mousemove', handleMouseMove)\n    root.addEventListener('touchstart', handleTouchMove, { passive: true })\n    root.addEventListener('touchmove', handleTouchMove, { passive: true })\n\n    function createMedia(x, y, deltaX, deltaY) {\n        const H = window.innerHeight\n\n        if (y > H - 200) return\n\n        const image = document.createElement(\"img\")\n\n\n        image.setAttribute('src', images[indexImg])\n        root.appendChild(image)\n    \n        const tl = gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })\n    \n        tl.fromTo(image, {\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }, {\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        })\n\n        tl.fromTo(image, {\n            x,\n        }, {\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }, '<')\n    \n        tl.fromTo(image, {\n            y\n        }, {\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }, '<')\n        \n        // BOUNCE\n        tl.to(image, {\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        })\n        tl.to(image, {\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }, '<')\n    \n        indexImg = (indexImg + 1) % images.length\n    }\n\n\n    // KILL\n    const observer = new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })\n    observer.observe(document.body, {childList: true, subtree: true})\n}",
+                  "line": 1,
+                  "endLine": 139,
+                  "start": 44,
+                  "end": 3992
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "window.addEventListener(\"DOMContentLoaded\", () => {\n    const root = document.querySelector('.codrops_mwg')\n    const images = []\n    root.querySelectorAll('.medias img').forEach(image => {\n        images.push(image.getAttribute('src'))\n    })\n\n    let incr = 0,\n        oldIncrX = 0,\n        oldIncrY = 0,\n        firstMove = true,\n        indexImg = 0\n\n    const isCoarsePointer = window.matchMedia('(hover: none)').matches\n    const resetDist = window.innerWidth / (isCoarsePointer ? 6 : 8)\n\n    const W = window.innerWidth\n    const H = window.innerHeight\n    const clampX = gsap.utils.clamp(0, W)\n    const clampY = gsap.utils.clamp(0, H)\n\n    function applyMove(clientX, clientY) {\n        const valX = clampX(clientX)\n        const valY = clampY(clientY)\n\n        if (firstMove) {\n            firstMove = false\n            oldIncrX = valX\n            oldIncrY = valY\n            return\n        }\n\n        incr += Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)\n\n        if (incr > resetDist) {\n            incr = 0\n            createMedia(valX, valY - root.getBoundingClientRect().top, valX - oldIncrX, valY - oldIncrY)\n        }\n\n        oldIncrX = valX\n        oldIncrY = valY\n    }\n\n    function handleMouseMove(e) {\n        applyMove(e.clientX, e.clientY)\n    }\n\n    function handleTouchMove(e) {\n        if (!e.touches || !e.touches[0]) return\n        applyMove(e.touches[0].clientX, e.touches[0].clientY)\n    }\n\n    root.addEventListener('mousemove', handleMouseMove)\n    root.addEventListener('touchstart', handleTouchMove, { passive: true })\n    root.addEventListener('touchmove', handleTouchMove, { passive: true })\n\n    function createMedia(x, y, deltaX, deltaY) {\n        const H = window.innerHeight\n\n        if (y > H - 200) return\n\n        const image = document.createElement(\"img\")\n\n\n        image.setAttribute('src', images[indexImg])\n        root.appendChild(image)\n    \n        const tl = gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })\n    \n        tl.fromTo(image, {\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }, {\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        })\n\n        tl.fromTo(image, {\n            x,\n        }, {\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }, '<')\n    \n        tl.fromTo(image, {\n            y\n        }, {\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }, '<')\n        \n        // BOUNCE\n        tl.to(image, {\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        })\n        tl.to(image, {\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }, '<')\n    \n        indexImg = (indexImg + 1) % images.length\n    }\n\n\n    // KILL\n    const observer = new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })\n    observer.observe(document.body, {childList: true, subtree: true})\n})"
+            }
+          ],
+          "creates": [],
+          "assignments": [],
+          "conditions": [],
+          "returns": [],
+          "properties": [],
+          "exports": [],
+          "controllerLinks": []
+        },
+        {
+          "id": "assets/script.js:44:3992",
+          "name": "window.addEventListener:callback[1]",
+          "binding": "window.addEventListener:callback[1]",
+          "kind": "ArrowFunctionExpression",
+          "className": null,
+          "classId": null,
+          "ownerId": null,
+          "from": 1,
+          "to": 139,
+          "parameters": [],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [
+            {
+              "line": 53,
+              "endLine": 53,
+              "start": 1435,
+              "end": 1486,
+              "call": "root.addEventListener",
+              "canonicalCall": "document.querySelector.addEventListener",
+              "receiver": "root",
+              "method": "addEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'mousemove'",
+                  "line": 53,
+                  "endLine": 53,
+                  "start": 1457,
+                  "end": 1468
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleMouseMove",
+                  "line": 53,
+                  "endLine": 53,
+                  "start": 1470,
+                  "end": 1485
+                }
+              ],
+              "targetIds": [],
+              "resolution": "unresolved",
+              "code": "root.addEventListener('mousemove', handleMouseMove)",
+              "type": "mousemove",
+              "target": "root",
+              "operation": "listen",
+              "handler": "handleMouseMove"
+            },
+            {
+              "line": 54,
+              "endLine": 54,
+              "start": 1491,
+              "end": 1562,
+              "call": "root.addEventListener",
+              "canonicalCall": "document.querySelector.addEventListener",
+              "receiver": "root",
+              "method": "addEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'touchstart'",
+                  "line": 54,
+                  "endLine": 54,
+                  "start": 1513,
+                  "end": 1525
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleTouchMove",
+                  "line": 54,
+                  "endLine": 54,
+                  "start": 1527,
+                  "end": 1542
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{ passive: true }",
+                  "line": 54,
+                  "endLine": 54,
+                  "start": 1544,
+                  "end": 1561
+                }
+              ],
+              "targetIds": [],
+              "resolution": "unresolved",
+              "code": "root.addEventListener('touchstart', handleTouchMove, { passive: true })",
+              "type": "touchstart",
+              "target": "root",
+              "operation": "listen",
+              "handler": "handleTouchMove"
+            },
+            {
+              "line": 55,
+              "endLine": 55,
+              "start": 1567,
+              "end": 1637,
+              "call": "root.addEventListener",
+              "canonicalCall": "document.querySelector.addEventListener",
+              "receiver": "root",
+              "method": "addEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'touchmove'",
+                  "line": 55,
+                  "endLine": 55,
+                  "start": 1589,
+                  "end": 1600
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleTouchMove",
+                  "line": 55,
+                  "endLine": 55,
+                  "start": 1602,
+                  "end": 1617
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{ passive: true }",
+                  "line": 55,
+                  "endLine": 55,
+                  "start": 1619,
+                  "end": 1636
+                }
+              ],
+              "targetIds": [],
+              "resolution": "unresolved",
+              "code": "root.addEventListener('touchmove', handleTouchMove, { passive: true })",
+              "type": "touchmove",
+              "target": "root",
+              "operation": "listen",
+              "handler": "handleTouchMove"
+            }
+          ],
+          "motion": [
+            {
+              "line": 19,
+              "endLine": 19,
+              "start": 579,
+              "end": 601,
+              "call": "gsap.utils.clamp",
+              "canonicalCall": "gsap.utils.clamp",
+              "receiver": "gsap.utils",
+              "method": "clamp",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "0",
+                  "line": 19,
+                  "endLine": 19,
+                  "start": 596,
+                  "end": 597
+                },
+                {
+                  "type": "Identifier",
+                  "code": "W",
+                  "line": 19,
+                  "endLine": 19,
+                  "start": 599,
+                  "end": 600
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "gsap.utils.clamp(0, W)"
+            },
+            {
+              "line": 20,
+              "endLine": 20,
+              "start": 621,
+              "end": 643,
+              "call": "gsap.utils.clamp",
+              "canonicalCall": "gsap.utils.clamp",
+              "receiver": "gsap.utils",
+              "method": "clamp",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "0",
+                  "line": 20,
+                  "endLine": 20,
+                  "start": 638,
+                  "end": 639
+                },
+                {
+                  "type": "Identifier",
+                  "code": "H",
+                  "line": 20,
+                  "endLine": 20,
+                  "start": 641,
+                  "end": 642
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "gsap.utils.clamp(0, H)"
+            }
+          ],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 2,
+              "endLine": 2,
+              "start": 62,
+              "end": 107,
+              "name": "root",
+              "expression": "document.querySelector('.codrops_mwg')",
+              "operator": "=",
+              "code": "root = document.querySelector('.codrops_mwg')"
+            },
+            {
+              "line": 3,
+              "endLine": 3,
+              "start": 118,
+              "end": 129,
+              "name": "images",
+              "expression": "[]",
+              "operator": "=",
+              "code": "images = []"
+            },
+            {
+              "line": 8,
+              "endLine": 8,
+              "start": 253,
+              "end": 261,
+              "name": "incr",
+              "expression": "0",
+              "operator": "=",
+              "code": "incr = 0"
+            },
+            {
+              "line": 9,
+              "endLine": 9,
+              "start": 271,
+              "end": 283,
+              "name": "oldIncrX",
+              "expression": "0",
+              "operator": "=",
+              "code": "oldIncrX = 0"
+            },
+            {
+              "line": 10,
+              "endLine": 10,
+              "start": 293,
+              "end": 305,
+              "name": "oldIncrY",
+              "expression": "0",
+              "operator": "=",
+              "code": "oldIncrY = 0"
+            },
+            {
+              "line": 11,
+              "endLine": 11,
+              "start": 315,
+              "end": 331,
+              "name": "firstMove",
+              "expression": "true",
+              "operator": "=",
+              "code": "firstMove = true"
+            },
+            {
+              "line": 12,
+              "endLine": 12,
+              "start": 341,
+              "end": 353,
+              "name": "indexImg",
+              "expression": "0",
+              "operator": "=",
+              "code": "indexImg = 0"
+            },
+            {
+              "line": 14,
+              "endLine": 14,
+              "start": 365,
+              "end": 425,
+              "name": "isCoarsePointer",
+              "expression": "window.matchMedia('(hover: none)').matches",
+              "operator": "=",
+              "code": "isCoarsePointer = window.matchMedia('(hover: none)').matches"
+            },
+            {
+              "line": 15,
+              "endLine": 15,
+              "start": 436,
+              "end": 493,
+              "name": "resetDist",
+              "expression": "window.innerWidth / (isCoarsePointer ? 6 : 8)",
+              "operator": "=",
+              "code": "resetDist = window.innerWidth / (isCoarsePointer ? 6 : 8)"
+            },
+            {
+              "line": 17,
+              "endLine": 17,
+              "start": 505,
+              "end": 526,
+              "name": "W",
+              "expression": "window.innerWidth",
+              "operator": "=",
+              "code": "W = window.innerWidth"
+            },
+            {
+              "line": 18,
+              "endLine": 18,
+              "start": 537,
+              "end": 559,
+              "name": "H",
+              "expression": "window.innerHeight",
+              "operator": "=",
+              "code": "H = window.innerHeight"
+            },
+            {
+              "line": 19,
+              "endLine": 19,
+              "start": 570,
+              "end": 601,
+              "name": "clampX",
+              "expression": "gsap.utils.clamp(0, W)",
+              "operator": "=",
+              "code": "clampX = gsap.utils.clamp(0, W)"
+            },
+            {
+              "line": 20,
+              "endLine": 20,
+              "start": 612,
+              "end": 643,
+              "name": "clampY",
+              "expression": "gsap.utils.clamp(0, H)",
+              "operator": "=",
+              "code": "clampY = gsap.utils.clamp(0, H)"
+            },
+            {
+              "line": 125,
+              "endLine": 137,
+              "start": 3370,
+              "end": 3920,
+              "name": "observer",
+              "expression": "new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })",
+              "operator": "=",
+              "code": "observer = new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })"
+            }
+          ],
+          "calls": [
+            {
+              "line": 2,
+              "endLine": 2,
+              "start": 69,
+              "end": 107,
+              "call": "document.querySelector",
+              "canonicalCall": "document.querySelector",
+              "receiver": "document",
+              "method": "querySelector",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'.codrops_mwg'",
+                  "line": 2,
+                  "endLine": 2,
+                  "start": 92,
+                  "end": 106
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "document.querySelector('.codrops_mwg')"
+            },
+            {
+              "line": 4,
+              "endLine": 4,
+              "start": 134,
+              "end": 170,
+              "call": "root.querySelectorAll",
+              "canonicalCall": "document.querySelector.querySelectorAll",
+              "receiver": "root",
+              "method": "querySelectorAll",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'.medias img'",
+                  "line": 4,
+                  "endLine": 4,
+                  "start": 156,
+                  "end": 169
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.querySelectorAll('.medias img')"
+            },
+            {
+              "line": 4,
+              "endLine": 6,
+              "start": 134,
+              "end": 243,
+              "call": "root.querySelectorAll.forEach",
+              "canonicalCall": "document.querySelector.querySelectorAll.forEach",
+              "receiver": "root.querySelectorAll",
+              "method": "forEach",
+              "arguments": [
+                {
+                  "type": "ArrowFunctionExpression",
+                  "code": "image => {\n        images.push(image.getAttribute('src'))\n    }",
+                  "line": 4,
+                  "endLine": 6,
+                  "start": 179,
+                  "end": 242
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.querySelectorAll('.medias img').forEach(image => {\n        images.push(image.getAttribute('src'))\n    })"
+            },
+            {
+              "line": 14,
+              "endLine": 14,
+              "start": 383,
+              "end": 417,
+              "call": "window.matchMedia",
+              "canonicalCall": "window.matchMedia",
+              "receiver": "window",
+              "method": "matchMedia",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'(hover: none)'",
+                  "line": 14,
+                  "endLine": 14,
+                  "start": 401,
+                  "end": 416
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "window.matchMedia('(hover: none)')"
+            },
+            {
+              "line": 19,
+              "endLine": 19,
+              "start": 579,
+              "end": 601,
+              "call": "gsap.utils.clamp",
+              "canonicalCall": "gsap.utils.clamp",
+              "receiver": "gsap.utils",
+              "method": "clamp",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "0",
+                  "line": 19,
+                  "endLine": 19,
+                  "start": 596,
+                  "end": 597
+                },
+                {
+                  "type": "Identifier",
+                  "code": "W",
+                  "line": 19,
+                  "endLine": 19,
+                  "start": 599,
+                  "end": 600
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "gsap.utils.clamp(0, W)"
+            },
+            {
+              "line": 20,
+              "endLine": 20,
+              "start": 621,
+              "end": 643,
+              "call": "gsap.utils.clamp",
+              "canonicalCall": "gsap.utils.clamp",
+              "receiver": "gsap.utils",
+              "method": "clamp",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "0",
+                  "line": 20,
+                  "endLine": 20,
+                  "start": 638,
+                  "end": 639
+                },
+                {
+                  "type": "Identifier",
+                  "code": "H",
+                  "line": 20,
+                  "endLine": 20,
+                  "start": 641,
+                  "end": 642
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "gsap.utils.clamp(0, H)"
+            },
+            {
+              "line": 53,
+              "endLine": 53,
+              "start": 1435,
+              "end": 1486,
+              "call": "root.addEventListener",
+              "canonicalCall": "document.querySelector.addEventListener",
+              "receiver": "root",
+              "method": "addEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'mousemove'",
+                  "line": 53,
+                  "endLine": 53,
+                  "start": 1457,
+                  "end": 1468
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleMouseMove",
+                  "line": 53,
+                  "endLine": 53,
+                  "start": 1470,
+                  "end": 1485
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.addEventListener('mousemove', handleMouseMove)"
+            },
+            {
+              "line": 54,
+              "endLine": 54,
+              "start": 1491,
+              "end": 1562,
+              "call": "root.addEventListener",
+              "canonicalCall": "document.querySelector.addEventListener",
+              "receiver": "root",
+              "method": "addEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'touchstart'",
+                  "line": 54,
+                  "endLine": 54,
+                  "start": 1513,
+                  "end": 1525
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleTouchMove",
+                  "line": 54,
+                  "endLine": 54,
+                  "start": 1527,
+                  "end": 1542
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{ passive: true }",
+                  "line": 54,
+                  "endLine": 54,
+                  "start": 1544,
+                  "end": 1561
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.addEventListener('touchstart', handleTouchMove, { passive: true })"
+            },
+            {
+              "line": 55,
+              "endLine": 55,
+              "start": 1567,
+              "end": 1637,
+              "call": "root.addEventListener",
+              "canonicalCall": "document.querySelector.addEventListener",
+              "receiver": "root",
+              "method": "addEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'touchmove'",
+                  "line": 55,
+                  "endLine": 55,
+                  "start": 1589,
+                  "end": 1600
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleTouchMove",
+                  "line": 55,
+                  "endLine": 55,
+                  "start": 1602,
+                  "end": 1617
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{ passive: true }",
+                  "line": 55,
+                  "endLine": 55,
+                  "start": 1619,
+                  "end": 1636
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.addEventListener('touchmove', handleTouchMove, { passive: true })"
+            },
+            {
+              "line": 125,
+              "endLine": 137,
+              "start": 3381,
+              "end": 3920,
+              "call": "MutationObserver",
+              "canonicalCall": "MutationObserver",
+              "receiver": "",
+              "method": "",
+              "arguments": [
+                {
+                  "type": "ArrowFunctionExpression",
+                  "code": "mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    }",
+                  "line": 125,
+                  "endLine": 137,
+                  "start": 3402,
+                  "end": 3919
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })"
+            },
+            {
+              "line": 138,
+              "endLine": 138,
+              "start": 3925,
+              "end": 3990,
+              "call": "observer.observe",
+              "canonicalCall": "observer.observe",
+              "receiver": "observer",
+              "method": "observe",
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "code": "document.body",
+                  "line": 138,
+                  "endLine": 138,
+                  "start": 3942,
+                  "end": 3955
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{childList: true, subtree: true}",
+                  "line": 138,
+                  "endLine": 138,
+                  "start": 3957,
+                  "end": 3989
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "observer.observe(document.body, {childList: true, subtree: true})"
+            }
+          ],
+          "creates": [
+            {
+              "line": 125,
+              "endLine": 137,
+              "start": 3370,
+              "end": 3920,
+              "name": "observer",
+              "expression": "new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })",
+              "operator": "=",
+              "code": "observer = new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })"
+            }
+          ],
+          "assignments": [
+            {
+              "line": 2,
+              "endLine": 2,
+              "start": 62,
+              "end": 107,
+              "name": "root",
+              "expression": "document.querySelector('.codrops_mwg')",
+              "operator": "=",
+              "code": "root = document.querySelector('.codrops_mwg')"
+            },
+            {
+              "line": 3,
+              "endLine": 3,
+              "start": 118,
+              "end": 129,
+              "name": "images",
+              "expression": "[]",
+              "operator": "=",
+              "code": "images = []"
+            },
+            {
+              "line": 8,
+              "endLine": 8,
+              "start": 253,
+              "end": 261,
+              "name": "incr",
+              "expression": "0",
+              "operator": "=",
+              "code": "incr = 0"
+            },
+            {
+              "line": 9,
+              "endLine": 9,
+              "start": 271,
+              "end": 283,
+              "name": "oldIncrX",
+              "expression": "0",
+              "operator": "=",
+              "code": "oldIncrX = 0"
+            },
+            {
+              "line": 10,
+              "endLine": 10,
+              "start": 293,
+              "end": 305,
+              "name": "oldIncrY",
+              "expression": "0",
+              "operator": "=",
+              "code": "oldIncrY = 0"
+            },
+            {
+              "line": 11,
+              "endLine": 11,
+              "start": 315,
+              "end": 331,
+              "name": "firstMove",
+              "expression": "true",
+              "operator": "=",
+              "code": "firstMove = true"
+            },
+            {
+              "line": 12,
+              "endLine": 12,
+              "start": 341,
+              "end": 353,
+              "name": "indexImg",
+              "expression": "0",
+              "operator": "=",
+              "code": "indexImg = 0"
+            },
+            {
+              "line": 14,
+              "endLine": 14,
+              "start": 365,
+              "end": 425,
+              "name": "isCoarsePointer",
+              "expression": "window.matchMedia('(hover: none)').matches",
+              "operator": "=",
+              "code": "isCoarsePointer = window.matchMedia('(hover: none)').matches"
+            },
+            {
+              "line": 15,
+              "endLine": 15,
+              "start": 436,
+              "end": 493,
+              "name": "resetDist",
+              "expression": "window.innerWidth / (isCoarsePointer ? 6 : 8)",
+              "operator": "=",
+              "code": "resetDist = window.innerWidth / (isCoarsePointer ? 6 : 8)"
+            },
+            {
+              "line": 17,
+              "endLine": 17,
+              "start": 505,
+              "end": 526,
+              "name": "W",
+              "expression": "window.innerWidth",
+              "operator": "=",
+              "code": "W = window.innerWidth"
+            },
+            {
+              "line": 18,
+              "endLine": 18,
+              "start": 537,
+              "end": 559,
+              "name": "H",
+              "expression": "window.innerHeight",
+              "operator": "=",
+              "code": "H = window.innerHeight"
+            },
+            {
+              "line": 19,
+              "endLine": 19,
+              "start": 570,
+              "end": 601,
+              "name": "clampX",
+              "expression": "gsap.utils.clamp(0, W)",
+              "operator": "=",
+              "code": "clampX = gsap.utils.clamp(0, W)"
+            },
+            {
+              "line": 20,
+              "endLine": 20,
+              "start": 612,
+              "end": 643,
+              "name": "clampY",
+              "expression": "gsap.utils.clamp(0, H)",
+              "operator": "=",
+              "code": "clampY = gsap.utils.clamp(0, H)"
+            },
+            {
+              "line": 125,
+              "endLine": 137,
+              "start": 3370,
+              "end": 3920,
+              "name": "observer",
+              "expression": "new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })",
+              "operator": "=",
+              "code": "observer = new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })"
+            }
+          ],
+          "conditions": [
+            {
+              "line": 15,
+              "endLine": 15,
+              "start": 469,
+              "end": 492,
+              "kind": "ConditionalExpression",
+              "test": "isCoarsePointer",
+              "code": "isCoarsePointer ? 6 : 8"
+            }
+          ],
+          "returns": [],
+          "properties": [
+            {
+              "line": 54,
+              "endLine": 54,
+              "start": 1546,
+              "end": 1559,
+              "key": "passive",
+              "value": "true",
+              "code": "passive: true"
+            },
+            {
+              "line": 55,
+              "endLine": 55,
+              "start": 1621,
+              "end": 1634,
+              "key": "passive",
+              "value": "true",
+              "code": "passive: true"
+            },
+            {
+              "line": 138,
+              "endLine": 138,
+              "start": 3958,
+              "end": 3973,
+              "key": "childList",
+              "value": "true",
+              "code": "childList: true"
+            },
+            {
+              "line": 138,
+              "endLine": 138,
+              "start": 3975,
+              "end": 3988,
+              "key": "subtree",
+              "value": "true",
+              "code": "subtree: true"
+            }
+          ],
+          "exports": [],
+          "controllerLinks": []
+        },
+        {
+          "id": "assets/script.js:179:242",
+          "name": "root.querySelectorAll.forEach:callback[0]",
+          "binding": "root.querySelectorAll.forEach:callback[0]",
+          "kind": "ArrowFunctionExpression",
+          "className": null,
+          "classId": null,
+          "ownerId": "assets/script.js:44:3992",
+          "from": 4,
+          "to": 6,
+          "parameters": [
+            "image"
+          ],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 5,
+              "endLine": 5,
+              "start": 210,
+              "end": 235,
+              "call": "image.getAttribute",
+              "canonicalCall": "image.getAttribute",
+              "receiver": "image",
+              "method": "getAttribute",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'src'",
+                  "line": 5,
+                  "endLine": 5,
+                  "start": 229,
+                  "end": 234
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "image.getAttribute('src')"
+            },
+            {
+              "line": 5,
+              "endLine": 5,
+              "start": 198,
+              "end": 236,
+              "call": "images.push",
+              "canonicalCall": "images.push",
+              "receiver": "images",
+              "method": "push",
+              "arguments": [
+                {
+                  "type": "CallExpression",
+                  "code": "image.getAttribute('src')",
+                  "line": 5,
+                  "endLine": 5,
+                  "start": 210,
+                  "end": 235
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "images.push(image.getAttribute('src'))"
+            }
+          ],
+          "creates": [],
+          "assignments": [],
+          "conditions": [],
+          "returns": [],
+          "properties": [],
+          "exports": [],
+          "controllerLinks": []
+        },
+        {
+          "id": "assets/script.js:649:1197",
+          "name": "applyMove",
+          "binding": "applyMove",
+          "kind": "FunctionDeclaration",
+          "className": null,
+          "classId": null,
+          "ownerId": "assets/script.js:44:3992",
+          "from": 22,
+          "to": 42,
+          "parameters": [
+            "clientX",
+            "clientY"
+          ],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [],
+          "motion": [
+            {
+              "line": 23,
+              "endLine": 23,
+              "start": 709,
+              "end": 724,
+              "call": "clampX",
+              "canonicalCall": "gsap.utils.clamp",
+              "receiver": "",
+              "method": "",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "clientX",
+                  "line": 23,
+                  "endLine": 23,
+                  "start": 716,
+                  "end": 723
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "clampX(clientX)"
+            },
+            {
+              "line": 24,
+              "endLine": 24,
+              "start": 746,
+              "end": 761,
+              "call": "clampY",
+              "canonicalCall": "gsap.utils.clamp",
+              "receiver": "",
+              "method": "",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "clientY",
+                  "line": 24,
+                  "endLine": 24,
+                  "start": 753,
+                  "end": 760
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "clampY(clientY)"
+            }
+          ],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 23,
+              "endLine": 23,
+              "start": 702,
+              "end": 724,
+              "name": "valX",
+              "expression": "clampX(clientX)",
+              "operator": "=",
+              "code": "valX = clampX(clientX)"
+            },
+            {
+              "line": 24,
+              "endLine": 24,
+              "start": 739,
+              "end": 761,
+              "name": "valY",
+              "expression": "clampY(clientY)",
+              "operator": "=",
+              "code": "valY = clampY(clientY)"
+            },
+            {
+              "line": 27,
+              "endLine": 27,
+              "start": 800,
+              "end": 817,
+              "name": "firstMove",
+              "expression": "false",
+              "operator": "=",
+              "code": "firstMove = false"
+            },
+            {
+              "line": 28,
+              "endLine": 28,
+              "start": 830,
+              "end": 845,
+              "name": "oldIncrX",
+              "expression": "valX",
+              "operator": "=",
+              "code": "oldIncrX = valX"
+            },
+            {
+              "line": 29,
+              "endLine": 29,
+              "start": 858,
+              "end": 873,
+              "name": "oldIncrY",
+              "expression": "valY",
+              "operator": "=",
+              "code": "oldIncrY = valY"
+            },
+            {
+              "line": 33,
+              "endLine": 33,
+              "start": 912,
+              "end": 973,
+              "name": "incr",
+              "expression": "Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)",
+              "operator": "+=",
+              "code": "incr += Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)"
+            },
+            {
+              "line": 36,
+              "endLine": 36,
+              "start": 1019,
+              "end": 1027,
+              "name": "incr",
+              "expression": "0",
+              "operator": "=",
+              "code": "incr = 0"
+            },
+            {
+              "line": 40,
+              "endLine": 40,
+              "start": 1152,
+              "end": 1167,
+              "name": "oldIncrX",
+              "expression": "valX",
+              "operator": "=",
+              "code": "oldIncrX = valX"
+            },
+            {
+              "line": 41,
+              "endLine": 41,
+              "start": 1176,
+              "end": 1191,
+              "name": "oldIncrY",
+              "expression": "valY",
+              "operator": "=",
+              "code": "oldIncrY = valY"
+            }
+          ],
+          "calls": [
+            {
+              "line": 23,
+              "endLine": 23,
+              "start": 709,
+              "end": 724,
+              "call": "clampX",
+              "canonicalCall": "gsap.utils.clamp",
+              "receiver": "",
+              "method": "",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "clientX",
+                  "line": 23,
+                  "endLine": 23,
+                  "start": 716,
+                  "end": 723
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "clampX(clientX)"
+            },
+            {
+              "line": 24,
+              "endLine": 24,
+              "start": 746,
+              "end": 761,
+              "call": "clampY",
+              "canonicalCall": "gsap.utils.clamp",
+              "receiver": "",
+              "method": "",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "clientY",
+                  "line": 24,
+                  "endLine": 24,
+                  "start": 753,
+                  "end": 760
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "clampY(clientY)"
+            },
+            {
+              "line": 33,
+              "endLine": 33,
+              "start": 920,
+              "end": 945,
+              "call": "Math.abs",
+              "canonicalCall": "Math.abs",
+              "receiver": "Math",
+              "method": "abs",
+              "arguments": [
+                {
+                  "type": "BinaryExpression",
+                  "code": "valX - oldIncrX",
+                  "line": 33,
+                  "endLine": 33,
+                  "start": 929,
+                  "end": 944
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "Math.abs(valX - oldIncrX)"
+            },
+            {
+              "line": 33,
+              "endLine": 33,
+              "start": 948,
+              "end": 973,
+              "call": "Math.abs",
+              "canonicalCall": "Math.abs",
+              "receiver": "Math",
+              "method": "abs",
+              "arguments": [
+                {
+                  "type": "BinaryExpression",
+                  "code": "valY - oldIncrY",
+                  "line": 33,
+                  "endLine": 33,
+                  "start": 957,
+                  "end": 972
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "Math.abs(valY - oldIncrY)"
+            },
+            {
+              "line": 37,
+              "endLine": 37,
+              "start": 1065,
+              "end": 1093,
+              "call": "root.getBoundingClientRect",
+              "canonicalCall": "document.querySelector.getBoundingClientRect",
+              "receiver": "root",
+              "method": "getBoundingClientRect",
+              "arguments": [],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.getBoundingClientRect()"
+            },
+            {
+              "line": 37,
+              "endLine": 37,
+              "start": 1040,
+              "end": 1132,
+              "call": "createMedia",
+              "canonicalCall": "createMedia",
+              "receiver": "",
+              "method": "",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "valX",
+                  "line": 37,
+                  "endLine": 37,
+                  "start": 1052,
+                  "end": 1056
+                },
+                {
+                  "type": "BinaryExpression",
+                  "code": "valY - root.getBoundingClientRect().top",
+                  "line": 37,
+                  "endLine": 37,
+                  "start": 1058,
+                  "end": 1097
+                },
+                {
+                  "type": "BinaryExpression",
+                  "code": "valX - oldIncrX",
+                  "line": 37,
+                  "endLine": 37,
+                  "start": 1099,
+                  "end": 1114
+                },
+                {
+                  "type": "BinaryExpression",
+                  "code": "valY - oldIncrY",
+                  "line": 37,
+                  "endLine": 37,
+                  "start": 1116,
+                  "end": 1131
+                }
+              ],
+              "targetIds": [
+                "assets/script.js:1643:3345"
+              ],
+              "resolution": "resolved-static",
+              "code": "createMedia(valX, valY - root.getBoundingClientRect().top, valX - oldIncrX, valY - oldIncrY)"
+            }
+          ],
+          "creates": [],
+          "assignments": [
+            {
+              "line": 23,
+              "endLine": 23,
+              "start": 702,
+              "end": 724,
+              "name": "valX",
+              "expression": "clampX(clientX)",
+              "operator": "=",
+              "code": "valX = clampX(clientX)"
+            },
+            {
+              "line": 24,
+              "endLine": 24,
+              "start": 739,
+              "end": 761,
+              "name": "valY",
+              "expression": "clampY(clientY)",
+              "operator": "=",
+              "code": "valY = clampY(clientY)"
+            },
+            {
+              "line": 27,
+              "endLine": 27,
+              "start": 800,
+              "end": 817,
+              "name": "firstMove",
+              "expression": "false",
+              "operator": "=",
+              "code": "firstMove = false"
+            },
+            {
+              "line": 28,
+              "endLine": 28,
+              "start": 830,
+              "end": 845,
+              "name": "oldIncrX",
+              "expression": "valX",
+              "operator": "=",
+              "code": "oldIncrX = valX"
+            },
+            {
+              "line": 29,
+              "endLine": 29,
+              "start": 858,
+              "end": 873,
+              "name": "oldIncrY",
+              "expression": "valY",
+              "operator": "=",
+              "code": "oldIncrY = valY"
+            },
+            {
+              "line": 33,
+              "endLine": 33,
+              "start": 912,
+              "end": 973,
+              "name": "incr",
+              "expression": "Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)",
+              "operator": "+=",
+              "code": "incr += Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)"
+            },
+            {
+              "line": 36,
+              "endLine": 36,
+              "start": 1019,
+              "end": 1027,
+              "name": "incr",
+              "expression": "0",
+              "operator": "=",
+              "code": "incr = 0"
+            },
+            {
+              "line": 40,
+              "endLine": 40,
+              "start": 1152,
+              "end": 1167,
+              "name": "oldIncrX",
+              "expression": "valX",
+              "operator": "=",
+              "code": "oldIncrX = valX"
+            },
+            {
+              "line": 41,
+              "endLine": 41,
+              "start": 1176,
+              "end": 1191,
+              "name": "oldIncrY",
+              "expression": "valY",
+              "operator": "=",
+              "code": "oldIncrY = valY"
+            }
+          ],
+          "conditions": [
+            {
+              "line": 26,
+              "endLine": 31,
+              "start": 771,
+              "end": 902,
+              "kind": "IfStatement",
+              "test": "firstMove",
+              "code": "if (firstMove) {\n            firstMove = false\n            oldIncrX = valX\n            oldIncrY = valY\n            return\n        }"
+            },
+            {
+              "line": 35,
+              "endLine": 38,
+              "start": 983,
+              "end": 1142,
+              "kind": "IfStatement",
+              "test": "incr > resetDist",
+              "code": "if (incr > resetDist) {\n            incr = 0\n            createMedia(valX, valY - root.getBoundingClientRect().top, valX - oldIncrX, valY - oldIncrY)\n        }"
+            }
+          ],
+          "returns": [
+            {
+              "line": 30,
+              "endLine": 30,
+              "start": 886,
+              "end": 892,
+              "expression": "",
+              "code": "return"
+            }
+          ],
+          "properties": [],
+          "exports": [],
+          "controllerLinks": []
+        },
+        {
+          "id": "assets/script.js:1203:1278",
+          "name": "handleMouseMove",
+          "binding": "handleMouseMove",
+          "kind": "FunctionDeclaration",
+          "className": null,
+          "classId": null,
+          "ownerId": "assets/script.js:44:3992",
+          "from": 44,
+          "to": 46,
+          "parameters": [
+            "e"
+          ],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 45,
+              "endLine": 45,
+              "start": 1241,
+              "end": 1272,
+              "call": "applyMove",
+              "canonicalCall": "applyMove",
+              "receiver": "",
+              "method": "",
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "code": "e.clientX",
+                  "line": 45,
+                  "endLine": 45,
+                  "start": 1251,
+                  "end": 1260
+                },
+                {
+                  "type": "MemberExpression",
+                  "code": "e.clientY",
+                  "line": 45,
+                  "endLine": 45,
+                  "start": 1262,
+                  "end": 1271
+                }
+              ],
+              "targetIds": [
+                "assets/script.js:649:1197"
+              ],
+              "resolution": "resolved-static",
+              "code": "applyMove(e.clientX, e.clientY)"
+            }
+          ],
+          "creates": [],
+          "assignments": [],
+          "conditions": [],
+          "returns": [],
+          "properties": [],
+          "exports": [],
+          "controllerLinks": []
+        },
+        {
+          "id": "assets/script.js:1284:1429",
+          "name": "handleTouchMove",
+          "binding": "handleTouchMove",
+          "kind": "FunctionDeclaration",
+          "className": null,
+          "classId": null,
+          "ownerId": "assets/script.js:44:3992",
+          "from": 48,
+          "to": 51,
+          "parameters": [
+            "e"
+          ],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 50,
+              "endLine": 50,
+              "start": 1370,
+              "end": 1423,
+              "call": "applyMove",
+              "canonicalCall": "applyMove",
+              "receiver": "",
+              "method": "",
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "code": "e.touches[0].clientX",
+                  "line": 50,
+                  "endLine": 50,
+                  "start": 1380,
+                  "end": 1400
+                },
+                {
+                  "type": "MemberExpression",
+                  "code": "e.touches[0].clientY",
+                  "line": 50,
+                  "endLine": 50,
+                  "start": 1402,
+                  "end": 1422
+                }
+              ],
+              "targetIds": [
+                "assets/script.js:649:1197"
+              ],
+              "resolution": "resolved-static",
+              "code": "applyMove(e.touches[0].clientX, e.touches[0].clientY)"
+            }
+          ],
+          "creates": [],
+          "assignments": [],
+          "conditions": [
+            {
+              "line": 49,
+              "endLine": 49,
+              "start": 1326,
+              "end": 1353,
+              "kind": "LogicalExpression",
+              "test": "!e.touches",
+              "code": "!e.touches || !e.touches[0]"
+            },
+            {
+              "line": 49,
+              "endLine": 49,
+              "start": 1322,
+              "end": 1361,
+              "kind": "IfStatement",
+              "test": "!e.touches || !e.touches[0]",
+              "code": "if (!e.touches || !e.touches[0]) return"
+            }
+          ],
+          "returns": [
+            {
+              "line": 49,
+              "endLine": 49,
+              "start": 1355,
+              "end": 1361,
+              "expression": "",
+              "code": "return"
+            }
+          ],
+          "properties": [],
+          "exports": [],
+          "controllerLinks": []
+        },
+        {
+          "id": "assets/script.js:1643:3345",
+          "name": "createMedia",
+          "binding": "createMedia",
+          "kind": "FunctionDeclaration",
+          "className": null,
+          "classId": null,
+          "ownerId": "assets/script.js:44:3992",
+          "from": 57,
+          "to": 121,
+          "parameters": [
+            "x",
+            "y",
+            "deltaX",
+            "deltaY"
+          ],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [],
+          "motion": [
+            {
+              "line": 68,
+              "endLine": 73,
+              "start": 1921,
+              "end": 2066,
+              "call": "gsap.timeline",
+              "canonicalCall": "gsap.timeline",
+              "receiver": "gsap",
+              "method": "timeline",
+              "arguments": [
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        }",
+                  "line": 68,
+                  "endLine": 73,
+                  "start": 1935,
+                  "end": 2065
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })"
+            },
+            {
+              "line": 75,
+              "endLine": 86,
+              "start": 2080,
+              "end": 2443,
+              "call": "tl.fromTo",
+              "canonicalCall": "gsap.timeline.fromTo",
+              "receiver": "tl",
+              "method": "fromTo",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 75,
+                  "endLine": 75,
+                  "start": 2090,
+                  "end": 2095
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }",
+                  "line": 75,
+                  "endLine": 81,
+                  "start": 2097,
+                  "end": 2318
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        }",
+                  "line": 81,
+                  "endLine": 86,
+                  "start": 2320,
+                  "end": 2442
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.fromTo(image, {\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }, {\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        })"
+            },
+            {
+              "line": 88,
+              "endLine": 95,
+              "start": 2453,
+              "end": 2631,
+              "call": "tl.fromTo",
+              "canonicalCall": "gsap.timeline.fromTo",
+              "receiver": "tl",
+              "method": "fromTo",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 88,
+                  "endLine": 88,
+                  "start": 2463,
+                  "end": 2468
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            x,\n        }",
+                  "line": 88,
+                  "endLine": 90,
+                  "start": 2470,
+                  "end": 2496
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }",
+                  "line": 90,
+                  "endLine": 95,
+                  "start": 2498,
+                  "end": 2625
+                },
+                {
+                  "type": "Literal",
+                  "code": "'<'",
+                  "line": 95,
+                  "endLine": 95,
+                  "start": 2627,
+                  "end": 2630
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.fromTo(image, {\n            x,\n        }, {\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }, '<')"
+            },
+            {
+              "line": 97,
+              "endLine": 105,
+              "start": 2645,
+              "end": 2933,
+              "call": "tl.fromTo",
+              "canonicalCall": "gsap.timeline.fromTo",
+              "receiver": "tl",
+              "method": "fromTo",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 97,
+                  "endLine": 97,
+                  "start": 2655,
+                  "end": 2660
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            y\n        }",
+                  "line": 97,
+                  "endLine": 99,
+                  "start": 2662,
+                  "end": 2687
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }",
+                  "line": 99,
+                  "endLine": 105,
+                  "start": 2689,
+                  "end": 2927
+                },
+                {
+                  "type": "Literal",
+                  "code": "'<'",
+                  "line": 105,
+                  "endLine": 105,
+                  "start": 2929,
+                  "end": 2932
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.fromTo(image, {\n            y\n        }, {\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }, '<')"
+            },
+            {
+              "line": 108,
+              "endLine": 113,
+              "start": 2969,
+              "end": 3136,
+              "call": "tl.to",
+              "canonicalCall": "gsap.timeline.to",
+              "receiver": "tl",
+              "method": "to",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 108,
+                  "endLine": 108,
+                  "start": 2975,
+                  "end": 2980
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        }",
+                  "line": 108,
+                  "endLine": 113,
+                  "start": 2982,
+                  "end": 3135
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.to(image, {\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        })"
+            },
+            {
+              "line": 114,
+              "endLine": 118,
+              "start": 3145,
+              "end": 3284,
+              "call": "tl.to",
+              "canonicalCall": "gsap.timeline.to",
+              "receiver": "tl",
+              "method": "to",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 114,
+                  "endLine": 114,
+                  "start": 3151,
+                  "end": 3156
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }",
+                  "line": 114,
+                  "endLine": 118,
+                  "start": 3158,
+                  "end": 3278
+                },
+                {
+                  "type": "Literal",
+                  "code": "'<'",
+                  "line": 118,
+                  "endLine": 118,
+                  "start": 3280,
+                  "end": 3283
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.to(image, {\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }, '<')"
+            }
+          ],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 58,
+              "endLine": 58,
+              "start": 1702,
+              "end": 1724,
+              "name": "H",
+              "expression": "window.innerHeight",
+              "operator": "=",
+              "code": "H = window.innerHeight"
+            },
+            {
+              "line": 62,
+              "endLine": 62,
+              "start": 1773,
+              "end": 1810,
+              "name": "image",
+              "expression": "document.createElement(\"img\")",
+              "operator": "=",
+              "code": "image = document.createElement(\"img\")"
+            },
+            {
+              "line": 68,
+              "endLine": 73,
+              "start": 1916,
+              "end": 2066,
+              "name": "tl",
+              "expression": "gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })",
+              "operator": "=",
+              "code": "tl = gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })"
+            },
+            {
+              "line": 120,
+              "endLine": 120,
+              "start": 3298,
+              "end": 3339,
+              "name": "indexImg",
+              "expression": "(indexImg + 1) % images.length",
+              "operator": "=",
+              "code": "indexImg = (indexImg + 1) % images.length"
+            }
+          ],
+          "calls": [
+            {
+              "line": 62,
+              "endLine": 62,
+              "start": 1781,
+              "end": 1810,
+              "call": "document.createElement",
+              "canonicalCall": "document.createElement",
+              "receiver": "document",
+              "method": "createElement",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "\"img\"",
+                  "line": 62,
+                  "endLine": 62,
+                  "start": 1804,
+                  "end": 1809
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "document.createElement(\"img\")"
+            },
+            {
+              "line": 65,
+              "endLine": 65,
+              "start": 1821,
+              "end": 1864,
+              "call": "image.setAttribute",
+              "canonicalCall": "document.createElement.setAttribute",
+              "receiver": "image",
+              "method": "setAttribute",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'src'",
+                  "line": 65,
+                  "endLine": 65,
+                  "start": 1840,
+                  "end": 1845
+                },
+                {
+                  "type": "MemberExpression",
+                  "code": "images[indexImg]",
+                  "line": 65,
+                  "endLine": 65,
+                  "start": 1847,
+                  "end": 1863
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "image.setAttribute('src', images[indexImg])"
+            },
+            {
+              "line": 66,
+              "endLine": 66,
+              "start": 1873,
+              "end": 1896,
+              "call": "root.appendChild",
+              "canonicalCall": "document.querySelector.appendChild",
+              "receiver": "root",
+              "method": "appendChild",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 66,
+                  "endLine": 66,
+                  "start": 1890,
+                  "end": 1895
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.appendChild(image)"
+            },
+            {
+              "line": 68,
+              "endLine": 73,
+              "start": 1921,
+              "end": 2066,
+              "call": "gsap.timeline",
+              "canonicalCall": "gsap.timeline",
+              "receiver": "gsap",
+              "method": "timeline",
+              "arguments": [
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        }",
+                  "line": 68,
+                  "endLine": 73,
+                  "start": 1935,
+                  "end": 2065
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })"
+            },
+            {
+              "line": 76,
+              "endLine": 76,
+              "start": 2128,
+              "end": 2141,
+              "call": "Math.random",
+              "canonicalCall": "Math.random",
+              "receiver": "Math",
+              "method": "random",
+              "arguments": [],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "Math.random()"
+            },
+            {
+              "line": 77,
+              "endLine": 77,
+              "start": 2184,
+              "end": 2197,
+              "call": "Math.random",
+              "canonicalCall": "Math.random",
+              "receiver": "Math",
+              "method": "random",
+              "arguments": [],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "Math.random()"
+            },
+            {
+              "line": 80,
+              "endLine": 80,
+              "start": 2283,
+              "end": 2296,
+              "call": "Math.random",
+              "canonicalCall": "Math.random",
+              "receiver": "Math",
+              "method": "random",
+              "arguments": [],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "Math.random()"
+            },
+            {
+              "line": 75,
+              "endLine": 86,
+              "start": 2080,
+              "end": 2443,
+              "call": "tl.fromTo",
+              "canonicalCall": "gsap.timeline.fromTo",
+              "receiver": "tl",
+              "method": "fromTo",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 75,
+                  "endLine": 75,
+                  "start": 2090,
+                  "end": 2095
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }",
+                  "line": 75,
+                  "endLine": 81,
+                  "start": 2097,
+                  "end": 2318
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        }",
+                  "line": 81,
+                  "endLine": 86,
+                  "start": 2320,
+                  "end": 2442
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.fromTo(image, {\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }, {\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        })"
+            },
+            {
+              "line": 88,
+              "endLine": 95,
+              "start": 2453,
+              "end": 2631,
+              "call": "tl.fromTo",
+              "canonicalCall": "gsap.timeline.fromTo",
+              "receiver": "tl",
+              "method": "fromTo",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 88,
+                  "endLine": 88,
+                  "start": 2463,
+                  "end": 2468
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            x,\n        }",
+                  "line": 88,
+                  "endLine": 90,
+                  "start": 2470,
+                  "end": 2496
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }",
+                  "line": 90,
+                  "endLine": 95,
+                  "start": 2498,
+                  "end": 2625
+                },
+                {
+                  "type": "Literal",
+                  "code": "'<'",
+                  "line": 95,
+                  "endLine": 95,
+                  "start": 2627,
+                  "end": 2630
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.fromTo(image, {\n            x,\n        }, {\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }, '<')"
+            },
+            {
+              "line": 97,
+              "endLine": 105,
+              "start": 2645,
+              "end": 2933,
+              "call": "tl.fromTo",
+              "canonicalCall": "gsap.timeline.fromTo",
+              "receiver": "tl",
+              "method": "fromTo",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 97,
+                  "endLine": 97,
+                  "start": 2655,
+                  "end": 2660
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            y\n        }",
+                  "line": 97,
+                  "endLine": 99,
+                  "start": 2662,
+                  "end": 2687
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }",
+                  "line": 99,
+                  "endLine": 105,
+                  "start": 2689,
+                  "end": 2927
+                },
+                {
+                  "type": "Literal",
+                  "code": "'<'",
+                  "line": 105,
+                  "endLine": 105,
+                  "start": 2929,
+                  "end": 2932
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.fromTo(image, {\n            y\n        }, {\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }, '<')"
+            },
+            {
+              "line": 110,
+              "endLine": 110,
+              "start": 3042,
+              "end": 3055,
+              "call": "Math.random",
+              "canonicalCall": "Math.random",
+              "receiver": "Math",
+              "method": "random",
+              "arguments": [],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "Math.random()"
+            },
+            {
+              "line": 108,
+              "endLine": 113,
+              "start": 2969,
+              "end": 3136,
+              "call": "tl.to",
+              "canonicalCall": "gsap.timeline.to",
+              "receiver": "tl",
+              "method": "to",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 108,
+                  "endLine": 108,
+                  "start": 2975,
+                  "end": 2980
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        }",
+                  "line": 108,
+                  "endLine": 113,
+                  "start": 2982,
+                  "end": 3135
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.to(image, {\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        })"
+            },
+            {
+              "line": 114,
+              "endLine": 118,
+              "start": 3145,
+              "end": 3284,
+              "call": "tl.to",
+              "canonicalCall": "gsap.timeline.to",
+              "receiver": "tl",
+              "method": "to",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 114,
+                  "endLine": 114,
+                  "start": 3151,
+                  "end": 3156
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }",
+                  "line": 114,
+                  "endLine": 118,
+                  "start": 3158,
+                  "end": 3278
+                },
+                {
+                  "type": "Literal",
+                  "code": "'<'",
+                  "line": 118,
+                  "endLine": 118,
+                  "start": 3280,
+                  "end": 3283
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.to(image, {\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }, '<')"
+            }
+          ],
+          "creates": [
+            {
+              "line": 68,
+              "endLine": 73,
+              "start": 1916,
+              "end": 2066,
+              "name": "tl",
+              "expression": "gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })",
+              "operator": "=",
+              "code": "tl = gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })"
+            }
+          ],
+          "assignments": [
+            {
+              "line": 58,
+              "endLine": 58,
+              "start": 1702,
+              "end": 1724,
+              "name": "H",
+              "expression": "window.innerHeight",
+              "operator": "=",
+              "code": "H = window.innerHeight"
+            },
+            {
+              "line": 62,
+              "endLine": 62,
+              "start": 1773,
+              "end": 1810,
+              "name": "image",
+              "expression": "document.createElement(\"img\")",
+              "operator": "=",
+              "code": "image = document.createElement(\"img\")"
+            },
+            {
+              "line": 68,
+              "endLine": 73,
+              "start": 1916,
+              "end": 2066,
+              "name": "tl",
+              "expression": "gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })",
+              "operator": "=",
+              "code": "tl = gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })"
+            },
+            {
+              "line": 120,
+              "endLine": 120,
+              "start": 3298,
+              "end": 3339,
+              "name": "indexImg",
+              "expression": "(indexImg + 1) % images.length",
+              "operator": "=",
+              "code": "indexImg = (indexImg + 1) % images.length"
+            }
+          ],
+          "conditions": [
+            {
+              "line": 60,
+              "endLine": 60,
+              "start": 1734,
+              "end": 1757,
+              "kind": "IfStatement",
+              "test": "y > H - 200",
+              "code": "if (y > H - 200) return"
+            }
+          ],
+          "returns": [
+            {
+              "line": 60,
+              "endLine": 60,
+              "start": 1751,
+              "end": 1757,
+              "expression": "",
+              "code": "return"
+            }
+          ],
+          "properties": [
+            {
+              "line": 76,
+              "endLine": 76,
+              "start": 2111,
+              "end": 2153,
+              "key": "xPercent",
+              "value": "-50 + (Math.random() - 0.5) * 80",
+              "code": "xPercent: -50 + (Math.random() - 0.5) * 80"
+            },
+            {
+              "line": 77,
+              "endLine": 77,
+              "start": 2167,
+              "end": 2209,
+              "key": "yPercent",
+              "value": "-50 + (Math.random() - 0.5) * 10",
+              "code": "yPercent: -50 + (Math.random() - 0.5) * 10"
+            },
+            {
+              "line": 78,
+              "endLine": 78,
+              "start": 2223,
+              "end": 2234,
+              "key": "scaleX",
+              "value": "1.3",
+              "code": "scaleX: 1.3"
+            },
+            {
+              "line": 79,
+              "endLine": 79,
+              "start": 2248,
+              "end": 2259,
+              "key": "scaleY",
+              "value": "1.3",
+              "code": "scaleY: 1.3"
+            },
+            {
+              "line": 80,
+              "endLine": 80,
+              "start": 2273,
+              "end": 2308,
+              "key": "rotation",
+              "value": "(Math.random() - 0.5) * 20",
+              "code": "rotation:(Math.random() - 0.5) * 20"
+            },
+            {
+              "line": 82,
+              "endLine": 82,
+              "start": 2334,
+              "end": 2342,
+              "key": "scaleX",
+              "value": "1",
+              "code": "scaleX:1"
+            },
+            {
+              "line": 83,
+              "endLine": 83,
+              "start": 2356,
+              "end": 2364,
+              "key": "scaleY",
+              "value": "1",
+              "code": "scaleY:1"
+            },
+            {
+              "line": 84,
+              "endLine": 84,
+              "start": 2378,
+              "end": 2405,
+              "key": "ease",
+              "value": "'elastic.out(2, 0.6)'",
+              "code": "ease: 'elastic.out(2, 0.6)'"
+            },
+            {
+              "line": 85,
+              "endLine": 85,
+              "start": 2419,
+              "end": 2432,
+              "key": "duration",
+              "value": "0.4",
+              "code": "duration: 0.4"
+            },
+            {
+              "line": 89,
+              "endLine": 89,
+              "start": 2484,
+              "end": 2485,
+              "key": "x",
+              "value": "x",
+              "code": "x"
+            },
+            {
+              "line": 91,
+              "endLine": 91,
+              "start": 2512,
+              "end": 2532,
+              "key": "x",
+              "value": "'+=' + deltaX * 2",
+              "code": "x: '+=' + deltaX * 2"
+            },
+            {
+              "line": 92,
+              "endLine": 92,
+              "start": 2546,
+              "end": 2557,
+              "key": "rotation",
+              "value": "0",
+              "code": "rotation: 0"
+            },
+            {
+              "line": 93,
+              "endLine": 93,
+              "start": 2571,
+              "end": 2588,
+              "key": "ease",
+              "value": "'power1.in'",
+              "code": "ease: 'power1.in'"
+            },
+            {
+              "line": 94,
+              "endLine": 94,
+              "start": 2602,
+              "end": 2615,
+              "key": "duration",
+              "value": "0.4",
+              "code": "duration: 0.4"
+            },
+            {
+              "line": 98,
+              "endLine": 98,
+              "start": 2676,
+              "end": 2677,
+              "key": "y",
+              "value": "y",
+              "code": "y"
+            },
+            {
+              "line": 100,
+              "endLine": 100,
+              "start": 2703,
+              "end": 2720,
+              "key": "y",
+              "value": "'+=' + (H - y)",
+              "code": "y: '+=' + (H - y)"
+            },
+            {
+              "line": 101,
+              "endLine": 101,
+              "start": 2734,
+              "end": 2744,
+              "key": "scale",
+              "value": "0.9",
+              "code": "scale: 0.9"
+            },
+            {
+              "line": 102,
+              "endLine": 102,
+              "start": 2758,
+              "end": 2771,
+              "key": "yPercent",
+              "value": "-95",
+              "code": "yPercent: -95"
+            },
+            {
+              "line": 103,
+              "endLine": 103,
+              "start": 2870,
+              "end": 2890,
+              "key": "ease",
+              "value": "'back.in(1.1)'",
+              "code": "ease: 'back.in(1.1)'"
+            },
+            {
+              "line": 104,
+              "endLine": 104,
+              "start": 2904,
+              "end": 2917,
+              "key": "duration",
+              "value": "0.4",
+              "code": "duration: 0.4"
+            },
+            {
+              "line": 109,
+              "endLine": 109,
+              "start": 2996,
+              "end": 3018,
+              "key": "x",
+              "value": "'+=' + deltaX * 1.6",
+              "code": "x: '+=' + deltaX * 1.6"
+            },
+            {
+              "line": 110,
+              "endLine": 110,
+              "start": 3032,
+              "end": 3067,
+              "key": "rotation",
+              "value": "(Math.random() - 0.5) * 40",
+              "code": "rotation:(Math.random() - 0.5) * 40"
+            },
+            {
+              "line": 111,
+              "endLine": 111,
+              "start": 3081,
+              "end": 3098,
+              "key": "ease",
+              "value": "'power1.in'",
+              "code": "ease: 'power1.in'"
+            },
+            {
+              "line": 112,
+              "endLine": 112,
+              "start": 3112,
+              "end": 3125,
+              "key": "duration",
+              "value": "0.3",
+              "code": "duration: 0.3"
+            },
+            {
+              "line": 115,
+              "endLine": 115,
+              "start": 3172,
+              "end": 3185,
+              "key": "yPercent",
+              "value": "150",
+              "code": "yPercent: 150"
+            },
+            {
+              "line": 116,
+              "endLine": 116,
+              "start": 3199,
+              "end": 3241,
+              "key": "ease",
+              "value": "'back.in(' + (1.5 + (1 - y/H)) + ')'",
+              "code": "ease: 'back.in(' + (1.5 + (1 - y/H)) + ')'"
+            },
+            {
+              "line": 117,
+              "endLine": 117,
+              "start": 3255,
+              "end": 3268,
+              "key": "duration",
+              "value": "0.3",
+              "code": "duration: 0.3"
+            }
+          ],
+          "exports": [],
+          "controllerLinks": []
+        },
+        {
+          "id": "assets/script.js:1961:2055",
+          "name": "onComplete",
+          "binding": "onComplete",
+          "kind": "ArrowFunctionExpression",
+          "className": null,
+          "classId": null,
+          "ownerId": "assets/script.js:1643:3345",
+          "from": 69,
+          "to": 72,
+          "parameters": [],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [],
+          "motion": [
+            {
+              "line": 71,
+              "endLine": 71,
+              "start": 2032,
+              "end": 2041,
+              "call": "tl.kill",
+              "canonicalCall": "gsap.timeline.kill",
+              "receiver": "tl",
+              "method": "kill",
+              "arguments": [],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.kill()"
+            }
+          ],
+          "controls": [
+            {
+              "line": 71,
+              "endLine": 71,
+              "start": 2032,
+              "end": 2041,
+              "call": "tl.kill",
+              "canonicalCall": "gsap.timeline.kill",
+              "receiver": "tl",
+              "method": "kill",
+              "arguments": [],
+              "targetIds": [],
+              "resolution": "unresolved",
+              "code": "tl.kill()",
+              "controller": "tl"
+            }
+          ],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 70,
+              "endLine": 70,
+              "start": 1985,
+              "end": 2008,
+              "call": "root.removeChild",
+              "canonicalCall": "root.removeChild",
+              "receiver": "root",
+              "method": "removeChild",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "image",
+                  "line": 70,
+                  "endLine": 70,
+                  "start": 2002,
+                  "end": 2007
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.removeChild(image)"
+            },
+            {
+              "line": 71,
+              "endLine": 71,
+              "start": 2032,
+              "end": 2041,
+              "call": "tl.kill",
+              "canonicalCall": "gsap.timeline.kill",
+              "receiver": "tl",
+              "method": "kill",
+              "arguments": [],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "tl.kill()"
+            }
+          ],
+          "creates": [],
+          "assignments": [],
+          "conditions": [
+            {
+              "line": 71,
+              "endLine": 71,
+              "start": 2026,
+              "end": 2041,
+              "kind": "LogicalExpression",
+              "test": "tl",
+              "code": "tl && tl.kill()"
+            }
+          ],
+          "returns": [],
+          "properties": [],
+          "exports": [],
+          "controllerLinks": [
+            {
+              "line": 71,
+              "controller": "tl",
+              "operation": "kill",
+              "creators": [
+                {
+                  "unitId": "assets/script.js:1643:3345",
+                  "line": 68
+                }
+              ],
+              "resolution": "name-linked"
+            }
+          ]
+        },
+        {
+          "id": "assets/script.js:3402:3919",
+          "name": "funzione@125:42",
+          "binding": "funzione@125:42",
+          "kind": "ArrowFunctionExpression",
+          "className": null,
+          "classId": null,
+          "ownerId": "assets/script.js:44:3992",
+          "from": 125,
+          "to": 137,
+          "parameters": [
+            "mutations"
+          ],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [
+            {
+              "line": 132,
+              "endLine": 132,
+              "start": 3642,
+              "end": 3696,
+              "call": "root.removeEventListener",
+              "canonicalCall": "document.querySelector.removeEventListener",
+              "receiver": "root",
+              "method": "removeEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'mousemove'",
+                  "line": 132,
+                  "endLine": 132,
+                  "start": 3667,
+                  "end": 3678
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleMouseMove",
+                  "line": 132,
+                  "endLine": 132,
+                  "start": 3680,
+                  "end": 3695
+                }
+              ],
+              "targetIds": [],
+              "resolution": "unresolved",
+              "code": "root.removeEventListener('mousemove', handleMouseMove)",
+              "type": "mousemove",
+              "target": "root",
+              "operation": "remove",
+              "handler": "handleMouseMove"
+            },
+            {
+              "line": 133,
+              "endLine": 133,
+              "start": 3709,
+              "end": 3783,
+              "call": "root.removeEventListener",
+              "canonicalCall": "document.querySelector.removeEventListener",
+              "receiver": "root",
+              "method": "removeEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'touchstart'",
+                  "line": 133,
+                  "endLine": 133,
+                  "start": 3734,
+                  "end": 3746
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleTouchMove",
+                  "line": 133,
+                  "endLine": 133,
+                  "start": 3748,
+                  "end": 3763
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{ passive: true }",
+                  "line": 133,
+                  "endLine": 133,
+                  "start": 3765,
+                  "end": 3782
+                }
+              ],
+              "targetIds": [],
+              "resolution": "unresolved",
+              "code": "root.removeEventListener('touchstart', handleTouchMove, { passive: true })",
+              "type": "touchstart",
+              "target": "root",
+              "operation": "remove",
+              "handler": "handleTouchMove"
+            },
+            {
+              "line": 134,
+              "endLine": 134,
+              "start": 3796,
+              "end": 3869,
+              "call": "root.removeEventListener",
+              "canonicalCall": "document.querySelector.removeEventListener",
+              "receiver": "root",
+              "method": "removeEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'touchmove'",
+                  "line": 134,
+                  "endLine": 134,
+                  "start": 3821,
+                  "end": 3832
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleTouchMove",
+                  "line": 134,
+                  "endLine": 134,
+                  "start": 3834,
+                  "end": 3849
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{ passive: true }",
+                  "line": 134,
+                  "endLine": 134,
+                  "start": 3851,
+                  "end": 3868
+                }
+              ],
+              "targetIds": [],
+              "resolution": "unresolved",
+              "code": "root.removeEventListener('touchmove', handleTouchMove, { passive: true })",
+              "type": "touchmove",
+              "target": "root",
+              "operation": "remove",
+              "handler": "handleTouchMove"
+            }
+          ],
+          "motion": [],
+          "controls": [],
+          "formulas": [
+            {
+              "line": 126,
+              "endLine": 129,
+              "start": 3431,
+              "end": 3591,
+              "name": "isRootRemoved",
+              "expression": "mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )",
+              "operator": "=",
+              "code": "isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )"
+            }
+          ],
+          "calls": [
+            {
+              "line": 126,
+              "endLine": 129,
+              "start": 3447,
+              "end": 3591,
+              "call": "mutations.some",
+              "canonicalCall": "mutations.some",
+              "receiver": "mutations",
+              "method": "some",
+              "arguments": [
+                {
+                  "type": "ArrowFunctionExpression",
+                  "code": "mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)",
+                  "line": 126,
+                  "endLine": 128,
+                  "start": 3462,
+                  "end": 3581
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )"
+            },
+            {
+              "line": 132,
+              "endLine": 132,
+              "start": 3642,
+              "end": 3696,
+              "call": "root.removeEventListener",
+              "canonicalCall": "document.querySelector.removeEventListener",
+              "receiver": "root",
+              "method": "removeEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'mousemove'",
+                  "line": 132,
+                  "endLine": 132,
+                  "start": 3667,
+                  "end": 3678
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleMouseMove",
+                  "line": 132,
+                  "endLine": 132,
+                  "start": 3680,
+                  "end": 3695
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.removeEventListener('mousemove', handleMouseMove)"
+            },
+            {
+              "line": 133,
+              "endLine": 133,
+              "start": 3709,
+              "end": 3783,
+              "call": "root.removeEventListener",
+              "canonicalCall": "document.querySelector.removeEventListener",
+              "receiver": "root",
+              "method": "removeEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'touchstart'",
+                  "line": 133,
+                  "endLine": 133,
+                  "start": 3734,
+                  "end": 3746
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleTouchMove",
+                  "line": 133,
+                  "endLine": 133,
+                  "start": 3748,
+                  "end": 3763
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{ passive: true }",
+                  "line": 133,
+                  "endLine": 133,
+                  "start": 3765,
+                  "end": 3782
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.removeEventListener('touchstart', handleTouchMove, { passive: true })"
+            },
+            {
+              "line": 134,
+              "endLine": 134,
+              "start": 3796,
+              "end": 3869,
+              "call": "root.removeEventListener",
+              "canonicalCall": "document.querySelector.removeEventListener",
+              "receiver": "root",
+              "method": "removeEventListener",
+              "arguments": [
+                {
+                  "type": "Literal",
+                  "code": "'touchmove'",
+                  "line": 134,
+                  "endLine": 134,
+                  "start": 3821,
+                  "end": 3832
+                },
+                {
+                  "type": "Identifier",
+                  "code": "handleTouchMove",
+                  "line": 134,
+                  "endLine": 134,
+                  "start": 3834,
+                  "end": 3849
+                },
+                {
+                  "type": "ObjectExpression",
+                  "code": "{ passive: true }",
+                  "line": 134,
+                  "endLine": 134,
+                  "start": 3851,
+                  "end": 3868
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "root.removeEventListener('touchmove', handleTouchMove, { passive: true })"
+            },
+            {
+              "line": 135,
+              "endLine": 135,
+              "start": 3882,
+              "end": 3903,
+              "call": "observer.disconnect",
+              "canonicalCall": "observer.disconnect",
+              "receiver": "observer",
+              "method": "disconnect",
+              "arguments": [],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "observer.disconnect()"
+            }
+          ],
+          "creates": [],
+          "assignments": [
+            {
+              "line": 126,
+              "endLine": 129,
+              "start": 3431,
+              "end": 3591,
+              "name": "isRootRemoved",
+              "expression": "mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )",
+              "operator": "=",
+              "code": "isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )"
+            }
+          ],
+          "conditions": [
+            {
+              "line": 131,
+              "endLine": 136,
+              "start": 3609,
+              "end": 3913,
+              "kind": "IfStatement",
+              "test": "isRootRemoved",
+              "code": "if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }"
+            }
+          ],
+          "returns": [],
+          "properties": [
+            {
+              "line": 133,
+              "endLine": 133,
+              "start": 3767,
+              "end": 3780,
+              "key": "passive",
+              "value": "true",
+              "code": "passive: true"
+            },
+            {
+              "line": 134,
+              "endLine": 134,
+              "start": 3853,
+              "end": 3866,
+              "key": "passive",
+              "value": "true",
+              "code": "passive: true"
+            }
+          ],
+          "exports": [],
+          "controllerLinks": []
+        },
+        {
+          "id": "assets/script.js:3462:3581",
+          "name": "mutations.some:callback[0]",
+          "binding": "mutations.some:callback[0]",
+          "kind": "ArrowFunctionExpression",
+          "className": null,
+          "classId": null,
+          "ownerId": "assets/script.js:3402:3919",
+          "from": 126,
+          "to": 128,
+          "parameters": [
+            "mutation"
+          ],
+          "async": false,
+          "generator": false,
+          "lifecycle": false,
+          "events": [],
+          "motion": [],
+          "controls": [],
+          "formulas": [],
+          "calls": [
+            {
+              "line": 128,
+              "endLine": 128,
+              "start": 3533,
+              "end": 3566,
+              "call": "Array.from",
+              "canonicalCall": "Array.from",
+              "receiver": "Array",
+              "method": "from",
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "code": "mutation.removedNodes",
+                  "line": 128,
+                  "endLine": 128,
+                  "start": 3544,
+                  "end": 3565
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "Array.from(mutation.removedNodes)"
+            },
+            {
+              "line": 128,
+              "endLine": 128,
+              "start": 3533,
+              "end": 3581,
+              "call": "Array.from.includes",
+              "canonicalCall": "Array.from.includes",
+              "receiver": "Array.from",
+              "method": "includes",
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "code": "root",
+                  "line": 128,
+                  "endLine": 128,
+                  "start": 3576,
+                  "end": 3580
+                }
+              ],
+              "targetIds": [],
+              "resolution": "external-or-dynamic",
+              "code": "Array.from(mutation.removedNodes).includes(root)"
+            }
+          ],
+          "creates": [],
+          "assignments": [],
+          "conditions": [
+            {
+              "line": 127,
+              "endLine": 128,
+              "start": 3487,
+              "end": 3581,
+              "kind": "LogicalExpression",
+              "test": "mutation.type === 'childList'",
+              "code": "mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)"
+            }
+          ],
+          "returns": [],
+          "properties": [],
+          "exports": [],
+          "controllerLinks": []
+        }
+      ],
+      "callbacks": [
+        {
+          "line": 4,
+          "endLine": 6,
+          "start": 134,
+          "end": 243,
+          "ownerId": "assets/script.js:44:3992",
+          "call": "root.querySelectorAll.forEach",
+          "argumentIndex": 0,
+          "binding": "image => {\n        images.push(image.getAttribute('src'))\n    }",
+          "targetId": "assets/script.js:179:242",
+          "resolution": "inline"
+        },
+        {
+          "line": 19,
+          "endLine": 19,
+          "start": 579,
+          "end": 601,
+          "ownerId": "assets/script.js:44:3992",
+          "call": "gsap.utils.clamp",
+          "argumentIndex": 1,
+          "binding": "W",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 20,
+          "endLine": 20,
+          "start": 621,
+          "end": 643,
+          "ownerId": "assets/script.js:44:3992",
+          "call": "gsap.utils.clamp",
+          "argumentIndex": 1,
+          "binding": "H",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 23,
+          "endLine": 23,
+          "start": 709,
+          "end": 724,
+          "ownerId": "assets/script.js:649:1197",
+          "call": "clampX",
+          "argumentIndex": 0,
+          "binding": "clientX",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 24,
+          "endLine": 24,
+          "start": 746,
+          "end": 761,
+          "ownerId": "assets/script.js:649:1197",
+          "call": "clampY",
+          "argumentIndex": 0,
+          "binding": "clientY",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 37,
+          "endLine": 37,
+          "start": 1040,
+          "end": 1132,
+          "ownerId": "assets/script.js:649:1197",
+          "call": "createMedia",
+          "argumentIndex": 0,
+          "binding": "valX",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 53,
+          "endLine": 53,
+          "start": 1435,
+          "end": 1486,
+          "ownerId": "assets/script.js:44:3992",
+          "call": "root.addEventListener",
+          "argumentIndex": 1,
+          "binding": "handleMouseMove",
+          "targetId": "assets/script.js:1203:1278",
+          "resolution": "resolved-static"
+        },
+        {
+          "line": 54,
+          "endLine": 54,
+          "start": 1491,
+          "end": 1562,
+          "ownerId": "assets/script.js:44:3992",
+          "call": "root.addEventListener",
+          "argumentIndex": 1,
+          "binding": "handleTouchMove",
+          "targetId": "assets/script.js:1284:1429",
+          "resolution": "resolved-static"
+        },
+        {
+          "line": 55,
+          "endLine": 55,
+          "start": 1567,
+          "end": 1637,
+          "ownerId": "assets/script.js:44:3992",
+          "call": "root.addEventListener",
+          "argumentIndex": 1,
+          "binding": "handleTouchMove",
+          "targetId": "assets/script.js:1284:1429",
+          "resolution": "resolved-static"
+        },
+        {
+          "line": 66,
+          "endLine": 66,
+          "start": 1873,
+          "end": 1896,
+          "ownerId": "assets/script.js:1643:3345",
+          "call": "root.appendChild",
+          "argumentIndex": 0,
+          "binding": "image",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 70,
+          "endLine": 70,
+          "start": 1985,
+          "end": 2008,
+          "ownerId": "assets/script.js:1961:2055",
+          "call": "root.removeChild",
+          "argumentIndex": 0,
+          "binding": "image",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 75,
+          "endLine": 86,
+          "start": 2080,
+          "end": 2443,
+          "ownerId": "assets/script.js:1643:3345",
+          "call": "tl.fromTo",
+          "argumentIndex": 0,
+          "binding": "image",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 88,
+          "endLine": 95,
+          "start": 2453,
+          "end": 2631,
+          "ownerId": "assets/script.js:1643:3345",
+          "call": "tl.fromTo",
+          "argumentIndex": 0,
+          "binding": "image",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 97,
+          "endLine": 105,
+          "start": 2645,
+          "end": 2933,
+          "ownerId": "assets/script.js:1643:3345",
+          "call": "tl.fromTo",
+          "argumentIndex": 0,
+          "binding": "image",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 108,
+          "endLine": 113,
+          "start": 2969,
+          "end": 3136,
+          "ownerId": "assets/script.js:1643:3345",
+          "call": "tl.to",
+          "argumentIndex": 0,
+          "binding": "image",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 114,
+          "endLine": 118,
+          "start": 3145,
+          "end": 3284,
+          "ownerId": "assets/script.js:1643:3345",
+          "call": "tl.to",
+          "argumentIndex": 0,
+          "binding": "image",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 128,
+          "endLine": 128,
+          "start": 3533,
+          "end": 3581,
+          "ownerId": "assets/script.js:3462:3581",
+          "call": "Array.from.includes",
+          "argumentIndex": 0,
+          "binding": "root",
+          "targetId": null,
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "line": 126,
+          "endLine": 129,
+          "start": 3447,
+          "end": 3591,
+          "ownerId": "assets/script.js:3402:3919",
+          "call": "mutations.some",
+          "argumentIndex": 0,
+          "binding": "mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)",
+          "targetId": "assets/script.js:3462:3581",
+          "resolution": "inline"
+        },
+        {
+          "line": 132,
+          "endLine": 132,
+          "start": 3642,
+          "end": 3696,
+          "ownerId": "assets/script.js:3402:3919",
+          "call": "root.removeEventListener",
+          "argumentIndex": 1,
+          "binding": "handleMouseMove",
+          "targetId": "assets/script.js:1203:1278",
+          "resolution": "resolved-static"
+        },
+        {
+          "line": 133,
+          "endLine": 133,
+          "start": 3709,
+          "end": 3783,
+          "ownerId": "assets/script.js:3402:3919",
+          "call": "root.removeEventListener",
+          "argumentIndex": 1,
+          "binding": "handleTouchMove",
+          "targetId": "assets/script.js:1284:1429",
+          "resolution": "resolved-static"
+        },
+        {
+          "line": 134,
+          "endLine": 134,
+          "start": 3796,
+          "end": 3869,
+          "ownerId": "assets/script.js:3402:3919",
+          "call": "root.removeEventListener",
+          "argumentIndex": 1,
+          "binding": "handleTouchMove",
+          "targetId": "assets/script.js:1284:1429",
+          "resolution": "resolved-static"
+        },
+        {
+          "line": 125,
+          "endLine": 137,
+          "start": 3381,
+          "end": 3920,
+          "ownerId": "assets/script.js:44:3992",
+          "call": "MutationObserver",
+          "argumentIndex": 0,
+          "binding": "mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    }",
+          "targetId": "assets/script.js:3402:3919",
+          "resolution": "inline"
+        },
+        {
+          "line": 1,
+          "endLine": 139,
+          "start": 0,
+          "end": 3993,
+          "ownerId": "assets/script.js:0:3993",
+          "call": "window.addEventListener",
+          "argumentIndex": 1,
+          "binding": "() => {\n    const root = document.querySelector('.codrops_mwg')\n    const images = []\n    root.querySelectorAll('.medias img').forEach(image => {\n        images.push(image.getAttribute('src'))\n    })\n\n    let incr = 0,\n        oldIncrX = 0,\n        oldIncrY = 0,\n        firstMove = true,\n        indexImg = 0\n\n    const isCoarsePointer = window.matchMedia('(hover: none)').matches\n    const resetDist = window.innerWidth / (isCoarsePointer ? 6 : 8)\n\n    const W = window.innerWidth\n    const H = window.innerHeight\n    const clampX = gsap.utils.clamp(0, W)\n    const clampY = gsap.utils.clamp(0, H)\n\n    function applyMove(clientX, clientY) {\n        const valX = clampX(clientX)\n        const valY = clampY(clientY)\n\n        if (firstMove) {\n            firstMove = false\n            oldIncrX = valX\n            oldIncrY = valY\n            return\n        }\n\n        incr += Math.abs(valX - oldIncrX) + Math.abs(valY - oldIncrY)\n\n        if (incr > resetDist) {\n            incr = 0\n            createMedia(valX, valY - root.getBoundingClientRect().top, valX - oldIncrX, valY - oldIncrY)\n        }\n\n        oldIncrX = valX\n        oldIncrY = valY\n    }\n\n    function handleMouseMove(e) {\n        applyMove(e.clientX, e.clientY)\n    }\n\n    function handleTouchMove(e) {\n        if (!e.touches || !e.touches[0]) return\n        applyMove(e.touches[0].clientX, e.touches[0].clientY)\n    }\n\n    root.addEventListener('mousemove', handleMouseMove)\n    root.addEventListener('touchstart', handleTouchMove, { passive: true })\n    root.addEventListener('touchmove', handleTouchMove, { passive: true })\n\n    function createMedia(x, y, deltaX, deltaY) {\n        const H = window.innerHeight\n\n        if (y > H - 200) return\n\n        const image = document.createElement(\"img\")\n\n\n        image.setAttribute('src', images[indexImg])\n        root.appendChild(image)\n    \n        const tl = gsap.timeline({\n            onComplete: () => {\n                root.removeChild(image);\n                tl && tl.kill()\n            }\n        })\n    \n        tl.fromTo(image, {\n            xPercent: -50 + (Math.random() - 0.5) * 80,\n            yPercent: -50 + (Math.random() - 0.5) * 10,\n            scaleX: 1.3,\n            scaleY: 1.3,\n            rotation:(Math.random() - 0.5) * 20\n        }, {\n            scaleX:1,\n            scaleY:1,\n            ease: 'elastic.out(2, 0.6)',\n            duration: 0.4\n        })\n\n        tl.fromTo(image, {\n            x,\n        }, {\n            x: '+=' + deltaX * 2,\n            rotation: 0,\n            ease: 'power1.in',\n            duration: 0.4\n        }, '<')\n    \n        tl.fromTo(image, {\n            y\n        }, {\n            y: '+=' + (H - y),\n            scale: 0.9,\n            yPercent: -95, // pour que le bord bas s'arrête pile au bas du viewport combiné avec le scale a 0.9\n            ease: 'back.in(1.1)',\n            duration: 0.4\n        }, '<')\n        \n        // BOUNCE\n        tl.to(image, {\n            x: '+=' + deltaX * 1.6,\n            rotation:(Math.random() - 0.5) * 40,\n            ease: 'power1.in',\n            duration: 0.3\n        })\n        tl.to(image, {\n            yPercent: 150,\n            ease: 'back.in(' + (1.5 + (1 - y/H)) + ')',\n            duration: 0.3\n        }, '<')\n    \n        indexImg = (indexImg + 1) % images.length\n    }\n\n\n    // KILL\n    const observer = new MutationObserver(mutations => {\n        const isRootRemoved = mutations.some(mutation => \n            mutation.type === 'childList' && \n            Array.from(mutation.removedNodes).includes(root)\n        )\n        \n        if (isRootRemoved) {\n            root.removeEventListener('mousemove', handleMouseMove)\n            root.removeEventListener('touchstart', handleTouchMove, { passive: true })\n            root.removeEventListener('touchmove', handleTouchMove, { passive: true })\n            observer.disconnect()\n        }\n    })\n    observer.observe(document.body, {childList: true, subtree: true})\n}",
+          "targetId": "assets/script.js:44:3992",
+          "resolution": "inline"
+        }
+      ],
+      "callGraph": [
+        {
+          "from": "assets/script.js:0:3993",
+          "line": 1,
+          "call": "window.addEventListener",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 2,
+          "call": "document.querySelector",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 4,
+          "call": "root.querySelectorAll",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 4,
+          "call": "root.querySelectorAll.forEach",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 14,
+          "call": "window.matchMedia",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 19,
+          "call": "gsap.utils.clamp",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 20,
+          "call": "gsap.utils.clamp",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 53,
+          "call": "root.addEventListener",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 54,
+          "call": "root.addEventListener",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 55,
+          "call": "root.addEventListener",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 125,
+          "call": "MutationObserver",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:44:3992",
+          "line": 138,
+          "call": "observer.observe",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:179:242",
+          "line": 5,
+          "call": "image.getAttribute",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:179:242",
+          "line": 5,
+          "call": "images.push",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:649:1197",
+          "line": 23,
+          "call": "clampX",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:649:1197",
+          "line": 24,
+          "call": "clampY",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:649:1197",
+          "line": 33,
+          "call": "Math.abs",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:649:1197",
+          "line": 33,
+          "call": "Math.abs",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:649:1197",
+          "line": 37,
+          "call": "root.getBoundingClientRect",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:649:1197",
+          "line": 37,
+          "call": "createMedia",
+          "targets": [
+            "assets/script.js:1643:3345"
+          ],
+          "resolution": "resolved-static"
+        },
+        {
+          "from": "assets/script.js:1203:1278",
+          "line": 45,
+          "call": "applyMove",
+          "targets": [
+            "assets/script.js:649:1197"
+          ],
+          "resolution": "resolved-static"
+        },
+        {
+          "from": "assets/script.js:1284:1429",
+          "line": 50,
+          "call": "applyMove",
+          "targets": [
+            "assets/script.js:649:1197"
+          ],
+          "resolution": "resolved-static"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 62,
+          "call": "document.createElement",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 65,
+          "call": "image.setAttribute",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 66,
+          "call": "root.appendChild",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 68,
+          "call": "gsap.timeline",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 76,
+          "call": "Math.random",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 77,
+          "call": "Math.random",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 80,
+          "call": "Math.random",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 75,
+          "call": "tl.fromTo",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 88,
+          "call": "tl.fromTo",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 97,
+          "call": "tl.fromTo",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 110,
+          "call": "Math.random",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 108,
+          "call": "tl.to",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1643:3345",
+          "line": 114,
+          "call": "tl.to",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1961:2055",
+          "line": 70,
+          "call": "root.removeChild",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:1961:2055",
+          "line": 71,
+          "call": "tl.kill",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:3402:3919",
+          "line": 126,
+          "call": "mutations.some",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:3402:3919",
+          "line": 132,
+          "call": "root.removeEventListener",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:3402:3919",
+          "line": 133,
+          "call": "root.removeEventListener",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:3402:3919",
+          "line": 134,
+          "call": "root.removeEventListener",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:3402:3919",
+          "line": 135,
+          "call": "observer.disconnect",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:3462:3581",
+          "line": 128,
+          "call": "Array.from",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        },
+        {
+          "from": "assets/script.js:3462:3581",
+          "line": 128,
+          "call": "Array.from.includes",
+          "targets": [],
+          "resolution": "external-or-dynamic"
+        }
+      ],
+      "unresolved": [
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:0:3993",
+          "line": 1,
+          "expression": "window.addEventListener",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 2,
+          "expression": "document.querySelector",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 4,
+          "expression": "root.querySelectorAll",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 4,
+          "expression": "root.querySelectorAll.forEach",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 14,
+          "expression": "window.matchMedia",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 19,
+          "expression": "gsap.utils.clamp",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 20,
+          "expression": "gsap.utils.clamp",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 53,
+          "expression": "root.addEventListener",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 54,
+          "expression": "root.addEventListener",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 55,
+          "expression": "root.addEventListener",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 125,
+          "expression": "MutationObserver",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:44:3992",
+          "line": 138,
+          "expression": "observer.observe",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:179:242",
+          "line": 5,
+          "expression": "image.getAttribute",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:179:242",
+          "line": 5,
+          "expression": "images.push",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:649:1197",
+          "line": 23,
+          "expression": "clampX",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:649:1197",
+          "line": 24,
+          "expression": "clampY",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:649:1197",
+          "line": 33,
+          "expression": "Math.abs",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:649:1197",
+          "line": 33,
+          "expression": "Math.abs",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:649:1197",
+          "line": 37,
+          "expression": "root.getBoundingClientRect",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 62,
+          "expression": "document.createElement",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 65,
+          "expression": "image.setAttribute",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 66,
+          "expression": "root.appendChild",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 68,
+          "expression": "gsap.timeline",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 76,
+          "expression": "Math.random",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 77,
+          "expression": "Math.random",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 80,
+          "expression": "Math.random",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 75,
+          "expression": "tl.fromTo",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 88,
+          "expression": "tl.fromTo",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 97,
+          "expression": "tl.fromTo",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 110,
+          "expression": "Math.random",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 108,
+          "expression": "tl.to",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1643:3345",
+          "line": 114,
+          "expression": "tl.to",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1961:2055",
+          "line": 70,
+          "expression": "root.removeChild",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:1961:2055",
+          "line": 71,
+          "expression": "tl.kill",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:3402:3919",
+          "line": 126,
+          "expression": "mutations.some",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:3402:3919",
+          "line": 132,
+          "expression": "root.removeEventListener",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:3402:3919",
+          "line": 133,
+          "expression": "root.removeEventListener",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:3402:3919",
+          "line": 134,
+          "expression": "root.removeEventListener",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:3402:3919",
+          "line": 135,
+          "expression": "observer.disconnect",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:3462:3581",
+          "line": 128,
+          "expression": "Array.from",
+          "reason": "external-or-dynamic"
+        },
+        {
+          "kind": "call",
+          "unitId": "assets/script.js:3462:3581",
+          "line": 128,
+          "expression": "Array.from.includes",
+          "reason": "external-or-dynamic"
+        }
+      ],
+      "sourceLines": 139,
+      "projection": null
+    }
+  ],
+  "callGraph": [
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:0:3993",
+      "line": 1,
+      "call": "window.addEventListener",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 2,
+      "call": "document.querySelector",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 4,
+      "call": "root.querySelectorAll",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 4,
+      "call": "root.querySelectorAll.forEach",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 14,
+      "call": "window.matchMedia",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 19,
+      "call": "gsap.utils.clamp",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 20,
+      "call": "gsap.utils.clamp",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 53,
+      "call": "root.addEventListener",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 54,
+      "call": "root.addEventListener",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 55,
+      "call": "root.addEventListener",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 125,
+      "call": "MutationObserver",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:44:3992",
+      "line": 138,
+      "call": "observer.observe",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:179:242",
+      "line": 5,
+      "call": "image.getAttribute",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:179:242",
+      "line": 5,
+      "call": "images.push",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:649:1197",
+      "line": 23,
+      "call": "clampX",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:649:1197",
+      "line": 24,
+      "call": "clampY",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:649:1197",
+      "line": 33,
+      "call": "Math.abs",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:649:1197",
+      "line": 33,
+      "call": "Math.abs",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:649:1197",
+      "line": 37,
+      "call": "root.getBoundingClientRect",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:649:1197",
+      "line": 37,
+      "call": "createMedia",
+      "targets": [
+        "assets/script.js:1643:3345"
+      ],
+      "resolution": "resolved-static"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1203:1278",
+      "line": 45,
+      "call": "applyMove",
+      "targets": [
+        "assets/script.js:649:1197"
+      ],
+      "resolution": "resolved-static"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1284:1429",
+      "line": 50,
+      "call": "applyMove",
+      "targets": [
+        "assets/script.js:649:1197"
+      ],
+      "resolution": "resolved-static"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 62,
+      "call": "document.createElement",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 65,
+      "call": "image.setAttribute",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 66,
+      "call": "root.appendChild",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 68,
+      "call": "gsap.timeline",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 76,
+      "call": "Math.random",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 77,
+      "call": "Math.random",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 80,
+      "call": "Math.random",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 75,
+      "call": "tl.fromTo",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 88,
+      "call": "tl.fromTo",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 97,
+      "call": "tl.fromTo",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 110,
+      "call": "Math.random",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 108,
+      "call": "tl.to",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1643:3345",
+      "line": 114,
+      "call": "tl.to",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1961:2055",
+      "line": 70,
+      "call": "root.removeChild",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:1961:2055",
+      "line": 71,
+      "call": "tl.kill",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:3402:3919",
+      "line": 126,
+      "call": "mutations.some",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:3402:3919",
+      "line": 132,
+      "call": "root.removeEventListener",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:3402:3919",
+      "line": 133,
+      "call": "root.removeEventListener",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:3402:3919",
+      "line": 134,
+      "call": "root.removeEventListener",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:3402:3919",
+      "line": 135,
+      "call": "observer.disconnect",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:3462:3581",
+      "line": 128,
+      "call": "Array.from",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "from": "assets/script.js:3462:3581",
+      "line": 128,
+      "call": "Array.from.includes",
+      "targets": [],
+      "resolution": "external-or-dynamic"
+    }
+  ],
+  "unresolved": [
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:0:3993",
+      "line": 1,
+      "expression": "window.addEventListener",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 2,
+      "expression": "document.querySelector",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 4,
+      "expression": "root.querySelectorAll",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 4,
+      "expression": "root.querySelectorAll.forEach",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 14,
+      "expression": "window.matchMedia",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 19,
+      "expression": "gsap.utils.clamp",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 20,
+      "expression": "gsap.utils.clamp",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 53,
+      "expression": "root.addEventListener",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 54,
+      "expression": "root.addEventListener",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 55,
+      "expression": "root.addEventListener",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 125,
+      "expression": "MutationObserver",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:44:3992",
+      "line": 138,
+      "expression": "observer.observe",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:179:242",
+      "line": 5,
+      "expression": "image.getAttribute",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:179:242",
+      "line": 5,
+      "expression": "images.push",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:649:1197",
+      "line": 23,
+      "expression": "clampX",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:649:1197",
+      "line": 24,
+      "expression": "clampY",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:649:1197",
+      "line": 33,
+      "expression": "Math.abs",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:649:1197",
+      "line": 33,
+      "expression": "Math.abs",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:649:1197",
+      "line": 37,
+      "expression": "root.getBoundingClientRect",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 62,
+      "expression": "document.createElement",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 65,
+      "expression": "image.setAttribute",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 66,
+      "expression": "root.appendChild",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 68,
+      "expression": "gsap.timeline",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 76,
+      "expression": "Math.random",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 77,
+      "expression": "Math.random",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 80,
+      "expression": "Math.random",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 75,
+      "expression": "tl.fromTo",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 88,
+      "expression": "tl.fromTo",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 97,
+      "expression": "tl.fromTo",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 110,
+      "expression": "Math.random",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 108,
+      "expression": "tl.to",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1643:3345",
+      "line": 114,
+      "expression": "tl.to",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1961:2055",
+      "line": 70,
+      "expression": "root.removeChild",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:1961:2055",
+      "line": 71,
+      "expression": "tl.kill",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:3402:3919",
+      "line": 126,
+      "expression": "mutations.some",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:3402:3919",
+      "line": 132,
+      "expression": "root.removeEventListener",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:3402:3919",
+      "line": 133,
+      "expression": "root.removeEventListener",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:3402:3919",
+      "line": 134,
+      "expression": "root.removeEventListener",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:3402:3919",
+      "line": 135,
+      "expression": "observer.disconnect",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:3462:3581",
+      "line": 128,
+      "expression": "Array.from",
+      "reason": "external-or-dynamic"
+    },
+    {
+      "file": "assets/script.js",
+      "kind": "call",
+      "unitId": "assets/script.js:3462:3581",
+      "line": 128,
+      "expression": "Array.from.includes",
+      "reason": "external-or-dynamic"
+    }
+  ],
+  "material": "codrops-mwg"
+}

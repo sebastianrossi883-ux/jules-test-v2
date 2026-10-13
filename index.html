@@ -5,11 +5,6 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Podere Bricco Sereno — Il gesto e la vigna</title>
-<link rel="stylesheet" href="MOTORE/vendor/lenis.css">
-<link rel="stylesheet" href="MOTORE/motion.css">
-<link rel="stylesheet" href="MOTORE/regia-accessibilita.css">
-<link rel="stylesheet" href="assets/css/splitting.css">
-<link rel="stylesheet" href="assets/css/splitting-cells.css">
 <!-- Google Fonts: Cormorant Garamond, Montserrat, Italianno / Playfair / Bodoni style -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -55,19 +50,16 @@
       font-family: 'Playfair Display', serif;
     }
   </style>
+<link rel="stylesheet" href="MOTORE/vendor/lenis.css" data-metodo21-global-engine>
 </head>
-<body class="w-full min-h-screen bg-white text-stone-900 overflow-x-opacity-0 pointer-events-none"><!-- HERO: Phase 1 repair hero full-bleed with image 11 -->
-<header class="relative w-full min-h-screen flex flex-col justify-between overflow-opacity-0 pointer-events-none bg-stone-900">
+<body class="w-full min-h-screen bg-white text-stone-900 overflow-x-hidden"><!-- HERO: Phase 1 repair hero full-bleed with image 11 -->
+<header class="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-stone-900" data-m21-root="scene-001">
 <!-- Sfondo panoramico fotografico Langhe -->
 <img alt="Podere Bricco Sereno storico vigneto Serralunga d'Alba Langhe" class="absolute inset-0 w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoaQ1DAnW6yTivS7UJjSUrg6_J-LdMKeDKrXhWcvlnwr-e0EBzxWP3SZwNqTKSIA5IuwuFEaCnENhpIeXLw_atXQIKSO9bQ7_mNna-mu5IwbLjX12nPYVT3yPFb3Deqw00aSd0Y1K2jGvFO1yuVX8XyZ5HrihV5KQ1Kqxj3U3QKy_FOyBaTA8gbN7IOopuJDnMBs49MAvZsR9lhlf8oGHXRd7boa0GUBV70bJrmUmq_8Db0xSURqW9"/>
 <div class="absolute inset-0 bg-black/35 pointer-events-none"></div>
 <!-- Header sovrapposto trasparente: 6 ancore di navigazione senza logo/monogramma -->
-<nav class="relative z-20 w-full py-6 px-6 md:px-12 flex justify-between items-center">
-<div class="text-white font-serif italic text-xl md:hidden">Bricco Sereno</div>
-<button class="md:hidden text-white" aria-label="Menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-  <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-</button>
-<div class="hidden md:flex items-center justify-center gap-6 md:gap-8 text-xs font-sans tracking-[0.25em] uppercase text-white/90 w-full md:w-auto">
+<nav class="relative z-20 w-full py-6 px-6 md:px-12 flex justify-center md:justify-between items-center">
+<div class="flex flex-wrap items-center justify-center gap-6 md:gap-8 text-xs font-sans tracking-[0.25em] uppercase text-white/90">
 <a class="hover:text-[#c5a059] transition-colors" href="#section-1">I Percorsi</a>
 <a class="hover:text-[#c5a059] transition-colors" href="#section-2">Le Dimore</a>
 <a class="hover:text-[#c5a059] transition-colors" href="#section-3">La Cantina</a>
@@ -76,16 +68,8 @@
 <a class="hover:text-[#c5a059] transition-colors" href="#section-6">Esperienze</a>
 </div>
 </nav>
-<div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-stone-900 z-50 py-8 px-6 flex flex-col gap-6 text-xs font-sans tracking-[0.25em] uppercase text-white/90 text-center shadow-2xl">
-<a class="hover:text-[#c5a059] transition-colors" href="#section-1" onclick="document.getElementById('mobile-menu').classList.add('hidden')">I Percorsi</a>
-<a class="hover:text-[#c5a059] transition-colors" href="#section-2" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Le Dimore</a>
-<a class="hover:text-[#c5a059] transition-colors" href="#section-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">La Cantina</a>
-<a class="hover:text-[#c5a059] transition-colors" href="#section-4" onclick="document.getElementById('mobile-menu').classList.add('hidden')">I Vigneti</a>
-<a class="hover:text-[#c5a059] transition-colors" href="#section-5" onclick="document.getElementById('mobile-menu').classList.add('hidden')">La Tradizione</a>
-<a class="hover:text-[#c5a059] transition-colors" href="#section-6" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Esperienze</a>
-</div>
 <!-- Titolo maestoso centrale sovrapposto a contrasto senza riquadri grigi o blur -->
-<div class="relative z-10 my-auto px-6 text-center max-w-5xl mx-auto flex flex-col items-center justify-center py-20" data-m="reveal">
+<div class="relative z-10 my-auto px-6 text-center max-w-5xl mx-auto flex flex-col items-center justify-center py-20">
 <span class="text-xs md:text-sm uppercase tracking-[0.35em] text-[#c5a059] font-sans font-medium mb-4">Langhe • Barolo</span>
 <h1 class="text-3xl md:text-5xl lg:text-7xl font-serif text-white tracking-[0.18em] uppercase font-light leading-tight">
       Podere Bricco Sereno — Serralunga d'Alba
@@ -102,11 +86,11 @@
 <!-- CONTENITORE MAIN CON LE 6 MACRO-SEZIONI -->
 <main class="w-full">
 <!-- SEZIONE 1: A-01 -->
-<section class="w-full bg-[#fbfbfa] py-24 md:py-32 px-6 flex flex-col items-center justify-center" data-parent="A-01.jpg" data-reference-slot="1" id="section-1">
+<section class="w-full bg-[#fbfbfa] py-24 md:py-32 px-6 flex flex-col items-center justify-center" data-parent="A-01.jpg" data-reference-slot="1" id="section-1" data-m21-root="scene-002">
 <div class="max-w-5xl w-full mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 max-w-4xl mx-auto items-stretch">
 <div class="flex flex-col items-center">
-<div class="w-full aspect-[3/4.2] bg-[#ded5d5] shadow-xl relative overflow-opacity-0 pointer-events-none flex flex-col items-center justify-center p-8 transition-transform duration-300 hover:scale-[1.01]" >
+<div class="w-full aspect-[3/4.2] bg-[#ded5d5] shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-8 transition-transform duration-300 hover:scale-[1.01]">
 <img alt="Carta delle Annate e Degustazioni - Podere Bricco Sereno" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-35" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDduEIHwEAK_KSvJlO8NW_SSLlr656JsOSuRQb3wpYhPE3qpVJKMiogOH5uarD8hSNEsnkxHBMAIXv1wjiJ_piT5fkX3JAAGZePdMdrKC2yGb-uirEv4hydXZtrnFiqW2UeuReQ7wo6nbC_7V2Sx2KXBDYPT_o8qMkpcFGh2_yQs2rNJgQyAMkwpGx-_LGK-Zq6DJz54Lgr7BKXYS5aWdrOlAYGa7UzXNfqloeUbvsXpcYCwb9fldha"/>
 <div class="absolute inset-0 bg-gradient-to-t from-[#c5b5b5]/80 via-transparent to-transparent pointer-events-none"></div>
 <div class="relative z-10 text-center flex flex-col items-center">
@@ -120,8 +104,8 @@
 <div class="w-24 h-[1px] bg-[#c5a059] mx-auto mt-2"></div>
 </div>
 </div>
-<div class="flex flex-col items-center mt-8 md:mt-0" style="transition-delay: 0.15s">
-<div class="w-full aspect-[3/4.2] bg-[#dad4ca] shadow-xl relative overflow-opacity-0 pointer-events-none flex flex-col items-center justify-between p-10 md:p-12 transition-transform duration-300 hover:scale-[1.01]" >
+<div class="flex flex-col items-center mt-8 md:mt-0">
+<div class="w-full aspect-[3/4.2] bg-[#dad4ca] shadow-xl relative overflow-hidden flex flex-col items-center justify-between p-10 md:p-12 transition-transform duration-300 hover:scale-[1.01]">
 <img alt="La Carta dei Vini di Serralunga - Podere Bricco Sereno" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-25" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOedGBq19GImMl77WFjO65NtEkQu5aF9PPX7fqfxjK7TDl_nRxPieIW2-NVIzL2nVRZP1E6nqErcZ8KKigGb3U87I1q01MEuw5BgcLeGW3eLzATt-AHsicpDPfVQ8mDCElQBj-V6Bad3fM2vz_9aAMMLoHXgdgRAGvWEye7-LJ_JyYefxEOr25coTd5wpaCEkZyRvTBFKJrCfyzqyEakl61xWsZWehdh1yJSixvj3fGHPHr3Zd1djl"/>
 <div class="w-full text-center pt-8 relative z-10">
 <h2 class="text-xl md:text-2xl font-serif uppercase tracking-[0.25em] text-stone-700 font-light">
@@ -142,28 +126,28 @@
 </div>
 </section>
 <!-- SEZIONE 2: A-02 -->
-<section class="w-full bg-white pt-20 pb-28 md:py-32 px-6 md:px-12 lg:px-20 relative overflow-opacity-0 pointer-events-none" data-parent="A-02.jpg" data-reference-slot="2" id="component-textblock8">
+<section class="w-full bg-white pt-20 pb-28 md:py-32 px-6 md:px-12 lg:px-20" data-parent="A-02.jpg" data-reference-slot="2" id="section-2" data-m21-root="scene-003">
 <div class="max-w-6xl mx-auto">
-<div class="max-w-4xl mx-auto text-center mb-20 md:mb-28 relative" data-m="reveal">
-<h2 class="text-2xl md:text-3xl lg:text-4xl font-serif text-stone-900 font-normal tracking-wide leading-snug relative content__text" data-splitting>
+<div class="max-w-4xl mx-auto text-center mb-20 md:mb-28">
+<h2 class="text-2xl md:text-3xl lg:text-4xl font-serif text-stone-900 font-normal tracking-wide leading-snug">
           L'ospitalità firmata Bricco Sereno. Il podere nel cuore delle Langhe unisce tradizione agricola, silenzi e profonda quiete.
         </h2>
-<h2 class="text-2xl md:text-3xl lg:text-4xl font-serif text-stone-900 font-normal tracking-wide leading-snug absolute inset-0 opacity-0 content__text" data-splitting>
-          UN'ESPERIENZA TRA I CRU DI SERRALUNGA: UN LUOGO RITROVATO DOVE LA MEMORIA INCONTRA IL CONFORT SENZA TEMPO.
-        </h2>
-<div class="mt-8 space-y-3 font-sans text-xs md:text-sm uppercase tracking-[0.18em] text-[#b5a36b] font-medium leading-relaxed max-w-3xl mx-auto z-10" >
+<div class="mt-8 space-y-3 font-sans text-xs md:text-sm uppercase tracking-[0.18em] text-[#b5a36b] font-medium leading-relaxed max-w-3xl mx-auto">
 <p>
-            "ABBIAMO COLTIVATO IL TEMPO E IL RISPETTO DELLA TERRA."
+            "ABBIAMO COLTIVATO IL TEMPO E IL RISPETTO DELLA TERRA: UN RIFUGIO DOVE RICONNETTERSI CON IL RITMO DELLA NATURA E DELLE VITI."
+          </p>
+<p class="text-[11px] md:text-xs text-[#c2b27d] tracking-[0.2em] pt-1">
+            UN'ESPERIENZA TRA I CRU DI SERRALUNGA: UN LUOGO RITROVATO DOVE LA MEMORIA INCONTRA IL CONFORT SENZA TEMPO. VIVI DEGUSTAZIONI TRA BOTTAIA E COLLINA, ABBANDONATI AI PAESAGGI DICHIARATI PATRIMONIO DELL'UMANITÀ.
           </p>
 </div>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 <div class="lg:col-span-6 flex justify-start">
-<div class="w-full aspect-[4/4.8] max-w-lg bg-stone-100 overflow-opacity-0 pointer-events-none relative shadow-sm" >
+<div class="w-full aspect-[4/4.8] max-w-lg bg-stone-100 overflow-hidden relative shadow-sm">
 <img alt="Gli interni delle suite tra travi in rovere e pietra a Podere Bricco Sereno" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2OQpGGOH3vpaENuI_IDK8WdHbfES8rC_EhKYtYS0xSTNxzPL2Hn4d5vwBSoXlgBIJF3WjVp4JoBz7HGYfiGyRqwsssZVkt-DhdtOXB4aJ6-tWOUvwXy0JKT15PHtwkhjWjPF-n2BwQxzjUNuJnCEgJ8weSkzVFqD1P3b4-3LVKb-Ne60WEuNo7eRfzSiKs-3nt3CJF2x409YTXFE6xq1Q2MhNkA6Snxl6KZqKtB-G80SpkPqIn2ip"/>
 </div>
 </div>
-<div class="lg:col-span-6 lg:pl-4 flex flex-col justify-center" data-m="reveal">
+<div class="lg:col-span-6 lg:pl-4 flex flex-col justify-center">
 <h3 class="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-950 font-normal tracking-tight mb-8">
             Le Dimore
           </h3>
@@ -176,10 +160,10 @@
             </p>
 </div>
 <div class="mt-10 flex items-center gap-3">
-<button class="inline-flex items-center justify-between border border-stone-800 px-6 py-3.5 text-xs uppercase tracking-[0.2em] text-stone-900 font-sans font-medium hover:bg-stone-900 hover:text-white transition-colors trigger-textblock8">
+<a class="inline-flex items-center justify-between border border-stone-800 px-6 py-3.5 text-xs uppercase tracking-[0.2em] text-stone-900 font-sans font-medium hover:bg-stone-900 hover:text-white transition-colors" href="#scopri">
 <span>Scopri le Dimore</span>
 <span class="ml-4 text-stone-600">→</span>
-</button>
+</a>
 <a aria-label="Visualizza disponibilità" class="w-11 h-11 bg-[#c5a059] flex items-center justify-center text-white hover:bg-[#b38f48] transition-colors" href="#prenota">
 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24">
 <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -191,9 +175,9 @@
 </div>
 </section>
 <!-- SEZIONE 3: A-03 -->
-<section class="w-full bg-[#1b2c24] text-white seed-parallax-section" data-parent="A-03.jpg" data-reference-slot="3" id="seed-parallax-1">
+<section class="w-full bg-[#1b2c24] text-white" data-parent="A-03.jpg" data-reference-slot="3" id="section-3" data-m21-root="scene-004">
 <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[680px]">
-<div class="lg:col-span-5 px-8 md:px-14 lg:px-20 py-20 lg:py-28 flex flex-col justify-center" data-m="reveal">
+<div class="lg:col-span-5 px-8 md:px-14 lg:px-20 py-20 lg:py-28 flex flex-col justify-center">
 <span class="text-xs uppercase tracking-[0.28em] text-stone-300/80 font-sans font-medium mb-4">
           La Cascina Oggi
         </span>
@@ -209,15 +193,14 @@
           </p>
 </div>
 </div>
-<div class="lg:col-span-7 relative min-h-[420px] lg:min-h-full overflow-opacity-0 pointer-events-none">
-<img alt="Momenti di famiglia e cantina a Podere Bricco Sereno tra le mura di mattoni storici" class="w-full h-[120%] object-cover object-center absolute inset-0 -top-[10%] parallax-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_17eRTIv6QG-I_zyeEb3XtgtTBmF7gxQ4w2PzxBTRrUFaFknTWn_vZOVJHdEZHzpluFqsUJWgH17i9LNw6NagtM4skx7F1j7AyKUmrXbmLwewD-WkboHvp_osV0GgmLZsLHXEBcJ4uCwLWt7h1AEVv8AgSPV-8fbuSB3uLPP5f-sVp8DLGilNI749Y2Ft7l45Ie_4yF1KNTBJ_7kcCn59LiQbYXa7nF_OTN12VnuDotsZt4WTajpN"/>
+<div class="lg:col-span-7 relative min-h-[420px] lg:min-h-full">
+<img alt="Momenti di famiglia e cantina a Podere Bricco Sereno tra le mura di mattoni storici" class="w-full h-full object-cover object-center absolute inset-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_17eRTIv6QG-I_zyeEb3XtgtTBmF7gxQ4w2PzxBTRrUFaFknTWn_vZOVJHdEZHzpluFqsUJWgH17i9LNw6NagtM4skx7F1j7AyKUmrXbmLwewD-WkboHvp_osV0GgmLZsLHXEBcJ4uCwLWt7h1AEVv8AgSPV-8fbuSB3uLPP5f-sVp8DLGilNI749Y2Ft7l45Ie_4yF1KNTBJ_7kcCn59LiQbYXa7nF_OTN12VnuDotsZt4WTajpN"/>
 </div>
 </div>
 </section>
 <!-- SEZIONE 4: B-01 -->
-<section class="w-full bg-[#fbfbfa] relative h-[250vh]" data-reference-slot="4" id="seed-paths">
-<div class="sticky top-0 w-full h-screen overflow-opacity-0 pointer-events-none py-24 md:py-32 px-6 md:px-12 lg:px-20 seed-paths-inner">
-<div class="max-w-6xl mx-auto h-full flex flex-col justify-center">
+<section class="w-full bg-[#fbfbfa] py-24 md:py-32 px-6 md:px-12 lg:px-20" data-reference-slot="4" id="section-4" data-m21-root="scene-005">
+<div class="max-w-6xl mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 <div class="lg:col-span-6 flex flex-col justify-center">
 <span class="text-xs uppercase tracking-[0.28em] text-[#bda170] font-sans font-medium mb-4">Terroir • Cru Storici</span>
@@ -227,23 +210,17 @@
           </p>
 <div class="w-24 h-[1px] bg-[#c5a059] mt-2"></div>
 </div>
-<div class="lg:col-span-6 h-[60vh] relative">
-  <!-- the 3 pos markers required by the path seed -->
-  <div class="path-pos1 absolute top-0 left-0 w-[40%] h-[40%] border-2 border-dashed border-stone-300 rounded-lg flex items-center justify-center text-stone-400 text-xs opacity-0 pointer-events-none">Pos1</div>
-  <div class="path-pos2 absolute top-[20%] right-0 w-[80%] h-[60%] border-2 border-dashed border-stone-300 rounded-lg flex items-center justify-center text-stone-400 text-xs opacity-0 pointer-events-none">Pos2</div>
-  <div class="path-pos3 absolute bottom-0 left-[20%] w-[60%] h-[50%] border-2 border-dashed border-stone-300 rounded-lg flex items-center justify-center text-stone-400 text-xs opacity-0 pointer-events-none">Pos3</div>
-  
-  <div class="w-full h-full path-img shadow-sm absolute rounded-lg overflow-opacity-0 pointer-events-none">
-    <img alt="Vigneti e colline di Serralunga d'Alba a Podere Bricco Sereno" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhYTb86e0eLWCB5VL08EBsVH_V9fowMU90gf4KUZXLYtiRVv1bEnmByPqlrwxUXWD1yq9GxBn12qtwf-e1QZGoienUhunBC__Egeo_8O6ZdF16JZei1BTIwAIZjujNR9VKkGrFckSrQdL4p3s0OvDX9lUU5rYuJ2gIydQr0uR1ciHisQ6RbWk8FLoAED-oVyZ0nSWVTFOAQv8DYzUvf_YznV1WW3jgI7rki_qRaSIV5HGwzdQBaFCM"/>
-  </div>
+<div class="lg:col-span-6">
+<div class="w-full aspect-[4/4.8] max-w-lg bg-stone-100 overflow-hidden relative shadow-sm">
+<img alt="Vigneti e colline di Serralunga d'Alba a Podere Bricco Sereno" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhYTb86e0eLWCB5VL08EBsVH_V9fowMU90gf4KUZXLYtiRVv1bEnmByPqlrwxUXWD1yq9GxBn12qtwf-e1QZGoienUhunBC__Egeo_8O6ZdF16JZei1BTIwAIZjujNR9VKkGrFckSrQdL4p3s0OvDX9lUU5rYuJ2gIydQr0uR1ciHisQ6RbWk8FLoAED-oVyZ0nSWVTFOAQv8DYzUvf_YznV1WW3jgI7rki_qRaSIV5HGwzdQBaFCM"/>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- SEZIONE 5: B-02 -->
-<section class="w-full bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20 border-t border-stone-100 seed-parallax-section" data-reference-slot="5" id="seed-parallax-2">
-<div class="max-w-4xl mx-auto text-center mb-16" data-m="reveal">
+<section class="w-full bg-white py-24 md:py-32 px-6 md:px-12 lg:px-20 border-t border-stone-100" data-reference-slot="5" id="section-5" data-m21-root="scene-006">
+<div class="max-w-4xl mx-auto text-center mb-16">
 <span class="text-xs uppercase tracking-[0.3em] text-[#bda170] font-sans font-medium mb-4 block">Valori &amp; Radici</span>
 <h2 class="text-3xl md:text-5xl font-serif text-stone-900 font-normal tracking-wide mb-6">La Tradizione e il Tempo</h2>
 <p class="text-stone-600 font-sans text-sm md:text-base leading-relaxed font-light max-w-2xl mx-auto">
@@ -251,17 +228,17 @@
       </p>
 </div>
 <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14">
-<div class="w-full aspect-[3/4.2] bg-stone-100 overflow-opacity-0 pointer-events-none relative shadow-sm">
-<img alt="Dettaglio botti storiche Podere Bricco Sereno" class="w-full h-[120%] object-cover object-center absolute inset-0 -top-[10%] parallax-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABoofI8YqbjZEWBzgyIB-x1LmrKcKJgVJBPrzRspiW6Mgz4_QKQmCst429dmf2B8RORDsLXYvApbGpHShlAPuXiB6_e2YCAd5kji9wuC1AzA6uUEu8pecxjB6CzMnXEx70fTh4dgdVxzSXLwOIgyJh4wkY2ALuxB2vSbQ947H8dUJtIx9He3znWpjik3IRK19HqDriEKAAHO0MldsJuHQbVVM8KeP7UzTRk3ltzXFsj9UPij09Br_Q"/>
+<div class="w-full aspect-[3/4.2] bg-stone-100 overflow-hidden relative shadow-sm">
+<img alt="Dettaglio botti storiche Podere Bricco Sereno" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABoofI8YqbjZEWBzgyIB-x1LmrKcKJgVJBPrzRspiW6Mgz4_QKQmCst429dmf2B8RORDsLXYvApbGpHShlAPuXiB6_e2YCAd5kji9wuC1AzA6uUEu8pecxjB6CzMnXEx70fTh4dgdVxzSXLwOIgyJh4wkY2ALuxB2vSbQ947H8dUJtIx9He3znWpjik3IRK19HqDriEKAAHO0MldsJuHQbVVM8KeP7UzTRk3ltzXFsj9UPij09Br_Q"/>
 </div>
-<div class="w-full aspect-[3/4.2] bg-stone-100 overflow-opacity-0 pointer-events-none relative shadow-sm">
-<img alt="Fasi di affinamento e cantina" class="w-full h-[120%] object-cover object-center absolute inset-0 -top-[10%] parallax-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYDjx8qdz6CIgOue8wAHGP738jaN1CsJ9DufOaBGKwHxHTTa7BmNZkNnEYs21UduViN5ZdRN0CyLUfLrmZZ0r0_wrJo_dNCPagQlQssDoSV1aiYJRD8vd6AwI_a3LfuE8LiFLwDrT0KqF2c5GAwb46HX96x9LJPXJLNyim2BZa4M-6JoxHFDwUaWMFpzcsAz2v4oDGZV6QEUc4OZDKvDMToKG2IgIDo6hqLcxsPIw9A5jy32PLbL-d"/>
+<div class="w-full aspect-[3/4.2] bg-stone-100 overflow-hidden relative shadow-sm">
+<img alt="Fasi di affinamento e cantina" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYDjx8qdz6CIgOue8wAHGP738jaN1CsJ9DufOaBGKwHxHTTa7BmNZkNnEYs21UduViN5ZdRN0CyLUfLrmZZ0r0_wrJo_dNCPagQlQssDoSV1aiYJRD8vd6AwI_a3LfuE8LiFLwDrT0KqF2c5GAwb46HX96x9LJPXJLNyim2BZa4M-6JoxHFDwUaWMFpzcsAz2v4oDGZV6QEUc4OZDKvDMToKG2IgIDo6hqLcxsPIw9A5jy32PLbL-d"/>
 </div>
 </div>
 </section>
 <!-- SEZIONE 6: B-03 -->
-<section class="w-full bg-[#1b2c24] text-white py-24 md:py-32 px-6 md:px-12 lg:px-20" data-reference-slot="6" id="section-6">
-<div class="max-w-5xl mx-auto text-center" data-m="reveal">
+<section class="w-full bg-[#1b2c24] text-white py-24 md:py-32 px-6 md:px-12 lg:px-20" data-reference-slot="6" id="section-6" data-m21-root="scene-007">
+<div class="max-w-5xl mx-auto text-center">
 <span class="text-xs uppercase tracking-[0.3em] text-stone-300/80 font-sans font-medium mb-4 block">Accoglienza &amp; Degustazione</span>
 <h2 class="text-5xl md:text-7xl custom-script text-white/95 leading-tight mb-8">esperienze e memorie</h2>
 <p class="text-stone-200/85 text-sm md:text-base leading-relaxed font-sans font-light max-w-2xl mx-auto mb-10">
@@ -274,7 +251,7 @@
 </section>
 </main>
 <!-- FOOTER: Phase 1 repair footer editoriale -->
-<footer class="w-full bg-[#080808] text-white py-20 px-6 md:px-14 lg:px-20 border-t border-stone-800">
+<footer class="w-full bg-[#080808] text-white py-20 px-6 md:px-14 lg:px-20 border-t border-stone-800" data-m21-root="scene-008">
 <div class="max-w-6xl mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-16">
 <div>
@@ -312,17 +289,14 @@
 </div>
 </div>
 </div>
-</footer>
-<script src="MOTORE/vendor/gsap.min.js"></script>
-<script src="MOTORE/vendor/ScrollTrigger.min.js"></script>
-<script src="MOTORE/vendor/MotionPathPlugin.min.js"></script>
-<script src="MOTORE/vendor/lenis.min.js"></script>
-<script src="assets/js/splitting.min.js"></script>
-<script>
-window.MOTION_CONFIG = { auto: false, lenis: true, intensity: 'hero', pinOnMobile: false };
-</script>
-<script src="MOTORE/regia-coordinatore.js"></script>
-<script src="MOTORE/motion.js"></script>
-<script src="assets/js/regia-sito.js"></script>
+</footer><!-- Metodo 21: unico runtime neutro GSAP / ScrollTrigger / Lenis -->
+<script src="MOTORE/vendor/gsap.min.js" data-metodo21-global-engine></script>
+<script src="MOTORE/vendor/ScrollTrigger.min.js" data-metodo21-global-engine></script>
+<script src="MOTORE/vendor/lenis.min.js" data-metodo21-global-engine></script>
+<script src="MOTORE/plugin-registry.js" data-metodo21-global-engine></script>
+<script src="MOTORE/regia-coordinatore.js" data-metodo21-global-engine></script>
+<script>window.MOTION_CONFIG = { lenis: true };</script>
+<script src="MOTORE/motion.js" data-metodo21-global-engine></script>
+<script src="assets/js/regia-sito.js" data-metodo21-global-engine></script>
 </body>
 </html>
