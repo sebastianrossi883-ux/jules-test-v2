@@ -1,19 +1,11 @@
 {
-  "site_id": "Metodo21_Podere_Consolidato_Giro_20261013_02",
-  "site_name": "",
-  "idea": "",
-  "metaphor": "",
-  "composition_signature": "",
-  "motion_signature": "",
-  "thread": "",
-  "dominant_curve": "",
-  "accent_curve": "",
-  "rhythm": "",
-  "transition_grammar": "",
-  "component_slug": "codrops-sticky-grid-scroll-main",
-  "seed_slugs": [
-    "codrops-mwg",
-    "codrops-motion-path-transition-main-2"
-  ],
-  "keywords": []
+  "site": "Podere Bricco Sereno",
+  "firma_movimento": {
+    "arco": "Ingresso ampio, sviluppo espanso tramite grid e percorsi curvi, chiusura con semi cadenti",
+    "meccanica_dominante": "Sticky Grid Scroll (Componente)",
+    "semi_applicati": [
+      "codrops-mwg",
+      "codrops-motion-path-transition-main-2"
+    ]
+  }
 }

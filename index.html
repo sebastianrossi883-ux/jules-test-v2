@@ -70,9 +70,10 @@
 </nav>
 <!-- Titolo maestoso centrale sovrapposto a contrasto senza riquadri grigi o blur -->
 <div class="relative z-10 my-auto px-6 text-center max-w-5xl mx-auto flex flex-col items-center justify-center py-20">
-<span class="text-xs md:text-sm uppercase tracking-[0.35em] text-[#c5a059] font-sans font-medium mb-4">Langhe • Barolo</span>
+<span class="text-xs md:text-sm uppercase tracking-[0.35em] text-[#c5a059] font-sans font-medium mb-4 inline-block overflow-hidden"><span class="motion-line block">Langhe • Barolo</span></span>
 <h1 class="text-3xl md:text-5xl lg:text-7xl font-serif text-white tracking-[0.18em] uppercase font-light leading-tight">
-      Podere Bricco Sereno — Serralunga d'Alba
+      <span class="motion-line-mask inline-block overflow-hidden align-top"><span class="motion-line inline-block">Podere Bricco Sereno —</span></span>
+      <span class="motion-line-mask inline-block overflow-hidden align-top"><span class="motion-line inline-block">Serralunga d'Alba</span></span>
     </h1>
 </div>
 <!-- Indicatore di scorrimento verso #section-1 -->
@@ -86,43 +87,55 @@
 <!-- CONTENITORE MAIN CON LE 6 MACRO-SEZIONI -->
 <main class="w-full">
 <!-- SEZIONE 1: A-01 -->
-<section class="w-full bg-[#fbfbfa] py-24 md:py-32 px-6 flex flex-col items-center justify-center" data-parent="A-01.jpg" data-reference-slot="1" id="section-1" data-m21-root="scene-002">
-<div class="max-w-5xl w-full mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 max-w-4xl mx-auto items-stretch">
-<div class="flex flex-col items-center">
-<div class="w-full aspect-[3/4.2] bg-[#ded5d5] shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-8 transition-transform duration-300 hover:scale-[1.01]">
-<img alt="Carta delle Annate e Degustazioni - Podere Bricco Sereno" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-35" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDduEIHwEAK_KSvJlO8NW_SSLlr656JsOSuRQb3wpYhPE3qpVJKMiogOH5uarD8hSNEsnkxHBMAIXv1wjiJ_piT5fkX3JAAGZePdMdrKC2yGb-uirEv4hydXZtrnFiqW2UeuReQ7wo6nbC_7V2Sx2KXBDYPT_o8qMkpcFGh2_yQs2rNJgQyAMkwpGx-_LGK-Zq6DJz54Lgr7BKXYS5aWdrOlAYGa7UzXNfqloeUbvsXpcYCwb9fldha"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#c5b5b5]/80 via-transparent to-transparent pointer-events-none"></div>
-<div class="relative z-10 text-center flex flex-col items-center">
-<span class="text-xs uppercase tracking-[0.35em] text-stone-700/80 mb-2 font-sans font-light">Podere</span>
-<h3 class="text-2xl md:text-3xl font-serif text-stone-800 tracking-[0.2em] uppercase font-light">Bricco</h3>
-<p class="text-[10px] tracking-[0.25em] uppercase text-stone-600 mt-1 font-sans">Sereno</p>
-</div>
-</div>
-<div class="mt-8 text-center">
-<span class="text-sm font-sans tracking-[0.18em] text-[#bda170] uppercase font-medium">I Nostri Percorsi</span>
-<div class="w-24 h-[1px] bg-[#c5a059] mx-auto mt-2"></div>
-</div>
-</div>
-<div class="flex flex-col items-center mt-8 md:mt-0">
-<div class="w-full aspect-[3/4.2] bg-[#dad4ca] shadow-xl relative overflow-hidden flex flex-col items-center justify-between p-10 md:p-12 transition-transform duration-300 hover:scale-[1.01]">
-<img alt="La Carta dei Vini di Serralunga - Podere Bricco Sereno" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-25" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOedGBq19GImMl77WFjO65NtEkQu5aF9PPX7fqfxjK7TDl_nRxPieIW2-NVIzL2nVRZP1E6nqErcZ8KKigGb3U87I1q01MEuw5BgcLeGW3eLzATt-AHsicpDPfVQ8mDCElQBj-V6Bad3fM2vz_9aAMMLoHXgdgRAGvWEye7-LJ_JyYefxEOr25coTd5wpaCEkZyRvTBFKJrCfyzqyEakl61xWsZWehdh1yJSixvj3fGHPHr3Zd1djl"/>
-<div class="w-full text-center pt-8 relative z-10">
-<h2 class="text-xl md:text-2xl font-serif uppercase tracking-[0.25em] text-stone-700 font-light">
-                Carta dei Vini
-              </h2>
-</div>
-<div class="relative z-10 text-center pb-4 flex flex-col items-center">
-<span class="text-xs uppercase tracking-[0.3em] text-stone-600 font-serif">Bricco Sereno</span>
-<span class="text-[9px] uppercase tracking-[0.2em] text-stone-500 mt-0.5 font-sans">Serralunga d'Alba</span>
-</div>
-</div>
-<div class="mt-8 text-center">
-<span class="text-sm font-sans tracking-[0.18em] text-[#bda170] uppercase font-medium">La Selezione Storica</span>
-<div class="w-24 h-[1px] bg-[#c5a059] mx-auto mt-2"></div>
-</div>
-</div>
-</div>
+<section class="w-full bg-[#fbfbfa]" data-parent="A-01.jpg" data-reference-slot="1" id="section-1" data-m21-root="scene-002" style="height: 425vh;">
+<div class="block__wrapper sticky top-0 w-full h-screen overflow-hidden flex flex-col items-center justify-center pt-20">
+    <div class="content relative z-20 flex flex-col justify-center items-center text-center px-6">
+        <h2 class="text-xl md:text-2xl font-serif uppercase tracking-[0.25em] text-stone-700 font-light mb-4">
+            Carta dei Vini
+        </h2>
+        <p class="text-sm font-sans tracking-[0.18em] text-[#bda170] uppercase font-medium max-w-lg mb-8">
+            Scopri i nostri percorsi e la selezione storica
+        </p>
+        <div class="w-24 h-[1px] bg-[#c5a059] mx-auto mb-4"></div>
+    </div>
+
+    <div class="gallery absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[900px] px-4 pointer-events-none z-10">
+        <ul class="gallery__grid grid grid-cols-3 gap-4 md:gap-8">
+            <li class="gallery__item w-full aspect-[3/4.2] bg-[#ded5d5] shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-8">
+                <!-- design block (color) -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#c5b5b5]/80 via-transparent to-transparent opacity-50"></div>
+                <div class="relative z-10 text-center flex flex-col items-center">
+                    <span class="text-xs uppercase tracking-[0.35em] text-stone-700 mb-2 font-sans">Radici</span>
+                </div>
+            </li>
+            <li class="gallery__item w-full aspect-[3/4.2] bg-[#ded5d5] shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-8">
+                <img alt="Carta delle Annate e Degustazioni" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDduEIHwEAK_KSvJlO8NW_SSLlr656JsOSuRQb3wpYhPE3qpVJKMiogOH5uarD8hSNEsnkxHBMAIXv1wjiJ_piT5fkX3JAAGZePdMdrKC2yGb-uirEv4hydXZtrnFiqW2UeuReQ7wo6nbC_7V2Sx2KXBDYPT_o8qMkpcFGh2_yQs2rNJgQyAMkwpGx-_LGK-Zq6DJz54Lgr7BKXYS5aWdrOlAYGa7UzXNfqloeUbvsXpcYCwb9fldha"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#c5b5b5]/80 via-transparent to-transparent pointer-events-none"></div>
+                <div class="relative z-10 text-center flex flex-col items-center">
+                    <span class="text-xs uppercase tracking-[0.35em] text-stone-800 font-sans font-light">Podere</span>
+                    <h3 class="text-xl font-serif text-stone-900 tracking-[0.2em] uppercase font-light">Bricco</h3>
+                </div>
+            </li>
+            <li class="gallery__item w-full aspect-[3/4.2] bg-[#dad4ca] shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-8">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#d4ccbf]/80 via-transparent to-transparent opacity-50"></div>
+            </li>
+            <li class="gallery__item w-full aspect-[3/4.2] bg-[#d4ccbf] shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-8">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#c5b5b5]/50 via-transparent to-transparent opacity-50"></div>
+            </li>
+            <li class="gallery__item w-full aspect-[3/4.2] bg-[#dad4ca] shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-8">
+                <img alt="La Carta dei Vini" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOedGBq19GImMl77WFjO65NtEkQu5aF9PPX7fqfxjK7TDl_nRxPieIW2-NVIzL2nVRZP1E6nqErcZ8KKigGb3U87I1q01MEuw5BgcLeGW3eLzATt-AHsicpDPfVQ8mDCElQBj-V6Bad3fM2vz_9aAMMLoHXgdgRAGvWEye7-LJ_JyYefxEOr25coTd5wpaCEkZyRvTBFKJrCfyzqyEakl61xWsZWehdh1yJSixvj3fGHPHr3Zd1djl"/>
+                <div class="relative z-10 text-center pb-4 flex flex-col items-center">
+                    <span class="text-[9px] uppercase tracking-[0.2em] text-stone-800 mt-0.5 font-sans">Serralunga</span>
+                </div>
+            </li>
+            <li class="gallery__item w-full aspect-[3/4.2] bg-[#ded5d5] shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-8">
+                <div class="absolute inset-0 bg-gradient-to-b from-[#dad4ca]/80 via-transparent to-transparent opacity-50"></div>
+                <div class="relative z-10 text-center flex flex-col items-center">
+                    <span class="text-xs uppercase tracking-[0.35em] text-stone-700 font-sans">Tempo</span>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
 </section>
 <!-- SEZIONE 2: A-02 -->
@@ -142,10 +155,23 @@
 </div>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-<div class="lg:col-span-6 flex justify-start">
-<div class="w-full aspect-[4/4.8] max-w-lg bg-stone-100 overflow-hidden relative shadow-sm">
-<img alt="Gli interni delle suite tra travi in rovere e pietra a Podere Bricco Sereno" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2OQpGGOH3vpaENuI_IDK8WdHbfES8rC_EhKYtYS0xSTNxzPL2Hn4d5vwBSoXlgBIJF3WjVp4JoBz7HGYfiGyRqwsssZVkt-DhdtOXB4aJ6-tWOUvwXy0JKT15PHtwkhjWjPF-n2BwQxzjUNuJnCEgJ8weSkzVFqD1P3b4-3LVKb-Ne60WEuNo7eRfzSiKs-3nt3CJF2x409YTXFE6xq1Q2MhNkA6Snxl6KZqKtB-G80SpkPqIn2ip"/>
-</div>
+<div class="lg:col-span-6 flex justify-start relative motion-path-container h-[600px] w-full items-center">
+  <!-- Questa è la struttura base. Nello script le card si distribuiranno. -->
+  <div class="w-[45%] absolute left-10 aspect-[4/4.8] max-w-md bg-[#ded5d5] overflow-hidden shadow-md motion-card flex flex-col justify-center items-center" style="z-index: 5;">
+    <div class="absolute inset-0 bg-gradient-to-tr from-[#1b2c24]/20 to-transparent"></div>
+    <span class="relative z-10 text-xl font-serif text-stone-700">Armonia</span>
+  </div>
+  <div class="w-[45%] absolute left-10 aspect-[4/4.8] max-w-md bg-[#d4ccbf] overflow-hidden shadow-md motion-card" style="z-index: 4;">
+    <div class="absolute inset-0 flex items-center justify-center text-stone-700/70 font-serif text-3xl">Quiete</div>
+  </div>
+  <div class="w-[45%] absolute left-10 aspect-[4/4.8] max-w-md bg-[#dad4ca] overflow-hidden shadow-md motion-card" style="z-index: 3;">
+    <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <span class="text-xs font-sans tracking-[0.2em] text-[#bda170] uppercase">Dimore</span>
+    </div>
+  </div>
+  <div class="w-[45%] absolute left-10 aspect-[4/4.8] max-w-md bg-stone-100 overflow-hidden shadow-xl motion-card" style="z-index: 2;">
+    <img alt="Gli interni delle suite tra travi in rovere e pietra a Podere Bricco Sereno" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2OQpGGOH3vpaENuI_IDK8WdHbfES8rC_EhKYtYS0xSTNxzPL2Hn4d5vwBSoXlgBIJF3WjVp4JoBz7HGYfiGyRqwsssZVkt-DhdtOXB4aJ6-tWOUvwXy0JKT15PHtwkhjWjPF-n2BwQxzjUNuJnCEgJ8weSkzVFqD1P3b4-3LVKb-Ne60WEuNo7eRfzSiKs-3nt3CJF2x409YTXFE6xq1Q2MhNkA6Snxl6KZqKtB-G80SpkPqIn2ip"/>
+  </div>
 </div>
 <div class="lg:col-span-6 lg:pl-4 flex flex-col justify-center">
 <h3 class="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-950 font-normal tracking-tight mb-8">
@@ -184,7 +210,7 @@
 <h2 class="text-6xl md:text-7xl lg:text-8xl custom-script text-white/95 leading-tight mb-8">
           la cantina
         </h2>
-<div class="space-y-6 text-stone-200/85 text-sm md:text-[15px] leading-relaxed font-sans font-light max-w-lg">
+<div class="space-y-6 text-stone-200/85 text-sm md:text-[15px] leading-relaxed font-sans font-light max-w-lg" data-motion-text="words">
 <p>
             La famiglia Ferrero-Vassallo custodisce questi appezzamenti da generazioni, trasformando la cascina di Serralunga in un presidio che preserva vinificazione lenta, accoglienza e dedizione.
           </p>
@@ -251,8 +277,10 @@
 </section>
 </main>
 <!-- FOOTER: Phase 1 repair footer editoriale -->
-<footer class="w-full bg-[#080808] text-white py-20 px-6 md:px-14 lg:px-20 border-t border-stone-800" data-m21-root="scene-008">
-<div class="max-w-6xl mx-auto">
+<footer class="w-full bg-[#080808] text-white py-20 px-6 md:px-14 lg:px-20 border-t border-stone-800 relative overflow-hidden" data-m21-root="scene-008">
+<!-- Trail effect container (Seme 1) -->
+<div class="trail-container absolute inset-0 pointer-events-none z-0"></div>
+<div class="max-w-6xl mx-auto relative z-10">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-16">
 <div>
 <h4 class="text-xs uppercase tracking-[0.25em] text-[#c5a059] font-sans font-medium mb-4">Contatti</h4>
@@ -297,6 +325,6 @@
 <script src="MOTORE/regia-coordinatore.js" data-metodo21-global-engine></script>
 <script>window.MOTION_CONFIG = { lenis: true };</script>
 <script src="MOTORE/motion.js" data-metodo21-global-engine></script>
-<script src="assets/js/regia-sito.js" data-metodo21-global-engine></script>
+<script type="module" src="assets/js/regia-sito.bundle.js"></script>
 </body>
 </html>

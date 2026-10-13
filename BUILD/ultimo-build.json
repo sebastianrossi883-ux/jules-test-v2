@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "assets/js/regia-sito.js": {
+      "bytes": 23750,
+      "imports": []
+    }
+  },
+  "outputs": {
+    "assets/js/regia-sito.bundle.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 37119
+    },
+    "assets/js/regia-sito.bundle.js": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "assets/js/regia-sito.js",
+      "inputs": {
+        "assets/js/regia-sito.js": {
+          "bytesInOutput": 17263
+        }
+      },
+      "bytes": 17336
+    }
+  }
+}
