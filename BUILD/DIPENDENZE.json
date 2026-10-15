@@ -1,0 +1,227 @@
+{
+  "schema": "metodo21.technical-dependencies/v1",
+  "status": "prepared",
+  "materials": [
+    {
+      "slug": "imagetocontent-main",
+      "libraries": [
+        {
+          "name": "split-type",
+          "version": "0.3.4",
+          "import": "@material/imagetocontent-main/split-type",
+          "path": "BUILD/librerie/imagetocontent-main/node_modules/split-type"
+        }
+      ],
+      "motorImports": [
+        "@studio-freight/lenis",
+        "gsap",
+        "gsap/Flip",
+        "gsap/ScrollTrigger",
+        "imagesloaded"
+      ],
+      "nonRuntimeReferences": [
+        "//tympanus.net/codrops/adpacks/analytics.js",
+        "https://tympanus.net/codrops/adpacks/cda_sponsor.js"
+      ],
+      "aliases": {},
+      "transforms": [],
+      "configs": [
+        "package.json"
+      ],
+      "shaderRequirements": [],
+      "browserScripts": [
+        {
+          "file": "dist/index.html",
+          "reference": "//tympanus.net/codrops/adpacks/analytics.js"
+        },
+        {
+          "file": "dist/index.html",
+          "reference": "index.e9a2d1b4.js"
+        },
+        {
+          "file": "dist/index.html",
+          "reference": "index.b5e7c14d.js"
+        },
+        {
+          "file": "dist/index.html",
+          "reference": "https://tympanus.net/codrops/adpacks/cda_sponsor.js"
+        },
+        {
+          "file": "dist/index.html",
+          "reference": "../_method_capsule_bridge.js"
+        },
+        {
+          "file": "src/index.html",
+          "reference": "js/index.js"
+        }
+      ],
+      "requiredCapabilities": [],
+      "analysisPartial": [],
+      "unresolved": []
+    },
+    {
+      "slug": "slicerevealer-master",
+      "libraries": [],
+      "motorImports": [
+        "js/anime.min.js"
+      ],
+      "nonRuntimeReferences": [],
+      "aliases": {},
+      "transforms": [],
+      "configs": [],
+      "shaderRequirements": [],
+      "browserScripts": [
+        {
+          "file": "index.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "js/anime.min.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "js/uncover.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "js/demo1.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "_method_capsule_bridge.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/anime.min.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/uncover.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/demo2.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "_method_capsule_bridge.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/anime.min.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/uncover.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/demo3.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "_method_capsule_bridge.js"
+        }
+      ],
+      "requiredCapabilities": [],
+      "analysisPartial": [],
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "runtimeConflicts": [],
+  "siteSourceAnalysis": {
+    "imports": [
+      {
+        "file": "assets/js/regia-sito.js",
+        "line": 2,
+        "reference": "../../MOTORE/scena-supporto.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/regia-sito.js",
+        "line": 3,
+        "reference": "./scene/scena-001.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/scene/scena-001.js",
+        "line": 1,
+        "reference": "../scenografie/scena-001.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/scene/scena-001.js",
+        "line": 2,
+        "reference": "../meccaniche/01-imagetocontent-main.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/scene/scena-001.js",
+        "line": 3,
+        "reference": "../meccaniche/02-slicerevealer-master.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/scenografie/scena-001.js",
+        "line": 1,
+        "reference": "../../../MOTORE/scena-supporto.js",
+        "kind": "import"
+      }
+    ],
+    "partial": [],
+    "configs": [],
+    "aliases": {},
+    "browserScripts": [
+      {
+        "file": "index.html",
+        "reference": "MOTORE/vendor/gsap.min.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/vendor/ScrollTrigger.min.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/vendor/lenis.min.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/plugin-registry.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/regia-coordinatore.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/motion.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "assets/js/regia-sito.js"
+      }
+    ],
+    "shaderRequirements": []
+  },
+  "canonicalVersions": {
+    "gsap": "3.15.0",
+    "ScrollTrigger": "3.15.0",
+    "lenis": "1.3.26"
+  },
+  "tools": {
+    "parse5": "8.0.1",
+    "esbuild-wasm": "0.25.12",
+    "sass": "1.93.2",
+    "glslify": "7.1.1"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "site_id": "PROVA_INCARICO",
+  "site_name": "",
+  "idea": "",
+  "metaphor": "",
+  "composition_signature": "",
+  "motion_signature": "",
+  "thread": "",
+  "dominant_curve": "",
+  "accent_curve": "",
+  "rhythm": "",
+  "transition_grammar": "",
+  "component_slug": "imagetocontent-main",
+  "seed_slugs": [
+    "slicerevealer-master"
+  ],
+  "keywords": []
+}

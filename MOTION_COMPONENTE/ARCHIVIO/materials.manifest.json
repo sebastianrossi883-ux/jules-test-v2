@@ -1,0 +1,82 @@
+{
+  "schema": "metodo21.material-library/v1",
+  "materials": [
+    {
+      "slug": "imagetocontent-main",
+      "title": "ImageToContent-main",
+      "mode": "source",
+      "build": {
+        "state": "prebuilt",
+        "output": "dist"
+      },
+      "runtime": [
+        "gsap-3",
+        "esm",
+        "npm-build"
+      ],
+      "libraries": [
+        "gsap-3",
+        "imagesloaded",
+        "lenis",
+        "scrolltrigger"
+      ],
+      "defaultVariant": "dist-index",
+      "variants": [
+        {
+          "id": "dist-index",
+          "entry": "dist/index.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/imagetocontent-main/dist/index.html"
+        }
+      ],
+      "framework": "vanilla",
+      "archivePath": "MOTION_COMPONENTE/ARCHIVIO/imagetocontent-main",
+      "sourceKind": "html-demo",
+      "hasCode": true,
+      "assignmentRole": "Componente",
+      "previewPath": "DERIVATI/ANTEPRIME/imagetocontent-main"
+    },
+    {
+      "slug": "slicerevealer-master",
+      "title": "SliceRevealer-master",
+      "mode": "source",
+      "build": {
+        "state": "static"
+      },
+      "runtime": [
+        "vanilla-classic"
+      ],
+      "libraries": [
+        "anime",
+        "imagesloaded"
+      ],
+      "defaultVariant": "index",
+      "variants": [
+        {
+          "id": "index",
+          "entry": "index.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/slicerevealer-master/index.html"
+        },
+        {
+          "id": "index2",
+          "entry": "index2.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/slicerevealer-master/index2.html"
+        },
+        {
+          "id": "index3",
+          "entry": "index3.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/slicerevealer-master/index3.html"
+        }
+      ],
+      "framework": "vanilla",
+      "archivePath": "MOTION_COMPONENTE/ARCHIVIO/slicerevealer-master",
+      "sourceKind": "html-demo",
+      "hasCode": true,
+      "assignmentRole": "Seme",
+      "previewPath": "DERIVATI/ANTEPRIME/slicerevealer-master"
+    }
+  ],
+  "materialCount": 2,
+  "assignmentScope": "isolated-pair",
+  "assignmentSiteId": "PROVA_INCARICO",
+  "reactExcludedByUser": true
+}

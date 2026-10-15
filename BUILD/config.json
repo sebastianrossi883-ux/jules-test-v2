@@ -1,0 +1,29 @@
+{
+  "entry": "assets/js/regia-sito.js",
+  "output": "assets/js/regia-sito.bundle.js",
+  "aliases": {},
+  "materials": {
+    "imagetocontent-main": {
+      "sourceRoot": "MOTION_COMPONENTE/ARCHIVIO/imagetocontent-main",
+      "libraryRoot": "BUILD/librerie/imagetocontent-main",
+      "aliases": {}
+    },
+    "slicerevealer-master": {
+      "sourceRoot": "MOTION_COMPONENTE/ARCHIVIO/slicerevealer-master",
+      "libraryRoot": "BUILD/librerie/slicerevealer-master",
+      "aliases": {}
+    }
+  },
+  "contract": {
+    "mechanics": [
+      "assets/js/meccaniche/01-imagetocontent-main.js",
+      "assets/js/meccaniche/02-slicerevealer-master.js"
+    ],
+    "scenes": [
+      {
+        "module": "assets/js/scene/scena-001.js",
+        "scenography": "assets/js/scenografie/scena-001.js"
+      }
+    ]
+  }
+}

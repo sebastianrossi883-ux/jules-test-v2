@@ -1,0 +1,8 @@
+{
+  "name": "metodo21-imagetocontent-main",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "split-type": "0.3.4"
+  }
+}

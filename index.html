@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Podere Bricco Sereno — prova di una scena</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/scena.css">
+<link rel="stylesheet" href="MOTORE/vendor/lenis.css" data-metodo21-global-engine>
+</head>
+<body>
+  <main>
+    <section id="scena-podere" aria-labelledby="titolo-scena" data-m21-root="scene-001">
+      <div class="intro-scena" data-m21-actor="node-00001">
+        <p class="identita" data-m21-actor="node-00002">Podere Bricco Sereno · Serralunga d'Alba</p>
+        <p class="nota-prova" data-m21-actor="node-00003">Prova scenografica — una sola scena</p>
+        <h1 id="titolo-scena" data-m21-actor="node-00004">Il gesto e la vigna</h1>
+        <p class="invito" data-m21-actor="node-00005">Scorri per attraversare la scena</p>
+      </div>
+      <div class="contenuti-scena" data-m21-actor="node-00006">
+        <div class="testi-scena" data-m21-actor="node-00007">
+          <p class="soprattitolo" data-m21-actor="node-00008">Terroir · Cru Storici</p>
+          <h2 data-m21-actor="node-00009">I Vigneti di Serralunga</h2>
+          <p data-m21-actor="node-00010">I versanti ripidi affacciati sui castelli medievali offrono terreni marnosi e calcarei ideali per il Nebbiolo. Ogni filare racconta la pazienza di un'agricoltura attenta e rispettosa dei cicli naturali delle colline piemontesi.</p>
+          <h2 data-m21-actor="node-00011">La Tradizione e il Tempo</h2>
+          <p data-m21-actor="node-00012">Dalla vendemmia manuale alla sosta silenziosa nel legno antico: ogni bottiglia custodisce la sincerità e l'eleganza rigorosa della nostra terra.</p>
+        </div>
+        <div class="media-scena" data-m21-actor="node-00013">
+          <figure data-m21-actor="node-00014"><img src="assets/media/vigneti.jpg" alt="Vigneti e colline di Serralunga d'Alba a Podere Bricco Sereno" data-m21-actor="node-00015"><figcaption data-m21-actor="node-00016">I Vigneti di Serralunga</figcaption></figure>
+          <figure data-m21-actor="node-00017"><img src="assets/media/cantina.jpg" alt="Momenti di famiglia e cantina a Podere Bricco Sereno tra le mura di mattoni storici" data-m21-actor="node-00018"><figcaption data-m21-actor="node-00019">La Cantina</figcaption></figure>
+          <figure data-m21-actor="node-00020"><img src="assets/media/botti.jpg" alt="Dettaglio botti storiche Podere Bricco Sereno" data-m21-actor="node-00021"><figcaption data-m21-actor="node-00022">La Tradizione e il Tempo</figcaption></figure>
+          <figure data-m21-actor="node-00023"><img src="assets/media/affinamento.jpg" alt="Fasi di affinamento e cantina" data-m21-actor="node-00024"><figcaption data-m21-actor="node-00025">Fasi di affinamento</figcaption></figure>
+        </div>
+      </div>
+      <p class="chiusura-scena" data-m21-actor="node-00026">Podere Bricco Sereno · Fine della scena</p>
+    </section>
+  </main>
+<!-- Metodo 21: unico runtime neutro GSAP / ScrollTrigger / Lenis -->
+<script src="MOTORE/vendor/gsap.min.js" data-metodo21-global-engine></script>
+<script src="MOTORE/vendor/ScrollTrigger.min.js" data-metodo21-global-engine></script>
+<script src="MOTORE/vendor/lenis.min.js" data-metodo21-global-engine></script>
+<script src="MOTORE/plugin-registry.js" data-metodo21-global-engine></script>
+<script src="MOTORE/regia-coordinatore.js" data-metodo21-global-engine></script>
+<script>window.MOTION_CONFIG = { lenis: true };</script>
+<script src="MOTORE/motion.js" data-metodo21-global-engine></script>
+<script type="module" src="assets/js/regia-sito.js" data-metodo21-global-engine></script>
+</body>
+</html>
