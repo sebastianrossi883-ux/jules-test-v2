@@ -1,0 +1,19 @@
+{
+  "site_id": "LANCIO_ARTICOLI_COMPONENTE_JULES_20261015_01",
+  "site_name": "",
+  "idea": "",
+  "metaphor": "",
+  "composition_signature": "",
+  "motion_signature": "",
+  "thread": "",
+  "dominant_curve": "",
+  "accent_curve": "",
+  "rhythm": "",
+  "transition_grammar": "",
+  "component_slug": "codrops-sticky-grid-scroll-main",
+  "seed_slugs": [
+    "codrops-motion-path-transition-main-2",
+    "rotatingonscrollanimations-main"
+  ],
+  "keywords": []
+}

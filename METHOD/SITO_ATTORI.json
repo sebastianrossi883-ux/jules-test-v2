@@ -1,0 +1,272 @@
+{
+  "schema": "metodo21.site-anchors/v1",
+  "purpose": "Agganci del DOM iniziale, non limiti agli attori o un progetto artistico.",
+  "scenes": [
+    {
+      "root": "[data-m21-root=\"scene-001\"]",
+      "label": "scena-podere",
+      "actors": [
+        {
+          "key": "node-00001",
+          "selector": "[data-m21-actor=\"node-00001\"]",
+          "tag": "div",
+          "parentKey": null,
+          "id": "",
+          "classes": "intro-scena",
+          "label": "Podere Bricco Sereno · Serralunga d'Alba Prova scenografica — una sola scena Il gesto e la vigna Sco",
+          "from": 16
+        },
+        {
+          "key": "node-00002",
+          "selector": "[data-m21-actor=\"node-00002\"]",
+          "tag": "p",
+          "parentKey": "node-00001",
+          "id": "",
+          "classes": "identita",
+          "label": "Podere Bricco Sereno · Serralunga d'Alba",
+          "from": 17
+        },
+        {
+          "key": "node-00003",
+          "selector": "[data-m21-actor=\"node-00003\"]",
+          "tag": "p",
+          "parentKey": "node-00001",
+          "id": "",
+          "classes": "nota-prova",
+          "label": "Prova scenografica — una sola scena",
+          "from": 18
+        },
+        {
+          "key": "node-00004",
+          "selector": "[data-m21-actor=\"node-00004\"]",
+          "tag": "h1",
+          "parentKey": "node-00001",
+          "id": "titolo-scena",
+          "classes": "",
+          "label": "Il gesto e la vigna",
+          "from": 19
+        },
+        {
+          "key": "node-00005",
+          "selector": "[data-m21-actor=\"node-00005\"]",
+          "tag": "p",
+          "parentKey": "node-00001",
+          "id": "",
+          "classes": "invito",
+          "label": "Scorri per attraversare la scena",
+          "from": 20
+        },
+        {
+          "key": "node-00006",
+          "selector": "[data-m21-actor=\"node-00006\"]",
+          "tag": "div",
+          "parentKey": null,
+          "id": "",
+          "classes": "contenuti-scena",
+          "label": "Terroir · Cru Storici I Vigneti di Serralunga I versanti ripidi affacciati sui castelli medievali of",
+          "from": 22
+        },
+        {
+          "key": "node-00007",
+          "selector": "[data-m21-actor=\"node-00007\"]",
+          "tag": "div",
+          "parentKey": "node-00006",
+          "id": "",
+          "classes": "testi-scena",
+          "label": "Terroir · Cru Storici I Vigneti di Serralunga I versanti ripidi affacciati sui castelli medievali of",
+          "from": 23
+        },
+        {
+          "key": "node-00008",
+          "selector": "[data-m21-actor=\"node-00008\"]",
+          "tag": "p",
+          "parentKey": "node-00007",
+          "id": "",
+          "classes": "soprattitolo",
+          "label": "Terroir · Cru Storici",
+          "from": 24
+        },
+        {
+          "key": "node-00009",
+          "selector": "[data-m21-actor=\"node-00009\"]",
+          "tag": "h2",
+          "parentKey": "node-00007",
+          "id": "",
+          "classes": "",
+          "label": "I Vigneti di Serralunga",
+          "from": 25
+        },
+        {
+          "key": "node-00010",
+          "selector": "[data-m21-actor=\"node-00010\"]",
+          "tag": "p",
+          "parentKey": "node-00007",
+          "id": "",
+          "classes": "",
+          "label": "I versanti ripidi affacciati sui castelli medievali offrono terreni marnosi e calcarei ideali per il",
+          "from": 26
+        },
+        {
+          "key": "node-00011",
+          "selector": "[data-m21-actor=\"node-00011\"]",
+          "tag": "h2",
+          "parentKey": "node-00007",
+          "id": "",
+          "classes": "",
+          "label": "La Tradizione e il Tempo",
+          "from": 27
+        },
+        {
+          "key": "node-00012",
+          "selector": "[data-m21-actor=\"node-00012\"]",
+          "tag": "p",
+          "parentKey": "node-00007",
+          "id": "",
+          "classes": "",
+          "label": "Dalla vendemmia manuale alla sosta silenziosa nel legno antico: ogni bottiglia custodisce la sinceri",
+          "from": 28
+        },
+        {
+          "key": "node-00013",
+          "selector": "[data-m21-actor=\"node-00013\"]",
+          "tag": "div",
+          "parentKey": "node-00006",
+          "id": "",
+          "classes": "media-scena",
+          "label": "I Vigneti di Serralunga La Cantina La Tradizione e il Tempo Fasi di affinamento",
+          "from": 30
+        },
+        {
+          "key": "node-00014",
+          "selector": "[data-m21-actor=\"node-00014\"]",
+          "tag": "figure",
+          "parentKey": "node-00013",
+          "id": "",
+          "classes": "",
+          "label": "I Vigneti di Serralunga",
+          "from": 31
+        },
+        {
+          "key": "node-00015",
+          "selector": "[data-m21-actor=\"node-00015\"]",
+          "tag": "img",
+          "parentKey": "node-00014",
+          "id": "",
+          "classes": "",
+          "label": "",
+          "from": 31
+        },
+        {
+          "key": "node-00016",
+          "selector": "[data-m21-actor=\"node-00016\"]",
+          "tag": "figcaption",
+          "parentKey": "node-00014",
+          "id": "",
+          "classes": "",
+          "label": "I Vigneti di Serralunga",
+          "from": 31
+        },
+        {
+          "key": "node-00017",
+          "selector": "[data-m21-actor=\"node-00017\"]",
+          "tag": "figure",
+          "parentKey": "node-00013",
+          "id": "",
+          "classes": "",
+          "label": "La Cantina",
+          "from": 32
+        },
+        {
+          "key": "node-00018",
+          "selector": "[data-m21-actor=\"node-00018\"]",
+          "tag": "img",
+          "parentKey": "node-00017",
+          "id": "",
+          "classes": "",
+          "label": "",
+          "from": 32
+        },
+        {
+          "key": "node-00019",
+          "selector": "[data-m21-actor=\"node-00019\"]",
+          "tag": "figcaption",
+          "parentKey": "node-00017",
+          "id": "",
+          "classes": "",
+          "label": "La Cantina",
+          "from": 32
+        },
+        {
+          "key": "node-00020",
+          "selector": "[data-m21-actor=\"node-00020\"]",
+          "tag": "figure",
+          "parentKey": "node-00013",
+          "id": "",
+          "classes": "",
+          "label": "La Tradizione e il Tempo",
+          "from": 33
+        },
+        {
+          "key": "node-00021",
+          "selector": "[data-m21-actor=\"node-00021\"]",
+          "tag": "img",
+          "parentKey": "node-00020",
+          "id": "",
+          "classes": "",
+          "label": "",
+          "from": 33
+        },
+        {
+          "key": "node-00022",
+          "selector": "[data-m21-actor=\"node-00022\"]",
+          "tag": "figcaption",
+          "parentKey": "node-00020",
+          "id": "",
+          "classes": "",
+          "label": "La Tradizione e il Tempo",
+          "from": 33
+        },
+        {
+          "key": "node-00023",
+          "selector": "[data-m21-actor=\"node-00023\"]",
+          "tag": "figure",
+          "parentKey": "node-00013",
+          "id": "",
+          "classes": "",
+          "label": "Fasi di affinamento",
+          "from": 34
+        },
+        {
+          "key": "node-00024",
+          "selector": "[data-m21-actor=\"node-00024\"]",
+          "tag": "img",
+          "parentKey": "node-00023",
+          "id": "",
+          "classes": "",
+          "label": "",
+          "from": 34
+        },
+        {
+          "key": "node-00025",
+          "selector": "[data-m21-actor=\"node-00025\"]",
+          "tag": "figcaption",
+          "parentKey": "node-00023",
+          "id": "",
+          "classes": "",
+          "label": "Fasi di affinamento",
+          "from": 34
+        },
+        {
+          "key": "node-00026",
+          "selector": "[data-m21-actor=\"node-00026\"]",
+          "tag": "p",
+          "parentKey": null,
+          "id": "",
+          "classes": "chiusura-scena",
+          "label": "Podere Bricco Sereno · Fine della scena",
+          "from": 37
+        }
+      ]
+    }
+  ]
+}

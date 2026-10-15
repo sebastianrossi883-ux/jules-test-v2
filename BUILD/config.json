@@ -1,0 +1,35 @@
+{
+  "entry": "assets/js/regia-sito.js",
+  "output": "assets/js/regia-sito.bundle.js",
+  "aliases": {},
+  "materials": {
+    "codrops-sticky-grid-scroll-main": {
+      "sourceRoot": "MOTION_COMPONENTE/ARCHIVIO/codrops-sticky-grid-scroll-main",
+      "libraryRoot": "BUILD/librerie/codrops-sticky-grid-scroll-main",
+      "aliases": {}
+    },
+    "codrops-motion-path-transition-main-2": {
+      "sourceRoot": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2",
+      "libraryRoot": "BUILD/librerie/codrops-motion-path-transition-main-2",
+      "aliases": {}
+    },
+    "rotatingonscrollanimations-main": {
+      "sourceRoot": "MOTION_COMPONENTE/ARCHIVIO/rotatingonscrollanimations-main",
+      "libraryRoot": "BUILD/librerie/rotatingonscrollanimations-main",
+      "aliases": {}
+    }
+  },
+  "contract": {
+    "mechanics": [
+      "assets/js/meccaniche/01-codrops-sticky-grid-scroll-main.js",
+      "assets/js/meccaniche/02-codrops-motion-path-transition-main-2.js",
+      "assets/js/meccaniche/03-rotatingonscrollanimations-main.js"
+    ],
+    "scenes": [
+      {
+        "module": "assets/js/scene/scena-001.js",
+        "scenography": "assets/js/scenografie/scena-001.js"
+      }
+    ]
+  }
+}

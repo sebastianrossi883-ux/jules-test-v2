@@ -1,0 +1,187 @@
+{
+  "schema": "metodo21.material-library/v1",
+  "materials": [
+    {
+      "slug": "codrops-sticky-grid-scroll-main",
+      "title": "codrops-sticky-grid-scroll-main",
+      "mode": "source",
+      "build": {
+        "state": "source-fallback",
+        "message": "build automatico non disponibile"
+      },
+      "runtime": [
+        "gsap-3",
+        "esm",
+        "npm-build"
+      ],
+      "libraries": [
+        "gsap-3",
+        "imagesloaded",
+        "lenis"
+      ],
+      "defaultVariant": "src-index",
+      "variants": [
+        {
+          "id": "src-index",
+          "entry": "src/index.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-sticky-grid-scroll-main/src/index.html"
+        }
+      ],
+      "framework": "vanilla",
+      "archivePath": "MOTION_COMPONENTE/ARCHIVIO/codrops-sticky-grid-scroll-main",
+      "sourceKind": "html-demo",
+      "hasCode": true,
+      "referenceFiles": [
+        "MOTION_COMPONENTE/REFERENZE/codrops-sticky-grid-scroll-main/originale-69eb2cea87adb275.txt",
+        "MOTION_COMPONENTE/REFERENZE/codrops-sticky-grid-scroll-main/articolo-completo.md"
+      ],
+      "referenceProvenance": [
+        {
+          "original": "MOTION_COMPONENTE/REFERENZE/codrops-sticky-grid-scroll-main/originale-69eb2cea87adb275.txt",
+          "sha256": "69eb2cea87adb2753c347fc01972604aa23552231966c40972ffa226b76b6781",
+          "attachmentSha256": "69eb2cea87adb2753c347fc01972604aa23552231966c40972ffa226b76b6781",
+          "startByte": 0,
+          "endByteExclusive": 23550,
+          "sourceAttachment": "/Users/adrianciocaianu/.codex/attachments/32b1e964-8448-44ce-b4c2-e3725e9e13fa/Testo incollato.txt",
+          "derivedViewPreserved": true
+        }
+      ],
+      "assignmentRole": "Componente",
+      "previewPath": "DERIVATI/ANTEPRIME/codrops-sticky-grid-scroll-main"
+    },
+    {
+      "slug": "codrops-motion-path-transition-main-2",
+      "title": "codrops-motion-path-transition-main-2",
+      "mode": "source",
+      "framework": "vanilla",
+      "sourceKind": "html-demo",
+      "hasCode": true,
+      "build": {
+        "state": "static"
+      },
+      "runtime": [
+        "legacy-gsap-2",
+        "gsap-3"
+      ],
+      "libraries": [
+        "gsap-2",
+        "gsap-3",
+        "imagesloaded",
+        "motion-path-plugin",
+        "scrolltrigger",
+        "splitting"
+      ],
+      "defaultVariant": "index",
+      "variants": [
+        {
+          "id": "index",
+          "entry": "index.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2/index.html"
+        },
+        {
+          "id": "index2",
+          "entry": "index2.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2/index2.html"
+        },
+        {
+          "id": "index3",
+          "entry": "index3.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2/index3.html"
+        },
+        {
+          "id": "index4",
+          "entry": "index4.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2/index4.html"
+        }
+      ],
+      "archivePath": "MOTION_COMPONENTE/ARCHIVIO/codrops-motion-path-transition-main-2",
+      "referenceFiles": [
+        "MOTION_COMPONENTE/REFERENZE/codrops-motion-path-transition-main-2/originale-ac8c549039854f62.txt",
+        "MOTION_COMPONENTE/REFERENZE/codrops-motion-path-transition-main-2/articolo-completo.md"
+      ],
+      "referenceProvenance": [
+        {
+          "original": "MOTION_COMPONENTE/REFERENZE/codrops-motion-path-transition-main-2/originale-ac8c549039854f62.txt",
+          "sha256": "ac8c549039854f620f2d6d2ae085de44d27940db3f37361b93a9dadc56ff8300",
+          "attachmentSha256": "ac8c549039854f620f2d6d2ae085de44d27940db3f37361b93a9dadc56ff8300",
+          "startByte": 0,
+          "endByteExclusive": 7302,
+          "sourceAttachment": "/Users/adrianciocaianu/.codex/attachments/d2a73ad3-014c-4a37-8387-b6227689041b/Testo incollato.txt",
+          "derivedViewPreserved": true
+        }
+      ],
+      "assignmentRole": "Seme 1",
+      "previewPath": "DERIVATI/ANTEPRIME/codrops-motion-path-transition-main-2"
+    },
+    {
+      "slug": "rotatingonscrollanimations-main",
+      "title": "RotatingOnScrollAnimations-main",
+      "mode": "source",
+      "build": {
+        "state": "static"
+      },
+      "runtime": [
+        "legacy-gsap-2",
+        "gsap-3"
+      ],
+      "libraries": [
+        "gsap-2",
+        "gsap-3",
+        "imagesloaded",
+        "lenis",
+        "scrolltrigger",
+        "splitting"
+      ],
+      "defaultVariant": "index",
+      "variants": [
+        {
+          "id": "index",
+          "entry": "index.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/rotatingonscrollanimations-main/index.html"
+        },
+        {
+          "id": "index2",
+          "entry": "index2.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/rotatingonscrollanimations-main/index2.html"
+        },
+        {
+          "id": "index3",
+          "entry": "index3.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/rotatingonscrollanimations-main/index3.html"
+        },
+        {
+          "id": "index4",
+          "entry": "index4.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/rotatingonscrollanimations-main/index4.html"
+        },
+        {
+          "id": "index5",
+          "entry": "index5.html",
+          "url": "MOTION_COMPONENTE/ARCHIVIO/rotatingonscrollanimations-main/index5.html"
+        }
+      ],
+      "framework": "vanilla",
+      "archivePath": "MOTION_COMPONENTE/ARCHIVIO/rotatingonscrollanimations-main",
+      "sourceKind": "html-demo",
+      "hasCode": true,
+      "referenceFiles": [
+        "MOTION_COMPONENTE/REFERENZE/rotatingonscrollanimations-main/originale-32659649b6cf04d4.txt",
+        "MOTION_COMPONENTE/REFERENZE/rotatingonscrollanimations-main/articolo-completo.md"
+      ],
+      "referenceProvenance": [
+        {
+          "original": "MOTION_COMPONENTE/REFERENZE/rotatingonscrollanimations-main/originale-32659649b6cf04d4.txt",
+          "sha256": "32659649b6cf04d433406a08a71eaf6285ee325c3302cf6b6a496a4ec3b50e53",
+          "derivedView": "MOTION_COMPONENTE/REFERENZE/rotatingonscrollanimations-main/articolo-completo.md",
+          "sourceName": "rotatingonscrollanimations-main-articolo.txt"
+        }
+      ],
+      "assignmentRole": "Seme 2",
+      "previewPath": "DERIVATI/ANTEPRIME/rotatingonscrollanimations-main"
+    }
+  ],
+  "materialCount": 3,
+  "assignmentScope": "full-site",
+  "assignmentSiteId": "LANCIO_ARTICOLI_COMPONENTE_JULES_20261015_01",
+  "reactExcludedByUser": true
+}

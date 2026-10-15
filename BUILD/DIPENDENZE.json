@@ -1,0 +1,352 @@
+{
+  "schema": "metodo21.technical-dependencies/v1",
+  "status": "prepared",
+  "materials": [
+    {
+      "slug": "codrops-sticky-grid-scroll-main",
+      "libraries": [],
+      "motorImports": [
+        "gsap",
+        "gsap/ScrollTrigger",
+        "imagesloaded",
+        "lenis"
+      ],
+      "nonRuntimeReferences": [],
+      "aliases": {},
+      "transforms": [],
+      "configs": [
+        "package-lock.json",
+        "package.json",
+        "vite.config.ts"
+      ],
+      "shaderRequirements": [],
+      "browserScripts": [
+        {
+          "file": "src/index.html",
+          "reference": "./scripts/index.js"
+        },
+        {
+          "file": "src/index.html",
+          "reference": "../_method_capsule_bridge.js"
+        }
+      ],
+      "requiredCapabilities": [],
+      "analysisPartial": [],
+      "unresolved": []
+    },
+    {
+      "slug": "codrops-motion-path-transition-main-2",
+      "libraries": [],
+      "motorImports": [
+        "./js/MotionPathPlugin.js",
+        "./js/gsap.js"
+      ],
+      "nonRuntimeReferences": [],
+      "aliases": {},
+      "transforms": [],
+      "configs": [],
+      "shaderRequirements": [],
+      "browserScripts": [
+        {
+          "file": "index.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "./js/gsap.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "./js/MotionPathPlugin.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "./js/script.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "./js/gsap.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "./js/MotionPathPlugin.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "./js/script2.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "./js/gsap.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "./js/MotionPathPlugin.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "./js/script3.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "./js/gsap.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "./js/MotionPathPlugin.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "./js/script4.js"
+        }
+      ],
+      "requiredCapabilities": [],
+      "analysisPartial": [],
+      "unresolved": []
+    },
+    {
+      "slug": "rotatingonscrollanimations-main",
+      "libraries": [],
+      "motorImports": [
+        "js/ScrollTrigger.min.js",
+        "js/gsap.min.js",
+        "js/lenis.min.js"
+      ],
+      "nonRuntimeReferences": [],
+      "aliases": {},
+      "transforms": [],
+      "configs": [],
+      "shaderRequirements": [],
+      "browserScripts": [
+        {
+          "file": "index.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "js/lenis.min.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "js/gsap.min.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "js/ScrollTrigger.min.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "js/index.js"
+        },
+        {
+          "file": "index.html",
+          "reference": "_method_capsule_bridge.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/lenis.min.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/gsap.min.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/ScrollTrigger.min.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "js/index2.js"
+        },
+        {
+          "file": "index2.html",
+          "reference": "_method_capsule_bridge.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/lenis.min.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/gsap.min.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/ScrollTrigger.min.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "js/index3.js"
+        },
+        {
+          "file": "index3.html",
+          "reference": "_method_capsule_bridge.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "js/lenis.min.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "js/gsap.min.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "js/ScrollTrigger.min.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "js/index4.js"
+        },
+        {
+          "file": "index4.html",
+          "reference": "_method_capsule_bridge.js"
+        },
+        {
+          "file": "index5.html",
+          "reference": "js/imagesloaded.pkgd.min.js"
+        },
+        {
+          "file": "index5.html",
+          "reference": "js/lenis.min.js"
+        },
+        {
+          "file": "index5.html",
+          "reference": "js/gsap.min.js"
+        },
+        {
+          "file": "index5.html",
+          "reference": "js/ScrollTrigger.min.js"
+        },
+        {
+          "file": "index5.html",
+          "reference": "js/index5.js"
+        },
+        {
+          "file": "index5.html",
+          "reference": "_method_capsule_bridge.js"
+        }
+      ],
+      "requiredCapabilities": [],
+      "analysisPartial": [],
+      "unresolved": []
+    }
+  ],
+  "unresolved": [],
+  "runtimeConflicts": [],
+  "siteSourceAnalysis": {
+    "imports": [
+      {
+        "file": "assets/js/regia-sito.js",
+        "line": 2,
+        "reference": "../../MOTORE/scena-supporto.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/regia-sito.js",
+        "line": 3,
+        "reference": "./scene/scena-001.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/scene/scena-001.js",
+        "line": 1,
+        "reference": "../scenografie/scena-001.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/scene/scena-001.js",
+        "line": 2,
+        "reference": "../meccaniche/01-codrops-sticky-grid-scroll-main.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/scene/scena-001.js",
+        "line": 3,
+        "reference": "../meccaniche/02-codrops-motion-path-transition-main-2.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/scene/scena-001.js",
+        "line": 4,
+        "reference": "../meccaniche/03-rotatingonscrollanimations-main.js",
+        "kind": "import"
+      },
+      {
+        "file": "assets/js/scenografie/scena-001.js",
+        "line": 1,
+        "reference": "../../../MOTORE/scena-supporto.js",
+        "kind": "import"
+      }
+    ],
+    "partial": [],
+    "configs": [],
+    "aliases": {},
+    "browserScripts": [
+      {
+        "file": "index.html",
+        "reference": "MOTORE/vendor/gsap.min.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/vendor/ScrollTrigger.min.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/vendor/lenis.min.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/plugin-registry.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/regia-coordinatore.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "MOTORE/motion.js"
+      },
+      {
+        "file": "index.html",
+        "reference": "assets/js/regia-sito.js"
+      }
+    ],
+    "shaderRequirements": []
+  },
+  "canonicalVersions": {
+    "gsap": "3.15.0",
+    "ScrollTrigger": "3.15.0",
+    "lenis": "1.3.26"
+  },
+  "tools": {
+    "parse5": "8.0.1",
+    "esbuild-wasm": "0.25.12",
+    "sass": "1.93.2",
+    "glslify": "7.1.1"
+  }
+}
