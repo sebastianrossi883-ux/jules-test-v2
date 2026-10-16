@@ -1,19 +1,19 @@
 {
   "site_id": "LANCIO_ARTICOLI_COMPONENTE_JULES_20261015_01",
-  "site_name": "",
-  "idea": "",
-  "metaphor": "",
-  "composition_signature": "",
-  "motion_signature": "",
-  "thread": "",
-  "dominant_curve": "",
-  "accent_curve": "",
-  "rhythm": "",
-  "transition_grammar": "",
+  "site_name": "Podere Bricco Sereno",
+  "idea": "Le fasi della vinificazione come processo spaziale e temporale.",
+  "metaphor": "I vigneti convergono al centro per poi espandersi rivelando l'essenza (il testo/vino).",
+  "composition_signature": "Griglia 2x2 che si apre verso l'esterno",
+  "motion_signature": "Ingresso fluido lungo percorsi, convergenza al centro e rivelazione scrub scroll.",
+  "thread": "Elementi visivi che scorrono fluidamente lungo l'asse Z/rotazione durante l'intero arco.",
+  "dominant_curve": "power2.inOut",
+  "accent_curve": "power2.out",
+  "rhythm": "Lento e maestoso",
+  "transition_grammar": "L'arrivo dal MotionPath confluisce nella griglia e le foto si spostano liberando lo spazio del testo.",
   "component_slug": "codrops-sticky-grid-scroll-main",
   "seed_slugs": [
     "codrops-motion-path-transition-main-2",
     "rotatingonscrollanimations-main"
   ],
-  "keywords": []
+  "keywords": ["vino", "tradizione", "scroll-reveal", "motion-path", "grid"]
 }

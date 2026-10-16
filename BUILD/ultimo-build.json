@@ -1,0 +1,167 @@
+{
+  "inputs": {
+    "MOTORE/scena-supporto.js": {
+      "bytes": 9490,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/scenografie/scena-001.js": {
+      "bytes": 1443,
+      "imports": [
+        {
+          "path": "MOTORE/scena-supporto.js",
+          "kind": "import-statement",
+          "original": "../../../MOTORE/scena-supporto.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "assets/js/meccaniche/01-codrops-sticky-grid-scroll-main.js": {
+      "bytes": 2173,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/meccaniche/02-codrops-motion-path-transition-main-2.js": {
+      "bytes": 1395,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/meccaniche/03-rotatingonscrollanimations-main.js": {
+      "bytes": 1703,
+      "imports": [],
+      "format": "esm"
+    },
+    "assets/js/scene/scena-001.js": {
+      "bytes": 2834,
+      "imports": [
+        {
+          "path": "assets/js/scenografie/scena-001.js",
+          "kind": "import-statement",
+          "original": "../scenografie/scena-001.js"
+        },
+        {
+          "path": "assets/js/meccaniche/01-codrops-sticky-grid-scroll-main.js",
+          "kind": "import-statement",
+          "original": "../meccaniche/01-codrops-sticky-grid-scroll-main.js"
+        },
+        {
+          "path": "assets/js/meccaniche/02-codrops-motion-path-transition-main-2.js",
+          "kind": "import-statement",
+          "original": "../meccaniche/02-codrops-motion-path-transition-main-2.js"
+        },
+        {
+          "path": "assets/js/meccaniche/03-rotatingonscrollanimations-main.js",
+          "kind": "import-statement",
+          "original": "../meccaniche/03-rotatingonscrollanimations-main.js"
+        },
+        {
+          "path": "assets/js/scenografie/scena-001.js",
+          "kind": "import-statement",
+          "original": "../scenografie/scena-001.js"
+        }
+      ],
+      "format": "esm"
+    },
+    "assets/js/regia-sito.js": {
+      "bytes": 2249,
+      "imports": [
+        {
+          "path": "MOTORE/scena-supporto.js",
+          "kind": "import-statement",
+          "original": "../../MOTORE/scena-supporto.js"
+        },
+        {
+          "path": "assets/js/scene/scena-001.js",
+          "kind": "import-statement",
+          "original": "./scene/scena-001.js"
+        }
+      ],
+      "format": "esm"
+    }
+  },
+  "outputs": {
+    "assets/js/regia-sito.bundle.js.map": {
+      "imports": [],
+      "exports": [],
+      "inputs": {},
+      "bytes": 30239
+    },
+    "assets/js/regia-sito.bundle.js": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "assets/js/regia-sito.js",
+      "inputs": {
+        "MOTORE/scena-supporto.js": {
+          "bytesInOutput": 3588
+        },
+        "assets/js/scenografie/scena-001.js": {
+          "bytesInOutput": 382
+        },
+        "assets/js/meccaniche/01-codrops-sticky-grid-scroll-main.js": {
+          "bytesInOutput": 1563
+        },
+        "assets/js/meccaniche/02-codrops-motion-path-transition-main-2.js": {
+          "bytesInOutput": 1009
+        },
+        "assets/js/meccaniche/03-rotatingonscrollanimations-main.js": {
+          "bytesInOutput": 1203
+        },
+        "assets/js/scene/scena-001.js": {
+          "bytesInOutput": 1668
+        },
+        "assets/js/regia-sito.js": {
+          "bytesInOutput": 1706
+        }
+      },
+      "bytes": 11656
+    }
+  },
+  "metodo21": {
+    "entry": "assets/js/regia-sito.js",
+    "output": "assets/js/regia-sito.bundle.js",
+    "sourceHashes": [
+      {
+        "path": "MOTORE/scena-supporto.js",
+        "sha256": "7e4ddff52dfd4ec69a1b939d41684fa84d107e6fa5ff5afb16ca684226aa7988"
+      },
+      {
+        "path": "assets/js/scenografie/scena-001.js",
+        "sha256": "80ba18e7d821111a6cd14ca0cae35d9419b413470330a8a62a656082f78029f9"
+      },
+      {
+        "path": "assets/js/meccaniche/01-codrops-sticky-grid-scroll-main.js",
+        "sha256": "ff45173c6eeff9e9fd5bfd091dad17eb0ade475cea6fa4f4f21c82a5d6ac2661"
+      },
+      {
+        "path": "assets/js/meccaniche/02-codrops-motion-path-transition-main-2.js",
+        "sha256": "d6fcf3c12e10b79b51efbb49b86e6a220cbe98bda66f23bfaeb190e517746180"
+      },
+      {
+        "path": "assets/js/meccaniche/03-rotatingonscrollanimations-main.js",
+        "sha256": "6b51d77aa0eba344944c91a504d51a507e147d7708735ec700e57ef3bacf9f80"
+      },
+      {
+        "path": "assets/js/scene/scena-001.js",
+        "sha256": "f1bb08df353f51145d69fd85b02a60b2109e965357b22c57fccb1d4942be5dbb"
+      },
+      {
+        "path": "assets/js/regia-sito.js",
+        "sha256": "4e34b7ee17c667b65fb7dac9cfab4e2050425a4fb70c962265b80d1960d211a9"
+      }
+    ],
+    "outputs": [
+      {
+        "path": "assets/js/regia-sito.bundle.js.map",
+        "sha256": "feaeb7d6c22289c80e3c0ab816352631f46aa76e3e52266cf044be34105eda32",
+        "bytes": 30239
+      },
+      {
+        "path": "assets/js/regia-sito.bundle.js",
+        "sha256": "dd9e0bb7b5cca73574d827173b9cc28edec41b5688708c35336ae0c3c542d2c4",
+        "bytes": 11656
+      }
+    ],
+    "htmlLinked": true,
+    "builtAt": "2026-10-15T20:35:26.086Z"
+  }
+}
